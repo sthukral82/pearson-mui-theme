@@ -465,6 +465,10 @@ const pearsonMuiTheme = {
       }
     },
     CustomCard: {
+      AssignmentCardAction: {
+        paddingTop: 15,
+        paddingBottom: 15
+      },
       cardRightIcon: {
         display: 'flex',
         width: '100%',
@@ -482,23 +486,21 @@ const pearsonMuiTheme = {
       paddginZero: {
         padding: 0
       },
-      flexContainer:{
+      flexContainer: {
         display: 'flex',
         width: '100%'
       },
       cardLeftContent: {
-        width:'9%',
-        paddingRight:'20px',
-        paddinggBottom:'20px',
+        width: '12%',
+        paddingRight: '20px',
+        paddinggBottom: '20px',
         fontSize: '16px',
-        fontWeight: 600,
         lineHeight: 1.31,
         textAlign: 'right',
         color: '#252525'
       },
       cardCenterContent: {
         fontSize: '20px',
-        fontWeight: 600,
         lineHeight: 1.4,
         color: '#252525 ',
         width: '86%',
@@ -506,38 +508,42 @@ const pearsonMuiTheme = {
         paddingRight: '20px',
         paddingBottom: '20px'
       },
-      cardCenterActionContent: {
+      scoreCardCenterContent: {
+        width: '85%'
+      },
+      cardActionCenterContent: {
         fontSize: '20px',
-        fontWeight: 600,
         lineHeight: 1.4,
         color: '#252525 ',
-        width: '86%',
+        width: '97%',
         paddingLeft: '20px',
         paddingRight: 0,
         paddingBottom: 0
       },
-      cardActionCenterContent: {
-        fontSize: '20px',
-        fontWeight: 600,
-        lineHeight: 1.4,
-        color: '#252525 ',
-        width: '66%',
-        paddingLeft: '20px',
-        paddingRight: '20px',
-        paddingBottom: '20px'
-      },
       cardActionRightContent: {
-        width: '18%',
+        width: '25%',
         fontSize: '12px',
         fontWeight: 'normal',
         lineHeight: 'normal',
         letterSpacing: '0.17px',
         color: '#6a7070',
         display: 'flex',
-        flexDirection: 'row-reverse'
+        flexDirection: 'row-reverse',
+        textAlign: 'riht'
+      },
+      scoreCardRightContent: {
+        width: '15%',
+        fontSize: '12px',
+        fontWeight: 'normal',
+        lineHeight: 'normal',
+        letterSpacing: '0.17px',
+        color: '#6a7070',
+        display: 'flex',
+        flexDirection: 'column',
+        textAlign: 'right'
       },
       scoreCardActionRightContent: {
-        width: '18%',
+        width: '30%',
         fontSize: '12px',
         fontWeight: 'normal',
         lineHeight: 'normal',
@@ -549,7 +555,6 @@ const pearsonMuiTheme = {
       },
       scoreCard: {
         fontSize: '20px !important',
-        fontWeight: 600,
         fontStretch: 'normal',
         fontStyle: 'normal',
         lineHeight: 1.4,
@@ -788,5 +793,11 @@ export { default as MenuIcon } from './icons/Menu'
 export { default as RemoveIcon } from './icons/Remove'
 export { default as SearchIcon } from './icons/Search'
 export { default as AssignmentIcon } from './icons/Assignment'
-export { default as HorizontalStepper } from './components/HorizontalStepper'
+export { default as IncompleteCircleIcon } from './icons/IncompleteCircle'
+export { default as InprogressCircleIcon } from './icons/InprogressCircle'
+export { default as CompleteCircleIcon } from './icons/CompleteCircle'
+export { default as IncompleteStarIcon } from './icons/IncompleteStar'
+export { default as InprogressStarIcon } from './icons/InprogressStar'
+export { default as CompleteStarIcon } from './icons/CompleteStar'
+export { default as LockedIcon } from './icons/Locked'
 export { icons }

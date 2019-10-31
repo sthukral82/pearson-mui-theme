@@ -28,6 +28,7 @@ const Icons = () => (
     <CodeRenderer name={'icons/AssignedIcon'} />
     <CodeRenderer name={'icons/AssignmentIcon'} />
     <CodeRenderer name={'icons/DisabledIcons'} />
+    <CodeRenderer name={'icons/StepperIcons'} />
   </div>
 );
 

@@ -4,11 +4,11 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import  CustomHorizontalStepper  from '../steppers/HorizontalStepper'
+
 
 const styles = theme => ({
   card: {
-    width: 765,
+    width: 941,
     backgroundColor: "#ffffff",
   },
   paddginZero:theme.overrides.CustomCard.paddginZero,
@@ -16,8 +16,9 @@ const styles = theme => ({
   flexContainer:theme.overrides.CustomCard.flexContainer,
   cardLeftContent:theme.overrides.CustomCard.cardLeftContent,
   cardCenterContent:theme.overrides.CustomCard.cardCenterContent,
-  cardCenterActionContent:theme.overrides.CustomCard.cardCenterActionContent,
-  cardActionRightContent:theme.overrides.CustomCard.scoreCardActionRightContent,
+  scoreCardCenterContent:theme.overrides.CustomCard.scoreCardCenterContent,
+  cardActionCenterContent:theme.overrides.CustomCard.cardActionCenterContent,
+  scoreCardRightContent:theme.overrides.CustomCard.scoreCardRightContent,
   smallContent:theme.overrides.CustomCard.smallContent,
   hrLine:theme.overrides.CustomCard.hrLine,
   vrLine: theme.overrides.CustomCard.vrLine,
@@ -33,29 +34,33 @@ class ScoresCard extends React.Component {
         <CardContent >
           <div className={classes.flexContainer}>
             <div className={classes.cardLeftContent}>
-              <div>Jan 11</div>
-              <div className={classes.smallContent}>8 pm</div>
+              <div>Mar 18</div>
+              <div className={classes.smallContent}>11:59 pm EDT</div>
             </div>
             <div className={classes.vrLine}></div>
-            <div className={classes.cardCenterContent}>
-              <div>4: Consciousness</div>
-              <div className={classes.smallContent}>3 readings, 6 quizzes, 1 shared writing</div>
+            <div className={`${classes.cardCenterContent} ${classes.scoreCardCenterContent}`}>
+              <div>7: Cognition: Thinking, Intelligence, and Language</div>
+              <div className={classes.smallContent}>Incomplete</div>
             </div>
+            <div className={classes.scoreCardRightContent}>
+                <div className={classes.scoreCard}>184/205</div>
+                <div className={classes.smallContent}>POINTS EARNED</div>
+              </div>
           </div>
           {/* <div className={classes.hrLine}></div> */}
         </CardContent>
-        <CardActions>
+        {/* <CardActions>
             <div className={classes.flexContainer}>
               <div className={classes.cardLeftContent}></div>
-              <div className={classes.cardCenterActionContent}>
-                <CustomHorizontalStepper></CustomHorizontalStepper>
+              <div className={classes.cardActionCenterContent}>
+
               </div>
               <div className={classes.cardActionRightContent}>
                 <div className={classes.scoreCard}>184/205</div>
                 <div className={classes.smallContent}>POINTS EARNED</div>
               </div>
             </div>
-        </CardActions>
+        </CardActions> */}
       </Card>
     )
     }

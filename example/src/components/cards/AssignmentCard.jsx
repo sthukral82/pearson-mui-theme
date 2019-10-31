@@ -4,11 +4,11 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import  CustomHorizontalStepper  from '../steppers/HorizontalStepper'
+
 
 const styles = theme => ({
   card: {
-    width: 765,
+    width: 941,
     backgroundColor: "#ffffff",
   },
   cardContentHeader: theme.overrides.CustomCard.cardContentHeader,
@@ -16,11 +16,12 @@ const styles = theme => ({
   flexContainer:theme.overrides.CustomCard.flexContainer,
   cardLeftContent:theme.overrides.CustomCard.cardLeftContent,
   cardCenterContent:theme.overrides.CustomCard.cardCenterContent,
-  cardCenterActionContent:theme.overrides.CustomCard.cardCenterActionContent,
+  cardActionCenterContent:theme.overrides.CustomCard.cardActionCenterContent,
   cardActionRightContent:theme.overrides.CustomCard.cardActionRightContent,
   smallContent:theme.overrides.CustomCard.smallContent,
   hrLine:theme.overrides.CustomCard.hrLine,
   vrLine:theme.overrides.CustomCard.vrLine,
+  assignmentCardAction:theme.overrides.CustomCard.AssignmentCardAction,
   cardDarkColor:theme.overrides.CustomCard.cardDarkColor
 });
 
@@ -43,14 +44,14 @@ class AssignmentCard extends React.Component {
       </div>
       <div className={classes.hrLine}></div>
     </CardContent>
-    <CardActions>
+    <CardActions className={classes.assignmentCardAction}>
         <div className={classes.flexContainer}>
           <div className={classes.cardLeftContent}></div>
-          <div className={classes.cardCenterActionContent}>
-            <CustomHorizontalStepper></CustomHorizontalStepper>
+          <div className={classes.cardActionCenterContent}>
+
           </div>
           <div className={classes.cardActionRightContent}>
-            <div className={classes.smallContent}>worth 198 points</div>
+            <div className={classes.smallContent}>WORTH 198 POINTS</div>
           </div>
         </div>
     </CardActions>
