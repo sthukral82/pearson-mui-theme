@@ -13,7 +13,7 @@ const styles = {
     height: 24
   }
 }
-const ContentsIcon = ({ classes, size = 'normal', enableTabIndex = true, ...other }) => (
+const ContentsIcon = ({ classes, size = 'normal', enableTabIndex = false, ...other }) => (
   <SvgIcon viewBox='0 0 20 20' tabIndex={enableTabIndex ? '0' : null} className={classes[size]} {...other}>
     <path d='M8,6 L21,6 C21.5522847,6 22,6.44771525 22,7 C22,7.55228475 21.5522847,8 21,8 L8,8 C7.44771525,8 7,7.55228475 7,7 C7,6.44771525 7.44771525,6 8,6 Z' fill='currentcolor' />
     <circle id='icon' fill='currentcolor' cx='3.5' cy='7' r='1.5' />
@@ -27,7 +27,7 @@ const ContentsIcon = ({ classes, size = 'normal', enableTabIndex = true, ...othe
 ContentsIcon.propTypes = {
   classes: PropTypes.object.isRequired,
   size: PropTypes.oneOf(['small', 'normal']),
-  enableTabIndex: PropTypes.object.isOptional
+  enableTabIndex: PropTypes.bool
 }
 
 export default withStyles(styles)(ContentsIcon)
