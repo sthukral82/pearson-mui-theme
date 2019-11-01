@@ -14,7 +14,7 @@ const styles = {
   }
 }
 
-const AssignmentIcon = ({ classes, size = 'normal', enableTabIndex = true, ...other }) => (
+const AssignmentIcon = ({ classes, size = 'normal', enableTabIndex = false, ...other }) => (
   <SvgIcon viewBox='0 0 22 23' tabIndex={enableTabIndex ? '0' : null} className={classes[size]} {...other}>
     <g fill='none' fillRule='evenodd'>
       <path d='M-1 0h24v24H-1z' />
@@ -27,7 +27,7 @@ const AssignmentIcon = ({ classes, size = 'normal', enableTabIndex = true, ...ot
 AssignmentIcon.propTypes = {
   classes: PropTypes.object.isRequired,
   size: PropTypes.oneOf(['small', 'normal']),
-  enableTabIndex: PropTypes.IsOptional
+  enableTabIndex: PropTypes.bool
 }
 
 export default withStyles(styles)(AssignmentIcon)

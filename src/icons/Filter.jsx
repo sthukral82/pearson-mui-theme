@@ -14,15 +14,16 @@ const styles = {
   }
 }
 
-const FilterIcon = ({ classes, size = 'normal', ...other }) => (
-  <SvgIcon viewBox='0 0 16 12' tabIndex='0' className={classes[size]} {...other}>
+const FilterIcon = ({ classes, size = 'normal', enableTabIndex = false, ...other }) => (
+  <SvgIcon viewBox='0 0 16 12' tabIndex={enableTabIndex ? '0' : null} className={classes[size]} {...other}>
     <path fill='currentcolor' stroke='#252525' strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M7 11h2M1 1h14M4 6h8' />
   </SvgIcon>
 )
 
 FilterIcon.propTypes = {
   classes: PropTypes.object.isRequired,
-  size: PropTypes.oneOf(['small', 'normal'])
+  size: PropTypes.oneOf(['small', 'normal']),
+  enableTabIndex: PropTypes.bool
 }
 
 export default withStyles(styles)(FilterIcon)

@@ -14,8 +14,8 @@ const styles = {
   }
 }
 
-const SelectedCircle = ({ classes, size = 'normal', ...other }) => (
-  <SvgIcon viewBox='0 0 19 19' className={classes[size]} {...other}>
+const SelectedCircle = ({ classes, size = 'normal', enableTabIndex = false, ...other }) => (
+  <SvgIcon viewBox='0 0 19 19' tabIndex={enableTabIndex ? '0' : null} className={classes[size]} {...other}>
     <circle fill='currentColor' cx='9.5' cy='9.5' r='9.5' />
     <path
       fillRule='nonzero'
@@ -27,7 +27,8 @@ const SelectedCircle = ({ classes, size = 'normal', ...other }) => (
 
 SelectedCircle.propTypes = {
   classes: PropTypes.object.isRequired,
-  size: PropTypes.oneOf(['small', 'normal'])
+  size: PropTypes.oneOf(['small', 'normal']),
+  enableTabIndex: PropTypes.bool
 }
 
 export default withStyles(styles)(SelectedCircle)
