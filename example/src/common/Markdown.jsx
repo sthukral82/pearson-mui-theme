@@ -11,7 +11,7 @@ import './styles/Markdown.css';
  */
 export default class Markdown extends React.PureComponent {
   static propTypes = {
-    source: PropTypes.string.isRequired,
+    source: PropTypes.string.isRequired
   };
 
   render() {

@@ -1,9 +1,14 @@
 {
   "parser": "babel-eslint",
   "extends": [
-    "standard",
-    "standard-react"
+    "airbnb"
   ],
+  "globals": {
+     "window": true,
+     "localStorage": true,
+     "navigator": true,
+     "document": true
+  },
   "env": {
     "es6": true
   },
@@ -14,10 +19,12 @@
     "sourceType": "module"
   },
   "rules": {
-    // don't force es6 functions to include space before paren
-    "space-before-function-paren": 0,
-
-    // allow specifying true explicitly for boolean props
-    "react/jsx-boolean-value": 0
+    "max-len": [1, 120, 2, {"ignoreComments": true}],
+    "prefer-destructuring": 0,
+    "comma-dangle": ["error", "never"],
+    "react/no-array-index-key": 0,
+    "react/destructuring-assignment": 0,
+    "react/forbid-prop-types": [2, {"forbid": ["any"]}],
+    "no-multiple-empty-lines": 2
   }
 }

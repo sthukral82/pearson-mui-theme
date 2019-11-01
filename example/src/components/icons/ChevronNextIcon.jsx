@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import { ChevronNextIcon } from 'pearson-mui-theme';
@@ -19,15 +19,15 @@ const styles = theme => ({
  */
 const component = ({ classes }) => (
   <div>
-  <ChevronNextIcon color="primary" className={classes.root} />
-  <ChevronNextIcon color="secondary" className={classes.root}/>
-  <ChevronNextIcon color="action" className={classes.root}/>
-  <ChevronNextIcon color="disabled" className={classes.root}/>
+    <ChevronNextIcon color="primary" className={classes.root} />
+    <ChevronNextIcon color="secondary" className={classes.root} />
+    <ChevronNextIcon color="action" className={classes.root} />
+    <ChevronNextIcon color="disabled" className={classes.root} />
   </div>
 );
 
 component.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(component);

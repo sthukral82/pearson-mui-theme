@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import { ArrowBackIcon } from 'pearson-mui-theme';
@@ -19,15 +19,15 @@ const styles = theme => ({
  */
 const component = ({ classes }) => (
   <div>
-  <ArrowBackIcon color="primary" className={classes.root} />
-  <ArrowBackIcon color="secondary" className={classes.root}/>
-  <ArrowBackIcon color="action" className={classes.root}/>
-  <ArrowBackIcon color="disabled" className={classes.root}/>
+    <ArrowBackIcon color="primary" className={classes.root} />
+    <ArrowBackIcon color="secondary" className={classes.root} />
+    <ArrowBackIcon color="action" className={classes.root} />
+    <ArrowBackIcon color="disabled" className={classes.root} />
   </div>
 );
 
 component.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(component);

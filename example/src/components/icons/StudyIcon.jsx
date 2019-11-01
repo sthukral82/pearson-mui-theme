@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import { StudyIcon } from 'pearson-mui-theme';
@@ -6,7 +6,7 @@ import { StudyIcon } from 'pearson-mui-theme';
 
 const styles = theme => ({
   root: {
-      margin: theme.spacing.unit
+    margin: theme.spacing.unit
   }
 });
 
@@ -17,13 +17,13 @@ const styles = theme => ({
  */
 const component = ({ classes }) => (
   <div>
-  <StudyIcon color="action" className={classes.root}/>
-  <StudyIcon color="primary" className={classes.root}/>
+    <StudyIcon color="action" className={classes.root} />
+    <StudyIcon color="primary" className={classes.root} />
   </div>
 );
 
 component.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(component);

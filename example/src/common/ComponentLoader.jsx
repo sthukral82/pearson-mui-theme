@@ -11,12 +11,12 @@ class ComponentLoader extends React.Component {
     super(props);
     this.state = {
       component: null
-    }
+    };
   }
 
   componentWillMount() {
     import(`../components/${this.props.name}`).then(
-      component => {
+      (component) => {
         this.setState({
           component: component.default
         });

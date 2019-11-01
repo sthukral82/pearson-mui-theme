@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 const styles = theme => ({
   row: {
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   largeAvatar: {
     margin: theme.spacing.unit,
@@ -31,7 +31,7 @@ const component = ({ classes }) => (
 );
 
 component.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(component);

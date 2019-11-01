@@ -13,7 +13,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
  */
 class ModalDialog extends React.Component {
   state = {
-    open: false,
+    open: false
   };
 
   handleClickOpen = () => {
@@ -31,7 +31,9 @@ class ModalDialog extends React.Component {
           variant="outlined"
           color="primary"
           onClick={this.handleClickOpen}
-        >Open alert dialog</Button>
+        >
+Open alert dialog
+        </Button>
         <Dialog
           open={this.state.open}
           onClose={this.handleClose}
@@ -49,13 +51,17 @@ class ModalDialog extends React.Component {
               variant="outlined"
               color="default"
               onClick={this.handleClose}
-            >Cancel</Button>
+            >
+Cancel
+            </Button>
             <Button
               autoFocus
               variant="text"
               color="primary"
               onClick={this.handleClose}
-            >Delete</Button>
+            >
+Delete
+            </Button>
           </DialogActions>
         </Dialog>
       </div>

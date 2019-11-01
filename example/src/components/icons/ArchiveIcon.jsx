@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import { ArchiveIcon } from 'pearson-mui-theme';
@@ -6,7 +6,7 @@ import { ArchiveIcon } from 'pearson-mui-theme';
 
 const styles = theme => ({
   root: {
-      margin: theme.spacing.unit
+    margin: theme.spacing.unit
   }
 });
 
@@ -17,15 +17,15 @@ const styles = theme => ({
  */
 const component = ({ classes }) => (
   <div>
-  <ArchiveIcon color="primary" className={classes.root} />
-  <ArchiveIcon color="secondary" className={classes.root}/>
-  <ArchiveIcon color="action" className={classes.root}/>
-  <ArchiveIcon color="disabled" className={classes.root}/>
+    <ArchiveIcon color="primary" className={classes.root} />
+    <ArchiveIcon color="secondary" className={classes.root} />
+    <ArchiveIcon color="action" className={classes.root} />
+    <ArchiveIcon color="disabled" className={classes.root} />
   </div>
 );
 
 component.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(component);

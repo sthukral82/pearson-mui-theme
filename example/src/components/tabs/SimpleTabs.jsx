@@ -20,7 +20,7 @@ function TabContainer(props) {
 }
 
 TabContainer.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 };
 
 const styles = theme => ({
@@ -28,12 +28,12 @@ const styles = theme => ({
     flexGrow: 1,
     backgroundColor: '#f5f5f5',
     padding: '10px'
-  },
+  }
 });
 
 class SimpleTabs extends React.Component {
   state = {
-    value: 0,
+    value: 0
   };
 
   handleChange = (event, value) => {
@@ -47,7 +47,7 @@ class SimpleTabs extends React.Component {
     return (
       <div className={classes.root}>
         <AppBar color="default" position="static">
-          <Tabs textColor="primary" centered={true} value={value} onChange={this.handleChange}>
+          <Tabs textColor="primary" centered value={value} onChange={this.handleChange}>
             <Tab label="Assignments" />
             <Tab label="Table of Contents" />
             <Tab label="Notebook" />
@@ -62,7 +62,7 @@ class SimpleTabs extends React.Component {
 }
 
 SimpleTabs.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(SimpleTabs);

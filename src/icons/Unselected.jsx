@@ -17,9 +17,11 @@ const styles = {
   }
 };
 
-const Unselected = ({ classes, size = 'normal', enableTabIndex = false, ...other }) => (
-  <SvgIcon viewBox='0 0 19 19' tabIndex={enableTabIndex ? '0' : null} className={classes[size]} {...other}>
-    <circle stroke='currentColor' strokeWidth='2' cx='9.5' cy='9.5' r='8.5' fill='none' />
+const Unselected = ({
+  classes, size = 'normal', enableTabIndex = false, ...other
+}) => (
+  <SvgIcon viewBox="0 0 19 19" tabIndex={enableTabIndex ? '0' : null} className={classes[size]} {...other}>
+    <circle stroke="currentColor" strokeWidth="2" cx="9.5" cy="9.5" r="8.5" fill="none" />
   </SvgIcon>
 );
 

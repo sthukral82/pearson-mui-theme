@@ -34,7 +34,10 @@ class VerticalSlider extends Component {
     const { value } = this.state;
     return (
       <div>
-        <div>Value: {value}</div>
+        <div>
+Value:
+          {value}
+        </div>
         <div className={this.props.classes.root}>
           <Slider
             vertical
@@ -45,12 +48,12 @@ class VerticalSlider extends Component {
           />
         </div>
       </div>
-    )
+    );
   }
 }
 
 VerticalSlider.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(VerticalSlider);

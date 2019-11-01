@@ -40,7 +40,10 @@ class RadioButtons extends React.Component {
     const { classes } = this.props;
     return (
       <div>
-        <div className={classes.value}>Selection: {value}</div>
+        <div className={classes.value}>
+Selection:
+          {value}
+        </div>
         <FormControl component="fieldset" className={classes.formControl}>
           <FormLabel component="legend">
             How did European scientists and writers in the nineteenth century attempt to make sense of
@@ -73,19 +76,21 @@ class RadioButtons extends React.Component {
               value="answer3"
               control={<Radio color="primary" />}
               label={
-                `They didn't care.`
+                'They didn\'t care.'
               }
             />
             <FormControlLabel
               value="answer4"
               control={<Radio color="primary" />}
-              label={
+              label={(
                 <div>
                   <span>D. </span>
-                  <span>They concluded that differences in behavior were biological and claimed that people's biology
-                  determined how their societies were organized.</span>
+                  <span>
+They concluded that differences in behavior were biological and claimed that people's biology
+                  determined how their societies were organized.
+                  </span>
                 </div>
-              }
+              )}
             />
             <FormControlLabel
               value="disabledAnswer"
@@ -100,7 +105,7 @@ class RadioButtons extends React.Component {
           <FormHelperText>Hint: They really didn't care!</FormHelperText>
         </FormControl>
       </div>
-    )
+    );
   }
 }
 

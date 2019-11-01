@@ -1,17 +1,15 @@
-import React from 'react'
+import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import IconButton from '@material-ui/core/IconButton';
-import { AddItemIcon } from 'pearson-mui-theme';
-import { ArrowBackIcon } from 'pearson-mui-theme';
-import { ContentsIcon} from 'pearson-mui-theme';
-import { FilterIcon } from 'pearson-mui-theme';
-import { MenuIcon } from 'pearson-mui-theme';
-import { NoteBookIcon } from 'pearson-mui-theme';
+import {
+  AddItemIcon, ArrowBackIcon, ContentsIcon, FilterIcon, MenuIcon, NoteBookIcon
+} from 'pearson-mui-theme';
+
 
 const styles = theme => ({
   root: {
-      margin: theme.spacing.unit
+    margin: theme.spacing.unit
   }
 });
 
@@ -23,29 +21,29 @@ const styles = theme => ({
 const component = ({ classes }) => (
   <div>
     <IconButton className={classes.root} aria-label="Back" disabled color="primary">
-        <ArrowBackIcon  />
+      <ArrowBackIcon />
     </IconButton>
     <IconButton className={classes.root} aria-label="Add Item" disabled color="primary">
-        <AddItemIcon  />
+      <AddItemIcon />
     </IconButton>
     <IconButton className={classes.root} aria-label="contents" disabled color="primary">
-        <ContentsIcon  />
+      <ContentsIcon />
     </IconButton>
     <IconButton className={classes.root} aria-label="filter" disabled color="primary">
-        <FilterIcon  />
+      <FilterIcon />
     </IconButton>
     <IconButton className={classes.root} aria-label="Menu" disabled color="primary">
-        <MenuIcon  />
+      <MenuIcon />
     </IconButton>
     <IconButton className={classes.root} aria-label="NoteBook" disabled color="primary">
-        <NoteBookIcon  />
+      <NoteBookIcon />
     </IconButton>
- 
+
   </div>
 );
 
 component.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(component);

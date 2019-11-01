@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import CodeRenderer from '../common/CodeRenderer';
 
 /**
@@ -8,8 +8,8 @@ import CodeRenderer from '../common/CodeRenderer';
  */
 const Sliders = () => (
   <div>
-    <CodeRenderer name={'selections/RadioButtons'} />
-    <CodeRenderer outside name={'selections/SelectableCards'} />
+    <CodeRenderer name="selections/RadioButtons" />
+    <CodeRenderer outside name="selections/SelectableCards" />
   </div>
 );
 

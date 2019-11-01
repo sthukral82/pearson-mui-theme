@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import CodeRenderer from '../common/CodeRenderer';
 
 /**
@@ -8,7 +8,7 @@ import CodeRenderer from '../common/CodeRenderer';
  */
 const Typography = () => (
   <div>
-    <CodeRenderer name={'typography/CopyTypography'} />
+    <CodeRenderer name="typography/CopyTypography" />
   </div>
 );
 

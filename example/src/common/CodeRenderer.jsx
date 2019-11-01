@@ -17,7 +17,7 @@ const REPO_RELATIVE_PATH = 'develop/example/src/components';
 const styles = theme => createStyles({
   root: {
     ...theme.mixins.gutters(),
-    padding: theme.spacing.unit *  2,
+    padding: theme.spacing.unit * 2,
     margin: `${theme.spacing.unit}px auto`,
     maxWidth: 620,
     [theme.breakpoints.only('xs')]: {
@@ -53,7 +53,7 @@ class CodeRenderer extends React.Component {
       code: '',
       repoCodePath: '',
       showCode: false
-    }
+    };
   }
 
   static propTypes = {
@@ -66,19 +66,19 @@ class CodeRenderer extends React.Component {
   };
 
   componentWillMount() {
-    let name = this.props.name;
+    const name = this.props.name;
     const rawCodePath = `${GITHUB_RAW_PATH}/${REPO_RELATIVE_PATH}/${name}.jsx`;
     const repoCodePath = `${GITHUB_CODE_PATH}/${REPO_RELATIVE_PATH}/${name}.jsx`;
     axios.get(rawCodePath).then(
       (response) => {
         const code = response.data;
-        this.setState({ source: response.data, code: code, repoCodePath})
+        this.setState({ source: response.data, code, repoCodePath });
       }
     );
   }
 
   handleCodeClick = () => {
-    this.setState({ showCode: !this.state.showCode })
+    this.setState({ showCode: !this.state.showCode });
   };
 
   handleGithubClick = () => {
@@ -88,7 +88,7 @@ class CodeRenderer extends React.Component {
   renderCodeBlock = () => (
     this.state.showCode ? (
       <div className="code-block">
-        <CodeBlock language='javascript' value={this.state.code} />
+        <CodeBlock language="javascript" value={this.state.code} />
       </div>
     ) : null
   );
@@ -114,8 +114,8 @@ class CodeRenderer extends React.Component {
         </Paper>
         {outside ? <ComponentLoader name={name} /> : null}
       </div>
-    )
+    );
   }
 }
 
-export default withStyles(styles)(CodeRenderer)
+export default withStyles(styles)(CodeRenderer);

@@ -31,7 +31,10 @@ class StepSlider extends Component {
     const { value } = this.state;
     return (
       <div>
-        <div>Value: {value}</div>
+        <div>
+Value:
+          {value}
+        </div>
         <Slider
           className={this.props.classes.slider}
           value={value}
@@ -41,12 +44,12 @@ class StepSlider extends Component {
           onChange={this.handleChange}
         />
       </div>
-    )
+    );
   }
 }
 
 StepSlider.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(StepSlider);

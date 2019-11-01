@@ -1,6 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import { MuiThemeProvider, createMuiTheme,jssPreset, createGenerateClassName } from '@material-ui/core/styles';
+import {
+  MuiThemeProvider, createMuiTheme, jssPreset, createGenerateClassName
+} from '@material-ui/core/styles';
 // import { jssPreset, createGenerateClassName} from '@material-ui/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -28,23 +30,23 @@ class App extends Component {
     super(props);
     this.state = {
       drawerOpen: false
-    }
+    };
   }
 
   handleDrawerClose = () => {
-    this.setState({ drawerOpen: false })
+    this.setState({ drawerOpen: false });
   };
 
   handleMenuClick = () => {
-    this.setState({ drawerOpen: true })
+    this.setState({ drawerOpen: true });
   };
 
-  render () {
+  render() {
     return (
       <div>
-        <JssProvider jss={jss} classNamePrefix={'pmui'} generateClassName={generateClassName}>
+        <JssProvider jss={jss} classNamePrefix="pmui" generateClassName={generateClassName}>
           <MuiThemeProvider theme={createMuiTheme(pearsonTheme)}>
-            <AppBar color="primary" position="static" >
+            <AppBar color="primary" position="static">
               <Toolbar>
                 <IconButton color="inherit" aria-label="Menu" onClick={this.handleMenuClick}>
                   <MenuIcon />
@@ -70,7 +72,7 @@ class App extends Component {
           </MuiThemeProvider>
         </JssProvider>
       </div>
-    )
+    );
   }
 }
 

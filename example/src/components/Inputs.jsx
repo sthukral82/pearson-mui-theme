@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import CodeRenderer from '../common/CodeRenderer';
 
 /**
@@ -8,7 +8,7 @@ import CodeRenderer from '../common/CodeRenderer';
  */
 const Inputs = () => (
   <div>
-    <CodeRenderer name={'inputs/DefaultTextField'} />
+    <CodeRenderer name="inputs/DefaultTextField" />
   </div>
 );
 

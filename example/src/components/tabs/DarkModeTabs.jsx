@@ -20,16 +20,16 @@ function TabContainer(props) {
 }
 
 TabContainer.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 };
 
 const styles = theme => ({
-  root:theme.overrides.MuiCustomTabs.DarkMode.root,
-  tabs:theme.overrides.MuiCustomTabs.DarkMode.tabs
-  
+  root: theme.overrides.MuiCustomTabs.DarkMode.root,
+  tabs: theme.overrides.MuiCustomTabs.DarkMode.tabs
+
 });
 
-const CustomTabs = withStyles(theme=>({
+const CustomTabs = withStyles(theme => ({
   indicator: theme.overrides.MuiCustomTabs.DarkMode.indicator
 }))(Tabs);
 
@@ -39,7 +39,7 @@ const CustomTab = withStyles(theme => ({
 
 class SimpleTabs extends React.Component {
   state = {
-    value: 0,
+    value: 0
   };
 
   handleChange = (event, value) => {
@@ -53,7 +53,7 @@ class SimpleTabs extends React.Component {
     return (
       <div className={classes.root}>
         <AppBar className={classes.tabs} position="static">
-          <CustomTabs textColor="inherit" centered={true} value={value} onChange={this.handleChange}>
+          <CustomTabs textColor="inherit" centered value={value} onChange={this.handleChange}>
             <CustomTab label="ASSIGNMENTS" />
             <CustomTab label="TABLE OF CONTENTS" />
             <CustomTab label="NOTEBOOK" />
@@ -68,7 +68,7 @@ class SimpleTabs extends React.Component {
 }
 
 SimpleTabs.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(SimpleTabs);

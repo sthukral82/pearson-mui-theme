@@ -1,6 +1,5 @@
-import React from 'react'
+import React from 'react';
 import TextField from '@material-ui/core/TextField';
-import PropTypes from 'prop-types';
 
 /**
  * Renders/demos Default Button.
@@ -18,17 +17,12 @@ const component = () => (
     <TextField
       id="standard-search"
       label="Search field"
-      fullWidth={true}
+      fullWidth
       placeholder="Example: Elephants in Africa"
       type="text"
       margin="normal"
     />
   </div>
 );
-
-
-component.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
 
 export default component;

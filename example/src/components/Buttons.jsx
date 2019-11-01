@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import CodeRenderer from '../common/CodeRenderer';
 
 /**
@@ -8,12 +8,12 @@ import CodeRenderer from '../common/CodeRenderer';
  */
 const Buttons = () => (
   <div>
-    <CodeRenderer name={'buttons/PrimaryButtons'} />
-    <CodeRenderer name={'buttons/CtaButtons'} />
-    <CodeRenderer name={'buttons/DefaultButtons'} />
-    <CodeRenderer name={'buttons/DaButtons'} />
-    <CodeRenderer name={'buttons/TertiaryButtons'} />
-    <CodeRenderer name={'buttons/DisabledButtons'} />
+    <CodeRenderer name="buttons/PrimaryButtons" />
+    <CodeRenderer name="buttons/CtaButtons" />
+    <CodeRenderer name="buttons/DefaultButtons" />
+    <CodeRenderer name="buttons/DaButtons" />
+    <CodeRenderer name="buttons/TertiaryButtons" />
+    <CodeRenderer name="buttons/DisabledButtons" />
   </div>
 );
 

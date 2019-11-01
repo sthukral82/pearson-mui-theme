@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import CodeRenderer from '../common/CodeRenderer';
 
 /**
@@ -8,9 +8,9 @@ import CodeRenderer from '../common/CodeRenderer';
  */
 const Tabs = () => (
   <div>
-    <CodeRenderer name={'tabs/SimpleTabs'} />
-    <CodeRenderer name={'tabs/DarkModeTabs'} />
-    <CodeRenderer name={'tabs/SimpleVerticalTabs'} />
+    <CodeRenderer name="tabs/SimpleTabs" />
+    <CodeRenderer name="tabs/DarkModeTabs" />
+    <CodeRenderer name="tabs/SimpleVerticalTabs" />
   </div>
 );
 Tabs.displayName = 'Tabs';

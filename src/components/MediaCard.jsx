@@ -10,8 +10,14 @@ const styles = () => ({
   }
 });
 
-const MediaCard = (props) => (
+const MediaCard = props => (
   <Card {...props} className={props.classes.root} />
 );
+
+MediaCard.propTypes = {
+  classes: PropTypes.shape({
+    root: PropTypes.string.isRequired
+  }).isRequired
+};
 
 export default withStyles(styles)(MediaCard);

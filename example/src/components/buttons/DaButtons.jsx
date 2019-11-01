@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
@@ -21,27 +21,33 @@ const component = ({ classes }) => (
       color="primary"
       size="small"
       className={classes.button}
-    >Small Button</Button>
+    >
+Small Button
+    </Button>
 
     <Button
       variant="text"
       color="primary"
       size="medium"
       className={classes.button}
-    >Medium Button</Button>
+    >
+Medium Button
+    </Button>
 
     <Button
       variant="text"
       color="primary"
       size="large"
       className={classes.button}
-    >Large Button</Button>
+    >
+Large Button
+    </Button>
   </div>
 );
 
 
 component.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(component);

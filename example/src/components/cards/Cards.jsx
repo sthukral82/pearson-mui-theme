@@ -4,6 +4,9 @@ import Typography from '@material-ui/core/Typography';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import { CardList } from 'pearson-mui-theme';
+import {
+  Button, ButtonBase, CardActionArea, Link
+} from '@material-ui/core';
 
 /**
  * Renders/demos Cards.
@@ -17,12 +20,14 @@ const Cards = () => (
     </CardList>
     <CardList>
       <Card>
-        <CardContent>
-          1.1-1.2 The History of Psychology
-        </CardContent>
-        <CardActions>
-          <div>JUNE 14, 2019 03:32 PM</div>
-        </CardActions>
+        <CardActionArea onClick={() => { alert('Hi'); }}>
+          <CardContent>
+            1.1-1.2 The History of Psychology
+          </CardContent>
+          <CardActions>
+            <div>JUNE 14, 2019 03:32 PM</div>
+          </CardActions>
+        </CardActionArea>
       </Card>
       <Card>
         <CardContent>

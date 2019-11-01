@@ -38,11 +38,11 @@ class SelectableCards extends React.Component {
           <Card>
             <CardHeader
               className="small"
-              action={
+              action={(
                 <IconButton>
                   <MoreVertIcon />
                 </IconButton>
-              }
+              )}
               title="Shrimp and Chorizo Paella September 14, 2016 and long header that will not stop here   "
             />
             <CardContent>
@@ -120,7 +120,7 @@ class SelectableCards extends React.Component {
           </Card>
         </CardList>
       </div>
-    )
+    );
   }
 }
 

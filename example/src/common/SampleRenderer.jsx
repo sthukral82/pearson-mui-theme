@@ -4,8 +4,8 @@ import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import MarkdownContainer from './MarkdownContainer';
 import ComponentLoader from './ComponentLoader';
-const styles = theme => {
-  return ({
+
+const styles = theme => ({
   root: {
     ...theme.mixins.gutters(),
     paddingTop: theme.spacing.unit * 2,
@@ -20,9 +20,8 @@ const styles = theme => {
     root: {
       margin: theme.spacing.unit
     }
-  },
-})
-};
+  }
+});
 
 /**
  * A Component that can render the provided sample code. It also use the MarkdownContainer to load the
@@ -44,4 +43,4 @@ SampleRenderer.propTypes = {
   name: PropTypes.string.isRequired
 };
 
-export default withStyles(styles)(SampleRenderer)
+export default withStyles(styles)(SampleRenderer);

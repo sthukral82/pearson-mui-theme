@@ -10,7 +10,7 @@ import SyntaxHighlighter from 'react-syntax-highlighter/prism';
 export default class CodeBlock extends React.PureComponent {
   static propTypes = {
     value: PropTypes.string.isRequired,
-    language: PropTypes.string,
+    language: PropTypes.string
   };
 
   static defaultProps = {

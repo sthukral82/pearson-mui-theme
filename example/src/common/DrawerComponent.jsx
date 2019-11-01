@@ -30,7 +30,7 @@ const styles = {
  * @author Hari Gangadharan
  */
 const DrawerComponent = ({ classes, open, onClose }) => (
-  <Drawer open={open} onClose={onClose} >
+  <Drawer open={open} onClose={onClose}>
     <div className={classes.drawer} onClick={onClose}>
       <List>
         <ListItem component={Link} to="/">
@@ -95,7 +95,7 @@ const DrawerComponent = ({ classes, open, onClose }) => (
         </ListItem>
         <ListItem component={Link} to="/icons">
           <ListItemIcon>
-          <ThumbUpOutlined />
+            <ThumbUpOutlined />
           </ListItemIcon>
           <ListItemText primary="Icons" />
         </ListItem>
