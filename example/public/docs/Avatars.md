@@ -5,17 +5,20 @@ Visit [Avatars](https://uxframework.pearson.com/c/avatar-display) in Pearson UX 
 
 **Usage**
 ```html
+import { Avatar } from 'pearson-mui-theme';
+
 <Avatar
-  alt="Hari Gangadharan"
-  src="/static/images/HariGangadharan.png"
-  className={classes.avatar}
-/>
+  aria-label="Hari Gangadharan's Profile"
+  color={primary | secondary}
+  className={some-classname-to-add}
+>HG</Avatar>
 ```
 
-|size|dimension|theme variable|
-|:---|:---|:---|
-|small | 60 x 60 | theme.pearson.avatar.small |
-|large | 120 x 120  | theme.pearson.avatar.large |
+|type|description|
+|:---|:---|
+| primary | Set prop color="primary". White text, white border & transparent background |
+| secondary | Set prop color="secondary". Pearson digital blue text and white background |
+| hover | Applied if Avatar is wrapped in an IconButton and has className avatarHover added to it |
 
 
 

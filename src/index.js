@@ -124,8 +124,6 @@ const pearsonMuiTheme = {
   overrides: {
     MuiPaper: {
       root: {
-        display: 'flex',
-        flexDirection: 'column',
         boxSizing: 'border-box',
         fontFamily: pearson.font.size.large,
         fontSize: pearson.font.size.large,
@@ -303,14 +301,14 @@ const pearsonMuiTheme = {
         marginBottom: 16
       },
       h4: {
-        fontSize: 16,
+        fontSize: '1.125em',
         letterSpacing: 'normal',
-        lineHeight: pearson.lineHeight.xl
+        lineHeight: pearson.lineHeight.m
       },
       h5: {
         letterSpacing: 0.3,
-        fontSize: 16,
-        lineHeight: pearson.lineHeight.xxs,
+        fontSize: '1em',
+        lineHeight: pearson.lineHeight.xs,
         color: colors.charcoal
       },
       h6: {
@@ -319,16 +317,17 @@ const pearsonMuiTheme = {
         color: colors.charcoal
       },
       subtitle1: {
-        fontSize: 14,
+        fontSize: '.75em',
         letterSpacing: 0.15,
-        lineHeight: 'normal'
+        color: colors.mediumGray,
+        lineHeight: pearson.lineHeight.xl
       },
       subtitle2: {
-        fontSize: 12,
-        fontWeight: 600,
+        fontSize: '.875em',
+        fontWeight: 'normal',
         color: colors.mediumGray,
         letterSpacing: -0.3,
-        lineHeight: pearson.lineHeight.xl
+        lineHeight: pearson.lineHeight.m
       },
       body1: {
         fontSize: 16,
@@ -341,8 +340,17 @@ const pearsonMuiTheme = {
     },
     MuiAvatar: {
       root: {
-        height: '50px',
-        width: '50px'
+        height: 48,
+        width: 48,
+        fontSize: '1rem',
+        fontWeight: 'bold'
+      },
+      colorDefault: {
+        height: 40,
+        width: 40,
+        backgroundColor: colors.mediumGray,
+        color: colors.white,
+        border: `0px solid ${colors.mediumGray}`
       }
     },
     MuiButtonBase: {
@@ -494,6 +502,16 @@ const pearsonMuiTheme = {
         marginBottom: pearson.padding.l
       }
     },
+    MuiListItem: {
+      button: {
+        '&:hover': {
+          backgroundColor: 'inherit',
+          '& .applyHover': {
+            color: pearson.colors.seaBlue
+          }
+        }
+      }
+    },
     MuiPopover: {
       root: {
         borderRadius: '4px',
@@ -532,7 +550,14 @@ const pearsonMuiTheme = {
     },
     MuiIconButton: {
       root: {
-        padding: 5
+        padding: 5,
+        '&:hover': {
+          backgroundColor: colors.transparent,
+          '& .avatarHover': {
+            backgroundColor: 'rgba(255, 255, 255, 0.2)',
+            color: colors.white
+          }
+        }
       }
     },
     MuiRadio: {
@@ -577,6 +602,9 @@ export { default as SelectedCircle } from './icons/SelectedCircle';
 export { default as CardList } from './components/CardList';
 export { default as VerticalTabs } from './components/VerticalTabs';
 export { default as MediaCard } from './components/MediaCard';
+export { default as Avatar } from './components/Avatar';
+export { default as ProfileDisplay } from './components/ProfileDisplay';
+export { default as ProfileDropdown } from './components/ProfileDropdown';
 export { default as AddIcon } from './icons/Add';
 export { default as AddItemIcon } from './icons/AddItem';
 export { default as ArchiveIcon } from './icons/Archive';
@@ -584,6 +612,8 @@ export { default as ArrowBackIcon } from './icons/ArrowBack';
 export { default as AssignedIcon } from './icons/Assigned';
 export { default as ChevronBackIcon } from './icons/ChevronBack';
 export { default as ChevronNextIcon } from './icons/ChevronNext';
+export { default as UpArrowIcon } from './icons/UpArrow';
+export { default as DownArrowIcon } from './icons/DownArrow';
 export { default as BookmarkoffIcon } from './icons/Bookmarkoff';
 export { default as BookmarkonIcon } from './icons/Bookmarkon';
 export { default as ContentsIcon } from './icons/Contents';

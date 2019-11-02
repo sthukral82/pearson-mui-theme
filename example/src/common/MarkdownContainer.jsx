@@ -35,7 +35,7 @@ class MarkdownContainer extends React.Component {
 }
 
 MarkdownContainer.propTypes = {
-  name: PropTypes.string
+  name: PropTypes.string.isRequired
 };
 
 export default MarkdownContainer;
