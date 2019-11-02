@@ -87,6 +87,12 @@ const DrawerComponent = ({ classes, open, onClose }) => (
           </ListItemIcon>
           <ListItemText primary="Dialogs" />
         </ListItem>
+        <ListItem component={Link} to="/dropdowns">
+          <ListItemIcon>
+            <WebAsset />
+          </ListItemIcon>
+          <ListItemText primary="Dropdowns" />
+        </ListItem>
         <ListItem component={Link} to="/typography">
           <ListItemIcon>
             <ViewCarousel />

@@ -75,9 +75,7 @@ Selection:
             <FormControlLabel
               value="answer3"
               control={<Radio color="primary" />}
-              label={
-                'They didn\'t care.'
-              }
+              label="They didn't care."
             />
             <FormControlLabel
               value="answer4"
@@ -86,7 +84,7 @@ Selection:
                 <div>
                   <span>D. </span>
                   <span>
-They concluded that differences in behavior were biological and claimed that people's biology
+They concluded that differences in behavior were biological and claimed that people&apos;s biology
                   determined how their societies were organized.
                   </span>
                 </div>
@@ -102,7 +100,7 @@ They concluded that differences in behavior were biological and claimed that peo
               }
             />
           </RadioGroup>
-          <FormHelperText>Hint: They really didn't care!</FormHelperText>
+          <FormHelperText>Hint: They really didn@apos;t care!</FormHelperText>
         </FormControl>
       </div>
     );
