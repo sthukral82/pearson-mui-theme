@@ -630,6 +630,7 @@ export { default as ResourcesIcon } from './icons/Resources';
 export { default as StudyIcon } from './icons/Study';
 export { default as ExpandIcon } from './icons/Expand';
 export { default as FilterIcon } from './icons/Filter';
+export { default as PearsonLogo } from './icons/PearsonLogo';
 export { default as ListenIcon } from './icons/Listen';
 export { default as MenuIcon } from './icons/Menu';
 export { default as RemoveIcon } from './icons/Remove';

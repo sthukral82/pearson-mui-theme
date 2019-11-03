@@ -1,31 +1,16 @@
 import React from 'react';
 import SvgIcon from '@material-ui/core/SvgIcon';
-import { withStyles } from '@material-ui/core/styles';
-import PropTypes from 'prop-types';
 
-const styles = {
-  small: {
-    width: 18,
-    height: 18
-  },
-  normal: {
-    width: 24,
-    height: 24
-  }
-};
-
-const FilterIcon = ({
-  classes, size = 'normal', enableTabIndex = false, ...other
-}) => (
-  <SvgIcon viewBox="0 0 16 12" tabIndex={enableTabIndex ? '0' : null} className={classes[size]} {...other}>
-    <path fill="currentcolor" stroke="#252525" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 11h2M1 1h14M4 6h8" />
+const FilterIcon = props => (
+  <SvgIcon viewBox="0 0 16 12" {...props}>
+    <path
+      stroke="currentcolor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      d="M7 11h2M1 1h14M4 6h8"
+    />
   </SvgIcon>
 );
 
-FilterIcon.propTypes = {
-  classes: PropTypes.object.isRequired,
-  size: PropTypes.oneOf(['small', 'normal']),
-  enableTabIndex: PropTypes.bool
-};
-
-export default withStyles(styles)(FilterIcon);
+export default FilterIcon;

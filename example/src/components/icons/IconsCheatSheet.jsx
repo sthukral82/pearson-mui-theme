@@ -11,7 +11,7 @@ import {
   AddItemIcon, ArchiveIcon, ArrowBackIcon, AssignedIcon, AssignmentIcon,
   BookmarkoffIcon, BookmarkonIcon, CaretDownIcon, CaretUpIcon, ChevronBackIcon, ChevronNextIcon, ContentsIcon,
   ExpandIcon, FilterIcon, ListenIcon, MenuIcon, NoteBookIcon, RemoveIcon, ResourcesIcon,
-  SearchIcon, StudyIcon
+  SearchIcon, StudyIcon, PearsonLogo
 } from 'pearson-mui-theme';
 
 const icons = new Map([
@@ -33,6 +33,7 @@ const icons = new Map([
   ['ListenIcon', ListenIcon],
   ['MenuIcon', MenuIcon],
   ['NoteBookIcon', NoteBookIcon],
+  ['PearsonLogo', PearsonLogo],
   ['RemoveIcon', RemoveIcon],
   ['ResourcesIcon', ResourcesIcon],
   ['SearchIcon', SearchIcon],
@@ -58,22 +59,26 @@ const component = ({ classes }) => (
     <TableHead>
       <TableRow>
         <TableCell>Icon Name</TableCell>
-        <TableCell align="right">Large</TableCell>
-        <TableCell align="right">Default</TableCell>
-        <TableCell align="right">Small</TableCell>
+        <TableCell align="center">Large</TableCell>
+        <TableCell align="center">Default</TableCell>
+        <TableCell align="center">Small</TableCell>
       </TableRow>
     </TableHead>
     <TableBody>
       {
         Array.from(icons).map(([name, Icon], key) => (
           <TableRow key={key}>
-            <TableCell component="th" scope="row">
+            <TableCell component="th" scope="row" style={{ backgroundColor: '#c7c7c7' }}>
               <icon />
               {name}
             </TableCell>
-            <TableCell align="right"><Icon fontSize="large" /></TableCell>
-            <TableCell align="right"><Icon /></TableCell>
-            <TableCell align="right"><Icon fontSize="small" /></TableCell>
+            <TableCell align="center">
+              <Icon fontSize="large" />
+            </TableCell>
+            <TableCell align="center"><Icon color="primary" /></TableCell>
+            <TableCell align="center" style={{ backgroundColor: '#c7c7c7' }}>
+              <Icon fontSize="small" color="secondary" />
+            </TableCell>
           </TableRow>
         ))
       }
