@@ -3,16 +3,13 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import {
   MuiThemeProvider, createMuiTheme, jssPreset, createGenerateClassName
 } from '@material-ui/core/styles';
-// import { jssPreset, createGenerateClassName} from '@material-ui/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import JssProvider from 'react-jss/lib/JssProvider';
 import { create } from 'jss';
-import pearsonTheme from 'pearson-mui-theme';
+import pearsonTheme, { PearsonLogo, MenuIcon } from 'pearson-mui-theme';
 import DrawerComponent from './common/DrawerComponent';
 import SampleRenderer from './common/SampleRenderer';
+import './App.css';
 
 const jss = create({
   ...jssPreset(),
@@ -46,13 +43,12 @@ class App extends Component {
       <div>
         <JssProvider jss={jss} classNamePrefix="pmui" generateClassName={generateClassName}>
           <MuiThemeProvider theme={createMuiTheme(pearsonTheme)}>
-            <AppBar color="primary" position="static">
-              <Toolbar>
-                <IconButton color="inherit" aria-label="Menu" onClick={this.handleMenuClick}>
-                  <MenuIcon />
-                </IconButton>
-              </Toolbar>
-            </AppBar>
+            <div className="curve">
+              <PearsonLogo style={{ fontSize: 49 }} color="secondary" />
+              <IconButton style={{ paddingLeft: 16 }} onClick={this.handleMenuClick}>
+                <MenuIcon color="secondary" />
+              </IconButton>
+            </div>
             <BrowserRouter>
               <div className="pearsonMuiTheme">
                 <DrawerComponent onClose={this.handleDrawerClose} open={this.state.drawerOpen} />

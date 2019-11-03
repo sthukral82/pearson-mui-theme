@@ -12,9 +12,9 @@ const styles = () => ({
 });
 
 const OpenCloseIndicator = ({ id, open, classes }) => (open ? (
-  <CaretDown id={`${id}-open`} color="secondary" className={classes.indicator} />
+  <CaretUp id={`${id}-open`} color="secondary" className={classes.indicator} />
 ) : (
-  <CaretUp id={`${id}-close`} color="secondary" className={classes.indicator} />
+  <CaretDown id={`${id}-close`} color="secondary" className={classes.indicator} />
 ));
 
 OpenCloseIndicator.propTypes = {
