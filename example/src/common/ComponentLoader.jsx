@@ -35,7 +35,7 @@ class ComponentLoader extends React.Component {
 }
 
 ComponentLoader.propTypes = {
-  name: PropTypes.string
+  name: PropTypes.string.isRequired
 };
 
 export default ComponentLoader;

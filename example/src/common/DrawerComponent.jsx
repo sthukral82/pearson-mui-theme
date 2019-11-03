@@ -31,75 +31,75 @@ const styles = {
  */
 const DrawerComponent = ({ classes, open, onClose }) => (
   <Drawer open={open} onClose={onClose}>
-    <div className={classes.drawer} onClick={onClose}>
+    <div className={classes.drawer}>
       <List>
-        <ListItem component={Link} to="/">
+        <ListItem component={Link} to="/" onClick={onClose}>
           <ListItemIcon>
             <Home />
           </ListItemIcon>
           <ListItemText primary="Home" />
         </ListItem>
-        <ListItem component={Link} to="/avatars">
+        <ListItem component={Link} to="/avatars" onClick={onClose}>
           <ListItemIcon>
             <AccountCircle />
           </ListItemIcon>
           <ListItemText primary="Avatars" />
         </ListItem>
-        <ListItem component={Link} to="/buttons">
+        <ListItem component={Link} to="/buttons" onClick={onClose}>
           <ListItemIcon>
             <Apps />
           </ListItemIcon>
           <ListItemText primary="Buttons" />
         </ListItem>
-        <ListItem component={Link} to="/cards">
+        <ListItem component={Link} to="/cards" onClick={onClose}>
           <ListItemIcon>
             <Pages />
           </ListItemIcon>
           <ListItemText primary="Cards" />
         </ListItem>
-        <ListItem component={Link} to="/inputs">
+        <ListItem component={Link} to="/inputs" onClick={onClose}>
           <ListItemIcon>
             <Apps />
           </ListItemIcon>
           <ListItemText primary="Inputs" />
         </ListItem>
-        <ListItem component={Link} to="/selections">
+        <ListItem component={Link} to="/selections" onClick={onClose}>
           <ListItemIcon>
             <SelectAllRounded />
           </ListItemIcon>
           <ListItemText primary="Selection Controls" />
         </ListItem>
-        <ListItem component={Link} to="/tabs">
+        <ListItem component={Link} to="/tabs" onClick={onClose}>
           <ListItemIcon>
             <Tab />
           </ListItemIcon>
           <ListItemText primary="Tabs" />
         </ListItem>
-        <ListItem component={Link} to="/sliders">
+        <ListItem component={Link} to="/sliders" onClick={onClose}>
           <ListItemIcon>
             <SwapHorizontalCircle />
           </ListItemIcon>
           <ListItemText primary="Sliders" />
         </ListItem>
-        <ListItem component={Link} to="/dialogs">
+        <ListItem component={Link} to="/dialogs" onClick={onClose}>
           <ListItemIcon>
             <WebAsset />
           </ListItemIcon>
           <ListItemText primary="Dialogs" />
         </ListItem>
-        <ListItem component={Link} to="/dropdowns">
+        <ListItem component={Link} to="/dropdowns" onClick={onClose}>
           <ListItemIcon>
             <WebAsset />
           </ListItemIcon>
           <ListItemText primary="Dropdowns" />
         </ListItem>
-        <ListItem component={Link} to="/typography">
+        <ListItem component={Link} to="/typography" onClick={onClose}>
           <ListItemIcon>
             <ViewCarousel />
           </ListItemIcon>
           <ListItemText primary="Typography" />
         </ListItem>
-        <ListItem component={Link} to="/icons">
+        <ListItem component={Link} to="/icons" onClick={onClose}>
           <ListItemIcon>
             <ThumbUpOutlined />
           </ListItemIcon>
@@ -114,6 +114,10 @@ DrawerComponent.propTypes = {
   open: PropTypes.bool.isRequired,
   classes: PropTypes.object.isRequired,
   onClose: PropTypes.func
+};
+
+DrawerComponent.defaultProps = {
+  onClose: () => {}
 };
 
 export default withStyles(styles)(DrawerComponent);

@@ -45,25 +45,24 @@ const styles = theme => createStyles({
  * @author Hari Gangadharan
  */
 class CodeRenderer extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      markdown: '',
-      source: '',
-      code: '',
-      repoCodePath: '',
-      showCode: false
-    };
-  }
-
   static propTypes = {
     classes: PropTypes.object.isRequired,
+    name: PropTypes.string.isRequired,
     outside: PropTypes.bool
   };
 
   static defaultProps = {
     outside: false
   };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      code: '',
+      repoCodePath: '',
+      showCode: false
+    };
+  }
 
   componentWillMount() {
     const name = this.props.name;
@@ -72,13 +71,13 @@ class CodeRenderer extends React.Component {
     axios.get(rawCodePath).then(
       (response) => {
         const code = response.data;
-        this.setState({ source: response.data, code, repoCodePath });
+        this.setState({ code, repoCodePath });
       }
     );
   }
 
   handleCodeClick = () => {
-    this.setState({ showCode: !this.state.showCode });
+    this.setState(prevState => ({ showCode: !prevState.showCode }));
   };
 
   handleGithubClick = () => {

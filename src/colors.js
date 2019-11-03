@@ -1,5 +1,5 @@
 const colors = {
-  transparent: 'transparent',
+  transparent: 'rgba(0, 0, 0, 0)',
   alto: '#d9d9d9',
   digitalBlue: '#005d83',
   seaBlue: '#047a9c',

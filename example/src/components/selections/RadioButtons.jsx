@@ -12,9 +12,6 @@ const styles = theme => ({
   value: {
     paddingTop: theme.spacing.unit,
     paddingBottom: theme.spacing.unit
-  },
-  icon: {
-    width: theme.pearson.iconSize.normal
   }
 });
 

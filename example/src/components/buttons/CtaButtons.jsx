@@ -2,10 +2,14 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
+import { Paper } from '@material-ui/core';
 
 const styles = theme => ({
   button: {
     margin: theme.spacing.unit
+  },
+  darkBackground: {
+    backgroundColor: theme.palette.primary.dark
   }
 });
 
@@ -15,7 +19,7 @@ const styles = theme => ({
  * @author Hari Gangadharan
  */
 const component = ({ classes }) => (
-  <div className="ctaButtons">
+  <Paper className={classes.darkBackground}>
 
     <Button
       variant="outlined"
@@ -43,7 +47,7 @@ Medium Button
     >
 Large Button
     </Button>
-  </div>
+  </Paper>
 );
 
 component.propTypes = {

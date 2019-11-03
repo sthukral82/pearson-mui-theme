@@ -98,9 +98,9 @@ const pearsonMuiTheme = {
       contrastText: colors.white
     },
     secondary: {
-      main: colors.sunshineYellow,
-      dark: colors.sunflowerYellow,
-      contrastText: colors.charcoal
+      main: colors.white,
+      dark: colors.white,
+      contrastText: colors.seaBlue
     },
     text: {
       primary: colors.charcoal,
@@ -414,11 +414,12 @@ const pearsonMuiTheme = {
         }
       },
       outlinedSecondary: {
-        color: colors.charcoal,
-        backgroundColor: colors.sunshineYellow,
-        borderColor: colors.sunshineYellow,
+        color: colors.seaBlue,
+        borderColor: colors.white,
+        backgroundColor: colors.white,
         '&:hover': {
-          backgroundColor: colors.sunflowerYellow
+          backgroundColor: colors.white,
+          color: colors.inkBlue
         }
       },
       contained: {
@@ -539,8 +540,14 @@ const pearsonMuiTheme = {
       colorPrimary: {
         fill: colors.whiteGray
       },
-      colorSecondary: {
-        fill: colors.charcoal
+      colorAction: {
+        color: colors.charcoal
+      },
+      fontSizeSmall: {
+        fontSize: '18px'
+      },
+      fontSizeLarge: {
+        fontSize: '30px'
       }
     },
     MuiDialogActions: {
@@ -551,6 +558,7 @@ const pearsonMuiTheme = {
     MuiIconButton: {
       root: {
         padding: 5,
+        color: colors.charcoal,
         '&:hover': {
           backgroundColor: colors.transparent,
           '& .avatarHover': {
@@ -612,8 +620,8 @@ export { default as ArrowBackIcon } from './icons/ArrowBack';
 export { default as AssignedIcon } from './icons/Assigned';
 export { default as ChevronBackIcon } from './icons/ChevronBack';
 export { default as ChevronNextIcon } from './icons/ChevronNext';
-export { default as UpArrowIcon } from './icons/UpArrow';
-export { default as DownArrowIcon } from './icons/DownArrow';
+export { default as CaretDownIcon } from './icons/CaretDown';
+export { default as CaretUpIcon } from './icons/CaretUp';
 export { default as BookmarkoffIcon } from './icons/Bookmarkoff';
 export { default as BookmarkonIcon } from './icons/Bookmarkon';
 export { default as ContentsIcon } from './icons/Contents';

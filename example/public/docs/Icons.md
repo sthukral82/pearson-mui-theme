@@ -1,29 +1,8 @@
 # Icons
 
 Visit [Icons](https://uxframework.pearson.com/nightly/icons) in Pearson UX specifications.
+Pearson icons are available in two sizes, 18x18 and 24x24 pixels. You can incorporate them 
+into your code by passing params.
 
-
-**Usage**
-```html
-<AddIcon color="primary" className={classes.root} />
-<AddIcon color="secondary" className={classes.root}/>
-<AddIcon color="action" className={classes.root}/>
-<AddIcon color="disabled" className={classes.root}/>
-
-<AddItemIcon color="primary" className={classes.root} />
-<AddItemIcon color="secondary" className={classes.root}/>
-<AddItemIcon color="action" className={classes.root}/>
-<AddItemIcon color="disabled" className={classes.root}/>
-
-We can use accessibility using IconButton
-
-<IconButton className={classes.root} aria-label="NoteBook" disabled color="primary">
-    <NoteBookIcon  />
-</IconButton>
-
-```
-
-
-
-
+**Always wrap the icons inside an IconButton when you are using icons for action.**
 
