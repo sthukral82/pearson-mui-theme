@@ -1,7 +1,4 @@
-import React from 'react';
 import colors from './colors';
-import SelectedCircle from './icons/SelectedCircle';
-import Unselected from './icons/Unselected';
 
 const pseodoOutline = (padding, borderRadius, focusColor) => ({
   content: '""',
@@ -24,18 +21,6 @@ const tabPseodoOutline = (borderRadius, focusColor) => ({
   height: 'calc(100% - 4px)',
   border: `2px solid ${focusColor}`
 });
-
-const icons = {
-  checkbox: {
-    normal: {
-      checked: <SelectedCircle />
-    },
-    fancy: {
-      unchecked: <Unselected size="small" color="primary" />,
-      checked: <SelectedCircle size="small" color="primary" />
-    }
-  }
-};
 
 // pearson {} should be used for internal reference only
 const pearson = {
@@ -606,7 +591,6 @@ const pearsonMuiTheme = {
 };
 
 export default pearsonMuiTheme;
-export { default as SelectedCircle } from './icons/SelectedCircle';
 export { default as CardList } from './components/CardList';
 export { default as VerticalTabs } from './components/VerticalTabs';
 export { default as MediaCard } from './components/MediaCard';
@@ -618,10 +602,12 @@ export { default as AddItemIcon } from './icons/AddItem';
 export { default as ArchiveIcon } from './icons/Archive';
 export { default as ArrowBackIcon } from './icons/ArrowBack';
 export { default as AssignedIcon } from './icons/Assigned';
-export { default as ChevronBackIcon } from './icons/ChevronBack';
-export { default as ChevronNextIcon } from './icons/ChevronNext';
 export { default as CaretDownIcon } from './icons/CaretDown';
 export { default as CaretUpIcon } from './icons/CaretUp';
+export { default as CheckCircleFilledIcon } from './icons/CheckCircleFilled';
+export { default as ChevronBackIcon } from './icons/ChevronBack';
+export { default as ChevronNextIcon } from './icons/ChevronNext';
+export { default as CircleOutlineIcon } from './icons/CircleOutline';
 export { default as BookmarkoffIcon } from './icons/Bookmarkoff';
 export { default as BookmarkonIcon } from './icons/Bookmarkon';
 export { default as ContentsIcon } from './icons/Contents';
@@ -636,4 +622,3 @@ export { default as MenuIcon } from './icons/Menu';
 export { default as RemoveIcon } from './icons/Remove';
 export { default as SearchIcon } from './icons/Search';
 export { default as AssignmentIcon } from './icons/Assignment';
-export { icons };
