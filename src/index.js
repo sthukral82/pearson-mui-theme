@@ -636,4 +636,11 @@ export { default as MenuIcon } from './icons/Menu';
 export { default as RemoveIcon } from './icons/Remove';
 export { default as SearchIcon } from './icons/Search';
 export { default as AssignmentIcon } from './icons/Assignment';
+export { default as IncompleteCircleIcon } from './icons/IncompleteCircle'
+export { default as InprogressCircleIcon } from './icons/InprogressCircle'
+export { default as CompleteCircleIcon } from './icons/CompleteCircle'
+export { default as IncompleteStarIcon } from './icons/IncompleteStar'
+export { default as InprogressStarIcon } from './icons/InprogressStar'
+export { default as CompleteStarIcon } from './icons/CompleteStar'
+export { default as LockedIcon } from './icons/Locked'
 export { icons };

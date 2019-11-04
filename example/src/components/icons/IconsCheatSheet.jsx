@@ -11,7 +11,9 @@ import {
   AddItemIcon, ArchiveIcon, ArrowBackIcon, AssignedIcon, AssignmentIcon,
   BookmarkoffIcon, BookmarkonIcon, CaretDownIcon, CaretUpIcon, ChevronBackIcon, ChevronNextIcon, ContentsIcon,
   ExpandIcon, FilterIcon, ListenIcon, MenuIcon, NoteBookIcon, RemoveIcon, ResourcesIcon,
-  SearchIcon, StudyIcon, PearsonLogo
+  SearchIcon, StudyIcon, PearsonLogo,
+  IncompleteCircleIcon,InprogressCircleIcon,CompleteCircleIcon,
+  IncompleteStarIcon,InprogressStarIcon,CompleteStarIcon,LockedIcon
 } from 'pearson-mui-theme';
 
 const icons = new Map([
@@ -37,7 +39,14 @@ const icons = new Map([
   ['RemoveIcon', RemoveIcon],
   ['ResourcesIcon', ResourcesIcon],
   ['SearchIcon', SearchIcon],
-  ['StudyIcon', StudyIcon]
+  ['StudyIcon', StudyIcon],
+  ['IncompleteCircleIcon',IncompleteCircleIcon],
+  ['InprogressCircleIcon',InprogressCircleIcon],
+  ['CompleteCircleIcon',CompleteCircleIcon],
+  ['IncompleteStarIcon',IncompleteStarIcon],
+  ['InprogressStarIcon',InprogressStarIcon],
+  ['CompleteStarIcon',CompleteStarIcon],
+  ['LockedIcon',LockedIcon]
 ]);
 
 const styles = theme => ({
