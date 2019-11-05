@@ -9,10 +9,11 @@ import { withStyles } from '@material-ui/core/styles';
 import {
   AddIcon,
   AddItemIcon, ArchiveIcon, ArrowBackIcon, AssignedIcon, AssignmentIcon,
-  BookmarkoffIcon, BookmarkonIcon, CaretDownIcon, CaretUpIcon, CircleOutlineIcon, CheckCircleFilledIcon,ChevronBackIcon, ChevronNextIcon, ContentsIcon,
+  BookmarkoffIcon, BookmarkonIcon, CaretDownIcon, CaretUpIcon, CircleOutlineIcon, CheckCircleFilledIcon,
+  ChevronBackIcon, ChevronNextIcon, ContentsIcon,
   ExpandIcon, FilterIcon, ListenIcon, LockIcon, MenuIcon, NoteBookIcon, PearsonLogo, RemoveIcon, ResourcesIcon,
-  SearchIcon, SmallCircleFilledIcon,SmallCircleHalfFilledIcon, SmallCircleOutlineIcon, StarFilledIcon, StarHalfFilledIcon,
-  StarOutlineIcon, StudyIcon
+  SearchIcon, SmallCircleFilledIcon, SmallCircleHalfFilledIcon, SmallCircleOutlineIcon,
+  StarFilledIcon, StarHalfFilledIcon, StarOutlineIcon, StudyIcon
 } from 'pearson-mui-theme';
 
 const icons = new Map([
