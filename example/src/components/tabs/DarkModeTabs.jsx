@@ -24,18 +24,14 @@ TabContainer.propTypes = {
 };
 
 const styles = theme => ({
-  root: theme.overrides.MuiCustomTabs.DarkMode.root,
+  root: {
+    backgroundColor: theme.palette.primary.dark,
+    color: theme.palette.secondary.contrastText
+  },
   tabs: theme.overrides.MuiCustomTabs.DarkMode.tabs
 
 });
 
-const CustomTabs = withStyles(theme => ({
-  indicator: theme.overrides.MuiCustomTabs.DarkMode.indicator
-}))(Tabs);
-
-const CustomTab = withStyles(theme => ({
-  root: theme.overrides.MuiCustomTabs.DarkMode.CustomTab
-}))(props => <Tab {...props} />);
 
 class SimpleTabs extends React.Component {
   state = {
@@ -52,16 +48,16 @@ class SimpleTabs extends React.Component {
 
     return (
       <div className={classes.root}>
-        <AppBar className={classes.tabs} position="static">
-          <CustomTabs textColor="inherit" centered value={value} onChange={this.handleChange}>
-            <CustomTab label="ASSIGNMENTS" />
-            <CustomTab label="TABLE OF CONTENTS" />
-            <CustomTab label="NOTEBOOK" />
-          </CustomTabs>
+        <AppBar color="secondary" position="static">
+          <Tabs textColor="secondary" centered value={value} onChange={this.handleChange}>
+            <Tab label="Assignments" />
+            <Tab label="Table of Contents" />
+            <Tab label="Notebook" />
+          </Tabs>
         </AppBar>
         {value === 0 && <TabContainer>Showing Assignments</TabContainer>}
         {value === 1 && <TabContainer>Showing Table of Contents</TabContainer>}
-        {value === 2 && <TabContainer>Showing Notebook </TabContainer>}
+        {value === 2 && <TabContainer>Notebook should be here!</TabContainer>}
       </div>
     );
   }

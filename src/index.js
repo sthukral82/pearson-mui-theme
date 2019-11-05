@@ -135,6 +135,12 @@ const pearsonMuiTheme = {
         border: '0 none',
         boxShadow: 'none'
       },
+      colorSecondary: {
+        backgroundColor: colors.transparent,
+        color: colors.white,
+        border: '0 none',
+        boxShadow: 'none'
+      },
       // eslint-disable-next-line no-dupe-keys
       colorDefault: {
         backgroundColor: colors.white,
@@ -165,11 +171,19 @@ const pearsonMuiTheme = {
           '&:after': tabPseodoOutline(6, colors.focusBlue)
         }
       },
+      textColorSecondary: {
+        color: 'rgba(255, 255, 255, 0.8)',
+        lineHeight: 1.29,
+        textTransform: 'uppercase',
+        '&.pmuiCustomFocusVisible': {
+          '&:after': tabPseodoOutline(6, colors.white)
+        }
+      },
       labelContainer: {
         paddingTop: '12px',
-        paddingBottom: '16px',
-        paddingLeft: 4,
-        paddingRight: 4,
+        paddingBottom: '10px',
+        paddingLeft: 0,
+        paddingRight: 0,
         '@media (min-width: 960px)': {
           padding: 'inherit'
         }
@@ -211,7 +225,7 @@ const pearsonMuiTheme = {
     },
     MuiPrivateTabIndicator: {
       colorSecondary: {
-        backgroundColor: colors.digitalMarineTurquoise,
+        backgroundColor: colors.white,
         height: 3,
         marginBottom: 8
       }
@@ -621,7 +635,7 @@ export { default as ListenIcon } from './icons/Listen';
 export { default as MenuIcon } from './icons/Menu';
 export { default as RemoveIcon } from './icons/Remove';
 export { default as SearchIcon } from './icons/Search';
-export { default as AssignmentIcon } from './icons/Assignment';
+export { default as CalendarOutlined } from './icons/CalendarOutlined';
 export { default as LockIcon } from './icons/Lock';
 export { default as SmallCircleFilledIcon } from './icons/SmallCircleFilled';
 export { default as SmallCircleHalfFilledIcon } from './icons/SmallCircleHalfFilled';

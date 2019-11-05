@@ -4,8 +4,8 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import {
-  ArrowBackIcon, NoteBookIcon, StudyIcon, ResourcesIcon, ContentsIcon, BookmarkoffIcon, AssignmentIcon,
-  VerticalTabs
+  ArrowBackIcon, NoteBookIcon, StudyIcon, ResourcesIcon, ContentsIcon, BookmarkoffIcon,
+  VerticalTabs, CalendarOutlined
 } from 'pearson-mui-theme';
 
 
@@ -68,13 +68,48 @@ class SimpleVerticalTabs extends React.Component {
           value={value}
           onChange={this.handleChange}
         >
-          <Tab label="Back" {...a11yProps(0)} icon={<ArrowBackIcon className={classes.paddingBottom8} />} className={`${classes.tab} ${value === 0 ? classes.activeTab : ''}`} />
-          <Tab label="Contents" {...a11yProps(1)} icon={<ContentsIcon className={classes.paddingBottom8} />} className={`${classes.tab} ${value === 1 ? classes.activeTab : ''}`} />
-          <Tab label="Bookmarks" {...a11yProps(2)} icon={<BookmarkoffIcon className={classes.paddingBottom8} />} className={`${classes.tab} ${value === 2 ? classes.activeTab : ''}`} />
-          <Tab label="NoteBook" {...a11yProps(3)} icon={<NoteBookIcon className={classes.paddingBottom8} />} className={`${classes.tab} ${value === 3 ? classes.activeTab : ''}`} />
-          <Tab label="Study" {...a11yProps(4)} icon={<StudyIcon className={classes.paddingBottom8} />} className={`${classes.tab} ${value === 4 ? classes.activeTab : ''}`} />
-          <Tab label="Resources" {...a11yProps(5)} icon={<ResourcesIcon className={classes.paddingBottom8} />} className={`${classes.tab} ${value === 5 ? classes.activeTab : ''}`} />
-          <Tab label="Assignment" {...a11yProps(6)} icon={<AssignmentIcon className={classes.paddingBottom8} />} className={`${classes.tab} ${value === 6 ? classes.activeTab : ''}`} />
+          <Tab
+            label="Back"
+            {...a11yProps(0)}
+            icon={<ArrowBackIcon className={classes.paddingBottom8} />}
+            className={`${classes.tab} ${value === 0 ? classes.activeTab : ''}`}
+          />
+          <Tab
+            label="Contents"
+            {...a11yProps(1)}
+            icon={<ContentsIcon className={classes.paddingBottom8} />}
+            className={`${classes.tab} ${value === 1 ? classes.activeTab : ''}`}
+          />
+          <Tab
+            label="Bookmarks"
+            {...a11yProps(2)}
+            icon={<BookmarkoffIcon className={classes.paddingBottom8} />}
+            className={`${classes.tab} ${value === 2 ? classes.activeTab : ''}`}
+          />
+          <Tab
+            label="NoteBook"
+            {...a11yProps(3)}
+            icon={<NoteBookIcon className={classes.paddingBottom8} />}
+            className={`${classes.tab} ${value === 3 ? classes.activeTab : ''}`}
+          />
+          <Tab
+            label="Study"
+            {...a11yProps(4)}
+            icon={<StudyIcon className={classes.paddingBottom8} />}
+            className={`${classes.tab} ${value === 4 ? classes.activeTab : ''}`}
+          />
+          <Tab
+            label="Resources"
+            {...a11yProps(5)}
+            icon={<ResourcesIcon className={classes.paddingBottom8} />}
+            className={`${classes.tab} ${value === 5 ? classes.activeTab : ''}`}
+          />
+          <Tab
+            label="Assignment"
+            {...a11yProps(6)}
+            icon={<CalendarOutlined className={classes.paddingBottom8} />}
+            className={`${classes.tab} ${value === 6 ? classes.activeTab : ''}`}
+          />
         </VerticalTabs>
         {value === 0
         && <TabContainer value={value} index={0} className={classes.tabContent}> Showing Back tab </TabContainer>}

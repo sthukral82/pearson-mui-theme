@@ -8,9 +8,9 @@ import TableRow from '@material-ui/core/TableRow';
 import { withStyles } from '@material-ui/core/styles';
 import {
   AddIcon,
-  AddItemIcon, ArchiveIcon, ArrowBackIcon, AssignedIcon, AssignmentIcon,
-  BookmarkoffIcon, BookmarkonIcon, CaretDownIcon, CaretUpIcon, CircleOutlineIcon, CheckCircleFilledIcon,
-  ChevronBackIcon, ChevronNextIcon, ContentsIcon,
+  AddItemIcon, ArchiveIcon, ArrowBackIcon, AssignedIcon,
+  BookmarkoffIcon, BookmarkonIcon, CalendarOutlined, CaretDownIcon, CaretUpIcon, CircleOutlineIcon,
+  CheckCircleFilledIcon, ChevronBackIcon, ChevronNextIcon, ContentsIcon,
   ExpandIcon, FilterIcon, ListenIcon, LockIcon, MenuIcon, NoteBookIcon, PearsonLogo, RemoveIcon, ResourcesIcon,
   SearchIcon, SmallCircleFilledIcon, SmallCircleHalfFilledIcon, SmallCircleOutlineIcon,
   StarFilledIcon, StarHalfFilledIcon, StarOutlineIcon, StudyIcon
@@ -22,9 +22,9 @@ const icons = new Map([
   ['ArchiveIcon', ArchiveIcon],
   ['ArrowBackIcon', ArrowBackIcon],
   ['AssignedIcon', AssignedIcon],
-  ['AssignmentIcon', AssignmentIcon],
   ['BookmarkoffIcon', BookmarkoffIcon],
   ['BookmarkonIcon', BookmarkonIcon],
+  ['CalendarOutlined', CalendarOutlined],
   ['CaretDownIcon', CaretDownIcon],
   ['CaretUpIcon', CaretUpIcon],
   ['CheckCircleFilledIcon', CheckCircleFilledIcon],

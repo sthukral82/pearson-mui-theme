@@ -47,7 +47,7 @@ class SimpleTabs extends React.Component {
     return (
       <div className={classes.root}>
         <AppBar color="default" position="static">
-          <Tabs textColor="primary" centered value={value} onChange={this.handleChange}>
+          <Tabs textColor="primary" indicatorColor="primary" centered value={value} onChange={this.handleChange}>
             <Tab label="Assignments" />
             <Tab label="Table of Contents" />
             <Tab label="Notebook" />
