@@ -35,7 +35,7 @@ const VerticalTabs = ({ classes, children, ...other }) => (
 
 VerticalTabs.propTypes = {
   classes: PropTypes.object.isRequired,
-  children: PropTypes.oneOf([PropTypes.arrayOf(PropTypes.node.isRequired), PropTypes.node.isRequired]).isRequired
+  children: PropTypes.array.isRequired
 };
 
 export default withStyles(styles)(VerticalTabs);

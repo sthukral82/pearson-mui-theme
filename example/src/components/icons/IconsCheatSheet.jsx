@@ -9,9 +9,11 @@ import { withStyles } from '@material-ui/core/styles';
 import {
   AddIcon,
   AddItemIcon, ArchiveIcon, ArrowBackIcon, AssignedIcon, AssignmentIcon,
-  BookmarkoffIcon, BookmarkonIcon, CaretDownIcon, CaretUpIcon, ChevronBackIcon, ChevronNextIcon, ContentsIcon,
-  ExpandIcon, FilterIcon, ListenIcon, MenuIcon, NoteBookIcon, RemoveIcon, ResourcesIcon,
-  SearchIcon, CheckCircleFilledIcon, StudyIcon, CircleOutlineIcon, PearsonLogo
+  BookmarkoffIcon, BookmarkonIcon, CaretDownIcon, CaretUpIcon, CircleOutlineIcon, CheckCircleFilledIcon,
+  ChevronBackIcon, ChevronNextIcon, ContentsIcon,
+  ExpandIcon, FilterIcon, ListenIcon, LockIcon, MenuIcon, NoteBookIcon, PearsonLogo, RemoveIcon, ResourcesIcon,
+  SearchIcon, SmallCircleFilledIcon, SmallCircleHalfFilledIcon, SmallCircleOutlineIcon,
+  StarFilledIcon, StarHalfFilledIcon, StarOutlineIcon, StudyIcon
 } from 'pearson-mui-theme';
 
 const icons = new Map([
@@ -33,12 +35,19 @@ const icons = new Map([
   ['ExpandIcon', ExpandIcon],
   ['FilterIcon', FilterIcon],
   ['ListenIcon', ListenIcon],
+  ['LockIcon', LockIcon],
   ['MenuIcon', MenuIcon],
   ['NoteBookIcon', NoteBookIcon],
   ['PearsonLogo', PearsonLogo],
   ['RemoveIcon', RemoveIcon],
   ['ResourcesIcon', ResourcesIcon],
   ['SearchIcon', SearchIcon],
+  ['SmallCircleFilledIcon', SmallCircleFilledIcon],
+  ['SmallCircleHalfFilledIcon', SmallCircleHalfFilledIcon],
+  ['SmallCircleOutlineIcon', SmallCircleOutlineIcon],
+  ['StarFilledIcon', StarFilledIcon],
+  ['StarHalfilledIcon ', StarHalfFilledIcon],
+  ['StarOutlineIcon', StarOutlineIcon],
   ['StudyIcon', StudyIcon]
 ]);
 
