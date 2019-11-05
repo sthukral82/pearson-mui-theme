@@ -9,7 +9,7 @@ import { withStyles } from '@material-ui/core/styles';
 import {
   AddIcon,
   AddItemIcon, ArchiveIcon, ArrowBackIcon, AssignedIcon, AssignmentIcon,
-  BookmarkoffIcon, BookmarkonIcon, CaretDownIcon, CaretUpIcon, ChevronBackIcon, ChevronNextIcon, ContentsIcon,
+  BookmarkoffIcon, BookmarkonIcon, CaretDownIcon, CaretUpIcon, CircleOutlineIcon, CheckCircleFilledIcon,ChevronBackIcon, ChevronNextIcon, ContentsIcon,
   ExpandIcon, FilterIcon, ListenIcon, LockIcon, MenuIcon, NoteBookIcon, PearsonLogo, RemoveIcon, ResourcesIcon,
   SearchIcon, SmallCircleFilledIcon,SmallCircleHalfFilledIcon, SmallCircleOutlineIcon, StarFilledIcon, StarHalfFilledIcon,
   StarOutlineIcon, StudyIcon
@@ -26,8 +26,10 @@ const icons = new Map([
   ['BookmarkonIcon', BookmarkonIcon],
   ['CaretDownIcon', CaretDownIcon],
   ['CaretUpIcon', CaretUpIcon],
+  ['CheckCircleFilledIcon', CheckCircleFilledIcon],
   ['ChevronBackIcon', ChevronBackIcon],
   ['ChevronNextIcon', ChevronNextIcon],
+  ['CircleOutlineIcon', CircleOutlineIcon],
   ['ContentsIcon', ContentsIcon],
   ['ExpandIcon', ExpandIcon],
   ['FilterIcon', FilterIcon],
