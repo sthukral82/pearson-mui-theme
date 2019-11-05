@@ -636,11 +636,11 @@ export { default as MenuIcon } from './icons/Menu';
 export { default as RemoveIcon } from './icons/Remove';
 export { default as SearchIcon } from './icons/Search';
 export { default as AssignmentIcon } from './icons/Assignment';
-export { default as IncompleteCircleIcon } from './icons/IncompleteCircle'
-export { default as InprogressCircleIcon } from './icons/InprogressCircle'
-export { default as CompleteCircleIcon } from './icons/CompleteCircle'
-export { default as IncompleteStarIcon } from './icons/IncompleteStar'
-export { default as InprogressStarIcon } from './icons/InprogressStar'
-export { default as CompleteStarIcon } from './icons/CompleteStar'
-export { default as LockedIcon } from './icons/Locked'
+export { default as LockIcon } from './icons/Lock';
+export { default as SmallCircleFilledIcon } from './icons/SmallCircleFilled';
+export { default as SmallCircleHalfFilledIcon } from './icons/SmallCircleHalfFilled';
+export { default as SmallCircleOutlineIcon } from './icons/SmallCircleOutline';
+export { default as StarFilledIcon } from './icons/StarFilled';
+export { default as StarHalfFilledIcon } from './icons/StarHalfFilled';
+export { default as StarOutlineIcon } from './icons/StarOutline';
 export { icons };
