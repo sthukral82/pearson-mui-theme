@@ -7,48 +7,48 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import { withStyles } from '@material-ui/core/styles';
 import {
-  AddIcon,
-  AddItemIcon, ArchiveIcon, ArrowBackIcon, AssignedIcon,
-  BookmarkoffIcon, BookmarkonIcon, CalendarOutlined, CaretDownIcon, CaretUpIcon, CircleOutlineIcon,
-  CheckCircleFilledIcon, ChevronBackIcon, ChevronNextIcon, ContentsIcon,
-  ExpandIcon, FilterIcon, ListenIcon, LockIcon, MenuIcon, NoteBookIcon, PearsonLogo, RemoveIcon, ResourcesIcon,
+  AddCircleOutlinedIcon, AddIcon,
+  ArchiveIcon, ArrowBackIcon,
+  BookmarkOutlinedIcon, BookmarkFilledIcon, CalendarOutlined, CaretDownIcon, CaretUpIcon, CircleOutlineIcon,
+  CheckCircleFilledIcon, ChevronLeftIcon, ChevronRightIcon, DotFilledIcon,
+  ExpandIcon, FilterIcon, FlashcardOutlinedIcon, FolderIcon, ListBulletedIcon, ListenIcon, LockIcon, MenuIcon, NotebookIcon, PearsonLogo, RemoveIcon,
   SearchIcon, SmallCircleFilledIcon, SmallCircleHalfFilledIcon, SmallCircleOutlineIcon,
-  StarFilledIcon, StarHalfFilledIcon, StarOutlineIcon, StudyIcon
+  StarFilledIcon, StarHalfFilledIcon, StarOutlineIcon
 } from 'pearson-mui-theme';
 
 const icons = new Map([
   ['AddIcon', AddIcon],
-  ['AddItemIcon', AddItemIcon],
+  ['AddCircleOutlinedIcon', AddCircleOutlinedIcon],
   ['ArchiveIcon', ArchiveIcon],
   ['ArrowBackIcon', ArrowBackIcon],
-  ['AssignedIcon', AssignedIcon],
-  ['BookmarkoffIcon', BookmarkoffIcon],
-  ['BookmarkonIcon', BookmarkonIcon],
+  ['BookmarkOutlinedIcon', BookmarkOutlinedIcon],
+  ['BookmarkFilledIcon', BookmarkFilledIcon],
   ['CalendarOutlined', CalendarOutlined],
   ['CaretDownIcon', CaretDownIcon],
   ['CaretUpIcon', CaretUpIcon],
   ['CheckCircleFilledIcon', CheckCircleFilledIcon],
-  ['ChevronBackIcon', ChevronBackIcon],
-  ['ChevronNextIcon', ChevronNextIcon],
+  ['ChevronLeftIcon', ChevronLeftIcon],
+  ['ChevronRightIcon', ChevronRightIcon],
   ['CircleOutlineIcon', CircleOutlineIcon],
-  ['ContentsIcon', ContentsIcon],
+  ['DotFilledIcon', DotFilledIcon],
   ['ExpandIcon', ExpandIcon],
   ['FilterIcon', FilterIcon],
+  ['FlashcardOutlinedIcon', FlashcardOutlinedIcon],
+  ['FolderIcon', FolderIcon],
+  ['ListBulletedIcon', ListBulletedIcon],
   ['ListenIcon', ListenIcon],
   ['LockIcon', LockIcon],
   ['MenuIcon', MenuIcon],
-  ['NoteBookIcon', NoteBookIcon],
+  ['NotebookIcon', NotebookIcon],
   ['PearsonLogo', PearsonLogo],
   ['RemoveIcon', RemoveIcon],
-  ['ResourcesIcon', ResourcesIcon],
   ['SearchIcon', SearchIcon],
   ['SmallCircleFilledIcon', SmallCircleFilledIcon],
   ['SmallCircleHalfFilledIcon', SmallCircleHalfFilledIcon],
   ['SmallCircleOutlineIcon', SmallCircleOutlineIcon],
   ['StarFilledIcon', StarFilledIcon],
-  ['StarHalfilledIcon ', StarHalfFilledIcon],
-  ['StarOutlineIcon', StarOutlineIcon],
-  ['StudyIcon', StudyIcon]
+  ['StarHalfilledIcon', StarHalfFilledIcon],
+  ['StarOutlineIcon', StarOutlineIcon]
 ]);
 
 const styles = theme => ({

@@ -4,7 +4,7 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import {
-  ArrowBackIcon, NoteBookIcon, StudyIcon, ResourcesIcon, ContentsIcon, BookmarkoffIcon,
+  ArrowBackIcon, NotebookIcon, FlashcardOutlinedIcon, FolderIcon, ListBulletedIcon, BookmarkOutlinedIcon,
   VerticalTabs, CalendarOutlined
 } from 'pearson-mui-theme';
 
@@ -77,31 +77,31 @@ class SimpleVerticalTabs extends React.Component {
           <Tab
             label="Contents"
             {...a11yProps(1)}
-            icon={<ContentsIcon className={classes.paddingBottom8} />}
+            icon={<ListBulletedIcon className={classes.paddingBottom8} />}
             className={`${classes.tab} ${value === 1 ? classes.activeTab : ''}`}
           />
           <Tab
             label="Bookmarks"
             {...a11yProps(2)}
-            icon={<BookmarkoffIcon className={classes.paddingBottom8} />}
+            icon={<BookmarkOutlinedIcon className={classes.paddingBottom8} />}
             className={`${classes.tab} ${value === 2 ? classes.activeTab : ''}`}
           />
           <Tab
             label="NoteBook"
             {...a11yProps(3)}
-            icon={<NoteBookIcon className={classes.paddingBottom8} />}
+            icon={<NotebookIcon className={classes.paddingBottom8} />}
             className={`${classes.tab} ${value === 3 ? classes.activeTab : ''}`}
           />
           <Tab
             label="Study"
             {...a11yProps(4)}
-            icon={<StudyIcon className={classes.paddingBottom8} />}
+            icon={<FlashcardOutlinedIcon className={classes.paddingBottom8} />}
             className={`${classes.tab} ${value === 4 ? classes.activeTab : ''}`}
           />
           <Tab
             label="Resources"
             {...a11yProps(5)}
-            icon={<ResourcesIcon className={classes.paddingBottom8} />}
+            icon={<FolderIcon className={classes.paddingBottom8} />}
             className={`${classes.tab} ${value === 5 ? classes.activeTab : ''}`}
           />
           <Tab
