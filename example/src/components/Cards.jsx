@@ -9,6 +9,7 @@ import CodeRenderer from '../common/CodeRenderer';
 const Cards = () => (
   <div>
     <CodeRenderer outside name="cards/Cards" />
+    <CodeRenderer outside name="cards/ClickableCards" />
     <CodeRenderer outside name="selections/SelectableCards" />
   </div>
 );

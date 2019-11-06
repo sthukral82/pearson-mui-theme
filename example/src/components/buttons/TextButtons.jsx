@@ -10,15 +10,15 @@ const styles = theme => ({
 });
 
 /**
- * Renders/demos Default Button.
+ * Renders/demos Text Button.
  *
  * @author Hari Gangadharan
  */
 const component = ({ classes }) => (
   <div className="defaultButtons">
     <Button
-      variant="contained"
-      color="primary"
+      variant="text"
+      color="default"
       size="small"
       className={classes.button}
     >
@@ -26,8 +26,8 @@ Small Button
     </Button>
 
     <Button
-      variant="contained"
-      color="primary"
+      variant="text"
+      color="default"
       size="medium"
       className={classes.button}
     >
@@ -35,8 +35,8 @@ Medium Button
     </Button>
 
     <Button
-      variant="contained"
-      color="primary"
+      variant="text"
+      color="default"
       size="large"
       className={classes.button}
     >

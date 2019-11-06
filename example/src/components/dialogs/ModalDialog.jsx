@@ -56,7 +56,7 @@ Cancel
             </Button>
             <Button
               autoFocus
-              variant="text"
+              variant="contained"
               color="primary"
               onClick={this.handleClose}
             >

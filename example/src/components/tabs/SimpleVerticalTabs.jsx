@@ -4,8 +4,7 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import {
-  ArrowBackIcon, NotebookIcon, FlashcardOutlinedIcon, FolderIcon, ListBulletedIcon, BookmarkOutlinedIcon,
-  VerticalTabs, CalendarOutlined
+  VerticalTabs, Icon
 } from 'pearson-mui-theme';
 
 
@@ -27,9 +26,12 @@ function TabContainer(props) {
 }
 
 TabContainer.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.any.isRequired,
-  value: PropTypes.any.isRequired
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired,
+  index: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+  value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired
 };
 
 function a11yProps(index) {
@@ -71,43 +73,43 @@ class SimpleVerticalTabs extends React.Component {
           <Tab
             label="Back"
             {...a11yProps(0)}
-            icon={<ArrowBackIcon className={classes.paddingBottom8} />}
+            icon={<Icon name="ArrowBack" className={classes.paddingBottom8} />}
             className={`${classes.tab} ${value === 0 ? classes.activeTab : ''}`}
           />
           <Tab
             label="Contents"
             {...a11yProps(1)}
-            icon={<ListBulletedIcon className={classes.paddingBottom8} />}
+            icon={<Icon name="ListBulleted" className={classes.paddingBottom8} />}
             className={`${classes.tab} ${value === 1 ? classes.activeTab : ''}`}
           />
           <Tab
             label="Bookmarks"
             {...a11yProps(2)}
-            icon={<BookmarkOutlinedIcon className={classes.paddingBottom8} />}
+            icon={<Icon name="BookmarkOutlined" className={classes.paddingBottom8} />}
             className={`${classes.tab} ${value === 2 ? classes.activeTab : ''}`}
           />
           <Tab
             label="NoteBook"
             {...a11yProps(3)}
-            icon={<NotebookIcon className={classes.paddingBottom8} />}
+            icon={<Icon name="Notebook" className={classes.paddingBottom8} />}
             className={`${classes.tab} ${value === 3 ? classes.activeTab : ''}`}
           />
           <Tab
             label="Study"
             {...a11yProps(4)}
-            icon={<FlashcardOutlinedIcon className={classes.paddingBottom8} />}
+            icon={<Icon name="FlashcardOutlined" className={classes.paddingBottom8} />}
             className={`${classes.tab} ${value === 4 ? classes.activeTab : ''}`}
           />
           <Tab
             label="Resources"
             {...a11yProps(5)}
-            icon={<FolderIcon className={classes.paddingBottom8} />}
+            icon={<Icon name="Folder" className={classes.paddingBottom8} />}
             className={`${classes.tab} ${value === 5 ? classes.activeTab : ''}`}
           />
           <Tab
             label="Assignment"
             {...a11yProps(6)}
-            icon={<CalendarOutlined className={classes.paddingBottom8} />}
+            icon={<Icon name="CalendarOutlined" className={classes.paddingBottom8} />}
             className={`${classes.tab} ${value === 6 ? classes.activeTab : ''}`}
           />
         </VerticalTabs>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import { ProfileDropdown, ProfileDisplay, ChevronRightIcon } from 'pearson-mui-theme';
+import { ProfileDropdown, ProfileDisplay, Icon } from 'pearson-mui-theme';
 
 import {
   Button, Divider, Paper, Typography
@@ -49,7 +49,7 @@ const MenuContent = withStyles(menuStyles)(({ classes }) => (
           Manage your account information
         </Typography>
       </div>
-      <ChevronRightIcon className="applyHover" />
+      <Icon name="ChevronRight" className="applyHover" />
     </ListItem>
     <Divider className={classes.divider} />
     <ListItem className={classes.action}>

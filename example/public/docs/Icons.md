@@ -5,4 +5,3 @@ Pearson icons are available in two sizes, 18x18 and 24x24 pixels. You can incorp
 into your code by passing params.
 
 **Always wrap the icons inside an IconButton when you are using icons for action.**
-

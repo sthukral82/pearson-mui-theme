@@ -23,18 +23,21 @@ Use fontSize and color to customize the button.
 
 **Usage**
 ```html
-<AddIcon color="primary" />
-<AddIcon color="secondary" />
-<AddIcon color="action" />
-<AddIcon color="error" />
-<AddIcon color="disabled" />
+```html
+import { Icon } from 'pearson-mui-theme';
 
-<AddIcon color="primary" fontSize="small" />
-<AddIcon color="secondary" fontSize="large" />
+<Icon name="Add" color="primary" />
+<Icon name="Add" color="secondary" />
+<Icon name="Add" color="action" />
+<Icon name="Add" color="error" />
+<Icon name="Add" color="disabled" />
+
+<Icon name="Add" color="primary" fontSize="small" />
+<Icon name="Add" color="secondary" fontSize="large" />
 
 
 <IconButton className={classes.root} aria-label="NoteBook" disabled color="primary">
-    <NoteBookIcon color="action" />
+    <Icon name="NoteBook" color="action" />
 </IconButton>
 ```
 

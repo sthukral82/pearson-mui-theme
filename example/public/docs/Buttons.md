@@ -17,9 +17,9 @@ Visit [Button](https://uxframework.pearson.com/nightly/buttons) in Pearson UX sp
 |:---|:---|:---|
 |outlined  | primary   | Primary button |
 |outlined  | secondary | CTA button     |
-|contained | default   | Tertiary button|
 |outlined  | default   | Default button|
-|text      | primary   | DA Button |
+|contained | default   | Tertiary button|
+|contained | primary   | DA Button |
 
 
 

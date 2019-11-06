@@ -10,12 +10,13 @@ import FormLabel from '@material-ui/core/FormLabel';
 import IconButton from '@material-ui/core/IconButton';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import { withStyles } from '@material-ui/core/styles';
-import { CheckCircleFilledIcon, CircleOutlineIcon, CardList } from 'pearson-mui-theme';
+import { CardList, Icon } from 'pearson-mui-theme';
 
 
 const styles = () => ({
   card: {
-    width: 362
+    width: 362,
+    marginBottom: 24
   }
 });
 
@@ -42,7 +43,7 @@ class SelectableCards extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <div>
+      <div className={classes.selectableCards}>
         <CardList>
           <Card className={classes.card}>
             <CardHeader
@@ -63,8 +64,8 @@ class SelectableCards extends React.Component {
             <CardActions style={{ display: 'flex', justifyContent: 'space-between' }}>
               <Checkbox
                 checked={this.state.checkedA}
-                icon={<CircleOutlineIcon />}
-                checkedIcon={<CheckCircleFilledIcon />}
+                icon={<Icon name="CircleOutline" />}
+                checkedIcon={<Icon name="CheckCircleFilled" />}
                 onChange={this.handleChange('checkedA')}
                 value="checkedB"
                 color="primary"
@@ -83,8 +84,8 @@ class SelectableCards extends React.Component {
             <CardActions>
               <Checkbox
                 checked={this.state.checkedB}
-                icon={<CircleOutlineIcon />}
-                checkedIcon={<CheckCircleFilledIcon />}
+                icon={<Icon name="CircleOutline" />}
+                checkedIcon={<Icon name="CheckCircleFilled" />}
                 onChange={this.handleChange('checkedB')}
                 value="checkedB"
                 color="primary"
@@ -101,8 +102,8 @@ class SelectableCards extends React.Component {
             <CardActions>
               <Checkbox
                 checked={this.state.checkedC}
-                icon={<CircleOutlineIcon />}
-                checkedIcon={<CheckCircleFilledIcon />}
+                icon={<Icon name="CircleOutline" />}
+                checkedIcon={<Icon name="CheckCircleFilled" />}
                 onChange={this.handleChange('checkedC')}
                 value="checkedB"
                 color="primary"
@@ -119,8 +120,8 @@ class SelectableCards extends React.Component {
             <CardActions>
               <Checkbox
                 checked={this.state.checkedD}
-                icon={<CircleOutlineIcon />}
-                checkedIcon={<CheckCircleFilledIcon />}
+                icon={<Icon name="CircleOutline" />}
+                checkedIcon={<Icon name="CheckCircleFilled" />}
                 onChange={this.handleChange('checkedD')}
                 value="checkedB"
                 color="primary"

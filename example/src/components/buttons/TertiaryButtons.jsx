@@ -17,7 +17,7 @@ const styles = theme => ({
 const component = ({ classes }) => (
   <div className="tertiaryButtons">
     <Button
-      variant="text"
+      variant="contained"
       color="default"
       size="small"
       className={classes.button}
@@ -26,7 +26,7 @@ Small Button
     </Button>
 
     <Button
-      variant="text"
+      variant="contained"
       color="default"
       size="medium"
       className={classes.button}
@@ -35,7 +35,7 @@ Medium Button
     </Button>
 
     <Button
-      variant="text"
+      variant="contained"
       color="default"
       size="large"
       className={classes.button}

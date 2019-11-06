@@ -33,7 +33,8 @@ const pearson = {
     ],
     size: {
       small: 12,
-      normal: 14
+      normal: 14,
+      large: 16
     }
   },
   borderRadius: {
@@ -93,6 +94,10 @@ const pearsonMuiTheme = {
       disabled: colors.concrete,
       hint: colors.charcoal
     },
+    error: {
+      main: colors.strawberryRed,
+      contrastText: colors.whiteGray
+    },
     action: {
       disabled: colors.mediumGray,
       disabledBackground: colors.moonlight
@@ -111,9 +116,7 @@ const pearsonMuiTheme = {
       root: {
         boxSizing: 'border-box',
         fontFamily: pearson.font.size.large,
-        fontSize: pearson.font.size.large,
         padding: 0,
-        marginBottom: 24,
         marginLeft: 0,
         boxShadow: '0 5px 22px 4px rgba(0, 0, 0, 0.03), 0 7px 8px -4px rgba(0, 0, 0, 0.05)',
         backgroundColor: colors.white
@@ -374,8 +377,15 @@ const pearsonMuiTheme = {
         minWidth: 104
       },
       text: {
-        borderRadius: pearson.borderRadius.normal,
-        backgroundColor: colors.alto
+        padding: 0,
+        textAlign: 'inherit',
+        border: '0px',
+        '&:hover': {
+          backgroundColor: 'inherit'
+        },
+        '&$focusVisible': {
+          '&:after': pseodoOutline(2, 1, colors.focusBlue)
+        }
       },
       outlined: {
         boxShadow: '0 5px 22px 4px rgba(0, 0, 0, 0.03), 0 7px 8px -4px rgba(0, 0, 0, 0.05)',
@@ -416,6 +426,9 @@ const pearsonMuiTheme = {
         color: colors.seaBlue,
         borderColor: colors.white,
         backgroundColor: colors.white,
+        '&$focusVisible': {
+          '&:after': pseodoOutline(2, 36, colors.white)
+        },
         '&:hover': {
           backgroundColor: colors.white,
           color: colors.inkBlue
@@ -426,10 +439,25 @@ const pearsonMuiTheme = {
         fontSize: 14,
         lineHeight: '18px',
         fontWeight: 600,
-        borderRadius: pearson.borderRadius.normal
+        borderRadius: pearson.borderRadius.normal,
+        color: colors.charcoal,
+        backgroundColor: colors.sunshineYellow,
+        boxShadow: '0 5px 22px 4px rgba(0, 0, 0, 0.03), 0 7px 8px -4px rgba(0, 0, 0, 0.05)',
+        '&:hover': {
+          backgroundColor: colors.sunflowerYellow,
+          color: colors.charcoal
+        },
+        '&:active': {
+          boxShadow: 'none'
+        }
       },
       containedPrimary: {
-        color: colors.whiteGray
+        color: colors.whiteGray,
+        backgroundColor: colors.strawberryRed,
+        '&:hover': {
+          backgroundColor: colors.strawberryRed,
+          color: colors.white
+        }
       },
       sizeSmall: {
         padding: '5px 24px',
@@ -444,6 +472,19 @@ const pearsonMuiTheme = {
         lineHeight: '20px',
         borderRadius: pearson.borderRadius.large,
         fontWeight: 600
+      }
+    },
+    MuiCardActionArea: {
+      root: {
+        fontFamily: pearson.font.family,
+        fontSize: pearson.font.size.large,
+        boxSizing: 'border-box',
+        '&$focusVisible': {
+          '&:after': pseodoOutline(0, 1, colors.focusBlue)
+        },
+        '&:hover': {
+          background: 'inherit'
+        }
       }
     },
     MuiCardActions: {
@@ -536,6 +577,9 @@ const pearsonMuiTheme = {
       }
     },
     MuiSvgIcon: {
+      root: {
+        fontSize: 18
+      },
       colorPrimary: {
         fill: colors.whiteGray
       },
@@ -543,10 +587,10 @@ const pearsonMuiTheme = {
         color: colors.charcoal
       },
       fontSizeSmall: {
-        fontSize: '18px'
+        fontSize: 16
       },
       fontSizeLarge: {
-        fontSize: '30px'
+        fontSize: 24
       }
     },
     MuiDialogActions: {
@@ -605,41 +649,12 @@ const pearsonMuiTheme = {
 };
 
 export default pearsonMuiTheme;
+export { default as icons } from './icons';
+export { default as Icon } from './icons/Icon';
 export { default as CardList } from './components/CardList';
 export { default as VerticalTabs } from './components/VerticalTabs';
 export { default as MediaCard } from './components/MediaCard';
 export { default as Avatar } from './components/Avatar';
 export { default as ProfileDisplay } from './components/ProfileDisplay';
 export { default as ProfileDropdown } from './components/ProfileDropdown';
-export { default as AddIcon } from './icons/Add';
-export { default as AddCircleOutlinedIcon } from './icons/AddCircleOutlined';
-export { default as ArchiveIcon } from './icons/Archive';
-export { default as ArrowBackIcon } from './icons/ArrowBack';
-export { default as DotFilledIcon } from './icons/DotFilled';
-export { default as CaretDownIcon } from './icons/CaretDown';
-export { default as CaretUpIcon } from './icons/CaretUp';
-export { default as CheckCircleFilledIcon } from './icons/CheckCircleFilled';
-export { default as ChevronLeftIcon } from './icons/ChevronLeft';
-export { default as ChevronRightIcon } from './icons/ChevronRight';
-export { default as CircleOutlineIcon } from './icons/CircleOutline';
-export { default as BookmarkOutlinedIcon } from './icons/BookmarkOutlined';
-export { default as BookmarkFilledIcon } from './icons/BookmarkFilled';
-export { default as ListBulletedIcon } from './icons/ListBulleted';
-export { default as NotebookIcon } from './icons/Notebook';
-export { default as FolderIcon } from './icons/Folder';
-export { default as FlashcardOutlinedIcon } from './icons/FlashcardOutlined';
-export { default as ExpandIcon } from './icons/Expand';
-export { default as FilterIcon } from './icons/Filter';
 export { default as PearsonLogo } from './icons/PearsonLogo';
-export { default as ListenIcon } from './icons/Listen';
-export { default as MenuIcon } from './icons/Menu';
-export { default as RemoveIcon } from './icons/Remove';
-export { default as SearchIcon } from './icons/Search';
-export { default as CalendarOutlined } from './icons/CalendarOutlined';
-export { default as LockIcon } from './icons/Lock';
-export { default as SmallCircleFilledIcon } from './icons/SmallCircleFilled';
-export { default as SmallCircleHalfFilledIcon } from './icons/SmallCircleHalfFilled';
-export { default as SmallCircleOutlineIcon } from './icons/SmallCircleOutline';
-export { default as StarFilledIcon } from './icons/StarFilled';
-export { default as StarHalfFilledIcon } from './icons/StarHalfFilled';
-export { default as StarOutlineIcon } from './icons/StarOutline';

@@ -29,15 +29,20 @@ const styles = () => ({
   }
 });
 
-const CardList = ({ classes, children }) => (
-  <div className={classes.root}>
+const CardList = ({ classes, className, children }) => (
+  <div className={`${className} ${classes.root}`}>
     {children}
   </div>
 );
 
 CardList.propTypes = {
   children: PropTypes.oneOf([PropTypes.arrayOf(PropTypes.node.isRequired), PropTypes.node.isRequired]).isRequired,
+  className: PropTypes.string,
   classes: PropTypes.object.isRequired
+};
+
+CardList.defaultProps = {
+  className: ''
 };
 
 export default withStyles(styles)(CardList);

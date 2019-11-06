@@ -6,50 +6,8 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import { withStyles } from '@material-ui/core/styles';
-import {
-  AddCircleOutlinedIcon, AddIcon,
-  ArchiveIcon, ArrowBackIcon,
-  BookmarkOutlinedIcon, BookmarkFilledIcon, CalendarOutlined, CaretDownIcon, CaretUpIcon, CircleOutlineIcon,
-  CheckCircleFilledIcon, ChevronLeftIcon, ChevronRightIcon, DotFilledIcon,
-  ExpandIcon, FilterIcon, FlashcardOutlinedIcon, FolderIcon, ListBulletedIcon, ListenIcon, LockIcon, MenuIcon, NotebookIcon, PearsonLogo, RemoveIcon,
-  SearchIcon, SmallCircleFilledIcon, SmallCircleHalfFilledIcon, SmallCircleOutlineIcon,
-  StarFilledIcon, StarHalfFilledIcon, StarOutlineIcon
-} from 'pearson-mui-theme';
+import { icons, Icon } from 'pearson-mui-theme';
 
-const icons = new Map([
-  ['AddIcon', AddIcon],
-  ['AddCircleOutlinedIcon', AddCircleOutlinedIcon],
-  ['ArchiveIcon', ArchiveIcon],
-  ['ArrowBackIcon', ArrowBackIcon],
-  ['BookmarkOutlinedIcon', BookmarkOutlinedIcon],
-  ['BookmarkFilledIcon', BookmarkFilledIcon],
-  ['CalendarOutlined', CalendarOutlined],
-  ['CaretDownIcon', CaretDownIcon],
-  ['CaretUpIcon', CaretUpIcon],
-  ['CheckCircleFilledIcon', CheckCircleFilledIcon],
-  ['ChevronLeftIcon', ChevronLeftIcon],
-  ['ChevronRightIcon', ChevronRightIcon],
-  ['CircleOutlineIcon', CircleOutlineIcon],
-  ['DotFilledIcon', DotFilledIcon],
-  ['ExpandIcon', ExpandIcon],
-  ['FilterIcon', FilterIcon],
-  ['FlashcardOutlinedIcon', FlashcardOutlinedIcon],
-  ['FolderIcon', FolderIcon],
-  ['ListBulletedIcon', ListBulletedIcon],
-  ['ListenIcon', ListenIcon],
-  ['LockIcon', LockIcon],
-  ['MenuIcon', MenuIcon],
-  ['NotebookIcon', NotebookIcon],
-  ['PearsonLogo', PearsonLogo],
-  ['RemoveIcon', RemoveIcon],
-  ['SearchIcon', SearchIcon],
-  ['SmallCircleFilledIcon', SmallCircleFilledIcon],
-  ['SmallCircleHalfFilledIcon', SmallCircleHalfFilledIcon],
-  ['SmallCircleOutlineIcon', SmallCircleOutlineIcon],
-  ['StarFilledIcon', StarFilledIcon],
-  ['StarHalfilledIcon', StarHalfFilledIcon],
-  ['StarOutlineIcon', StarOutlineIcon]
-]);
 
 const styles = theme => ({
   root: {
@@ -77,18 +35,17 @@ const component = ({ classes }) => (
     </TableHead>
     <TableBody>
       {
-        Array.from(icons).map(([name, Icon], key) => (
+        Array.from(icons.keys()).map((name, key) => (
           <TableRow key={key}>
             <TableCell component="th" scope="row" style={{ backgroundColor: '#c7c7c7' }}>
-              <icon />
               {name}
             </TableCell>
             <TableCell align="center">
-              <Icon fontSize="large" />
+              <Icon name={name} fontSize="large" />
             </TableCell>
-            <TableCell align="center"><Icon color="primary" /></TableCell>
+            <TableCell align="center"><Icon name={name} color="primary" /></TableCell>
             <TableCell align="center" style={{ backgroundColor: '#c7c7c7' }}>
-              <Icon fontSize="small" color="secondary" />
+              <Icon name={name} fontSize="small" color="secondary" />
             </TableCell>
           </TableRow>
         ))

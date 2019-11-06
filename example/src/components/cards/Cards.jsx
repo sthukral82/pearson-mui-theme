@@ -4,13 +4,17 @@ import Card from '@material-ui/core/Card';
 import Typography from '@material-ui/core/Typography';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import CardActionArea from '@material-ui/core/CardActionArea';
 import { withStyles } from '@material-ui/core/styles';
 import { CardList } from 'pearson-mui-theme';
 
 const styles = () => ({
   card: {
-    width: 362
+    width: 362,
+    marginBottom: 24
+  },
+  simpleCards: {
+    marginBottom: 32,
+    marginTop: 32
   }
 });
 /**
@@ -19,26 +23,18 @@ const styles = () => ({
  * @author Hari Gangadharan
  */
 const Cards = ({ classes }) => (
-  <div>
+  <div className={classes.simpleCards}>
     <CardList>
       <Typography variant="h3">Recently Visited</Typography>
     </CardList>
     <CardList>
       <Card className={classes.card}>
-        <CardActionArea
-          onClick={
-            () => {
-              // do some work
-            }
-          }
-        >
-          <CardContent>
-            1.1-1.2 The History of Psychology
-          </CardContent>
-          <CardActions>
-            <div>JUNE 14, 2019 03:32 PM</div>
-          </CardActions>
-        </CardActionArea>
+        <CardContent>
+          1.1-1.2 The History of Psychology
+        </CardContent>
+        <CardActions>
+          <div>JUNE 14, 2019 03:32 PM</div>
+        </CardActions>
       </Card>
       <Card className={classes.card}>
         <CardContent>

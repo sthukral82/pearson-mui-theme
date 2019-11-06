@@ -6,7 +6,7 @@ import {
 import IconButton from '@material-ui/core/IconButton';
 import JssProvider from 'react-jss/lib/JssProvider';
 import { create } from 'jss';
-import pearsonTheme, { PearsonLogo, MenuIcon } from 'pearson-mui-theme';
+import pearsonTheme, { PearsonLogo, Icon } from 'pearson-mui-theme';
 import DrawerComponent from './common/DrawerComponent';
 import SampleRenderer from './common/SampleRenderer';
 import './App.css';
@@ -46,7 +46,7 @@ class App extends Component {
             <div className="curve">
               <PearsonLogo style={{ fontSize: 49 }} color="secondary" />
               <IconButton style={{ paddingLeft: 16 }} onClick={this.handleMenuClick}>
-                <MenuIcon color="secondary" />
+                <Icon name="Menu" color="secondary" />
               </IconButton>
             </div>
             <BrowserRouter>

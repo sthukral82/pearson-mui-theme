@@ -11,7 +11,7 @@ const colors = {
   mediumGray: '#6a7070',
   moonlight: '#e9e9e9',
   strawberryRed: '#db0021',
-  sunshineYellow: '#ffb71c',
+  sunshineYellow: '#ffb81c',
   sunflowerYellow: '#ff9b19',
   whiteGray: '#f5f5f5',
   white: '#ffffff'

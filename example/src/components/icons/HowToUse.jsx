@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Paper from '@material-ui/core/Paper';
 import IconButton from '@material-ui/core/IconButton';
 import { withStyles } from '@material-ui/core/styles';
-import { AddIcon } from 'pearson-mui-theme';
+import { Icon } from 'pearson-mui-theme';
 
 
 const styles = theme => ({
@@ -28,48 +28,48 @@ const component = ({ classes }) => (
   <Fragment>
     <Paper className={classes.darkBackground}>
       <IconButton className={classes.iconButton}>
-        <AddIcon />
+        <Icon name="Add" />
       </IconButton>
       <IconButton className={classes.iconButton}>
-        <AddIcon color="primary" />
+        <Icon name="Add" color="primary" />
       </IconButton>
       <IconButton className={classes.iconButton}>
-        <AddIcon color="secondary" />
+        <Icon name="Add" color="secondary" />
       </IconButton>
       <IconButton className={classes.iconButton}>
-        <AddIcon color="error" />
+        <Icon name="Add" color="error" />
       </IconButton>
       <IconButton disabled className={classes.iconButton}>
-        <AddIcon />
+        <Icon name="Add" />
       </IconButton>
       <IconButton className={classes.iconButton}>
-        <AddIcon />
+        <Icon name="Add" />
       </IconButton>
     </Paper>
     <Paper className={classes.darkBackground}>
       <div>
-        <AddIcon fontSize="small" color="action" className={classes.root} />
-        <AddIcon fontSize="small" color="primary" className={classes.root} />
-        <AddIcon fontSize="small" color="secondary" className={classes.root} />
-        <AddIcon fontSize="small" color="error" className={classes.root} />
-        <AddIcon fontSize="small" color="disabled" className={classes.root} />
-        <AddIcon fontSize="small" color="inherit" className={classes.root} />
+        <Icon name="Add" fontSize="small" color="action" className={classes.root} />
+        <Icon name="Add" fontSize="small" color="primary" className={classes.root} />
+        <Icon name="Add" fontSize="small" color="secondary" className={classes.root} />
+        <Icon name="Add" fontSize="small" color="error" className={classes.root} />
+        <Icon name="Add" fontSize="small" color="disabled" className={classes.root} />
+        <Icon name="Add" fontSize="small" color="inherit" className={classes.root} />
       </div>
       <div>
-        <AddIcon color="action" className={classes.root} />
-        <AddIcon color="primary" className={classes.root} />
-        <AddIcon color="secondary" className={classes.root} />
-        <AddIcon color="error" className={classes.root} />
-        <AddIcon color="disabled" className={classes.root} />
-        <AddIcon color="inherit" className={classes.root} />
+        <Icon name="Add" color="action" className={classes.root} />
+        <Icon name="Add" color="primary" className={classes.root} />
+        <Icon name="Add" color="secondary" className={classes.root} />
+        <Icon name="Add" color="error" className={classes.root} />
+        <Icon name="Add" color="disabled" className={classes.root} />
+        <Icon name="Add" color="inherit" className={classes.root} />
       </div>
       <div>
-        <AddIcon fontSize="large" color="action" className={classes.root} />
-        <AddIcon fontSize="large" color="primary" className={classes.root} />
-        <AddIcon fontSize="large" color="secondary" className={classes.root} />
-        <AddIcon fontSize="large" color="error" className={classes.root} />
-        <AddIcon fontSize="large" color="disabled" className={classes.root} />
-        <AddIcon fontSize="large" color="inherit" className={classes.root} />
+        <Icon name="Add" fontSize="large" color="action" className={classes.root} />
+        <Icon name="Add" fontSize="large" color="primary" className={classes.root} />
+        <Icon name="Add" fontSize="large" color="secondary" className={classes.root} />
+        <Icon name="Add" fontSize="large" color="error" className={classes.root} />
+        <Icon name="Add" fontSize="large" color="disabled" className={classes.root} />
+        <Icon name="Add" fontSize="large" color="inherit" className={classes.root} />
       </div>
     </Paper>
   </Fragment>
