@@ -27,9 +27,9 @@ function TabContainer(props) {
 }
 
 TabContainer.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.any.isRequired,
-  value: PropTypes.any.isRequired
+  children: PropTypes.node.isRequired,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired
 };
 
 function a11yProps(index) {
@@ -40,10 +40,10 @@ function a11yProps(index) {
 }
 
 const styles = theme => ({
-  root: theme.overrides.MuiVerticalTabs.root,
-  activeTab: theme.overrides.MuiVerticalTabs.activeTab,
-  tab: theme.overrides.MuiVerticalTabs.tab,
-  tabContent: theme.overrides.MuiVerticalTabs.tabContent,
+  root: theme.custom.MuiVerticalTabs.root,
+  activeTab: theme.custom.MuiVerticalTabs.activeTab,
+  tab: theme.custom.MuiVerticalTabs.tab,
+  tabContent: theme.custom.MuiVerticalTabs.tabContent,
   paddingBottom8:
   {
     paddingBottom: '8px'

@@ -193,84 +193,11 @@ const pearsonMuiTheme = {
         paddingRight: 4
       }
     },
-    MuiCustomTabs: {
-      DarkMode: {
-        root: {
-          flexGrow: 1,
-          backgroundColor: '#f5f5f5',
-          padding: '10px',
-          fontFamily: 'OpenSans',
-          fontStyle: 'normal',
-          fontStretch: 'normal',
-          letterSpacing: 'normal'
-        },
-        tabs: {
-          backgroundColor: '#002e60',
-          fontSize: '14px',
-          fontWeight: 'bold',
-          lineHeight: '1.29',
-          color: '#ffffff'
-        },
-        indicator: {
-          height: 3,
-          borderRadius: 2,
-          backgroundColor: '#ffffff'
-        },
-        CustomTab: {
-          border: 0,
-          fontSize: '14px',
-          lineHeight: '1.29'
-        }
-      }
-    },
     MuiPrivateTabIndicator: {
       colorSecondary: {
         backgroundColor: colors.white,
         height: 3,
         marginBottom: 8
-      }
-    },
-    MuiVerticalTabs: {
-      root: {
-        flexGrow: 1,
-        display: 'flex',
-        minHeight: 224,
-        height: '100%',
-        padding: '20px',
-        backgroundColor: '#f5f5f5'
-      },
-      activeTab: {
-        opacity: 0.8,
-        backgroundColor: '#33557b',
-        borderTopLeftRadius: 8,
-        borderBottomLeftRadius: 8
-      },
-      tab: {
-        color: '#ffffff',
-        margin: 0,
-        height: 80,
-        fontSize: 10,
-        minHeight: 60,
-        opacity: 1,
-        '&:hover': {
-          opacity: 0.8,
-          borderTopLeftRadius: 8,
-          borderBottomLeftRadius: 8,
-          backgroundColor: 'rgba(255, 255, 255, 0.6)',
-          color: '#003558'
-        },
-        '&:active': {
-          opacity: 0.8,
-          backgroundColor: '#33557b'
-        },
-        '&:visited': {
-          opacity: 0.8,
-          backgroundColor: '#33557b'
-        }
-      },
-      tabContent: {
-        width: '100%',
-        paddingLeft: '10px'
       }
     },
     MuiTypography: {
@@ -599,6 +526,81 @@ const pearsonMuiTheme = {
       root: {
         alignItems: 'flex-start',
         paddingTop: 30
+      }
+    }
+  },
+  custom: {
+    MuiCustomTabs: {
+      DarkMode: {
+        root: {
+          flexGrow: 1,
+          backgroundColor: '#f5f5f5',
+          padding: '10px',
+          fontFamily: 'OpenSans',
+          fontStyle: 'normal',
+          fontStretch: 'normal',
+          letterSpacing: 'normal'
+        },
+        tabs: {
+          backgroundColor: '#002e60',
+          fontSize: '14px',
+          fontWeight: 'bold',
+          lineHeight: '1.29',
+          color: '#ffffff'
+        },
+        indicator: {
+          height: 3,
+          borderRadius: 2,
+          backgroundColor: '#ffffff'
+        },
+        CustomTab: {
+          border: 0,
+          fontSize: '14px',
+          lineHeight: '1.29'
+        }
+      }
+    },
+    MuiVerticalTabs: {
+      root: {
+        flexGrow: 1,
+        display: 'flex',
+        minHeight: 224,
+        height: '100%',
+        padding: '20px',
+        backgroundColor: '#f5f5f5'
+      },
+      activeTab: {
+        opacity: 0.8,
+        backgroundColor: '#33557b',
+        borderTopLeftRadius: 8,
+        borderBottomLeftRadius: 8
+      },
+      tab: {
+        color: '#ffffff',
+        margin: 0,
+        height: 80,
+        fontSize: 10,
+        minHeight: 60,
+        opacity: 1,
+        '&:hover': {
+          opacity: 0.8,
+          borderTopLeftRadius: 8,
+          borderBottomLeftRadius: 8,
+          backgroundColor: 'rgba(255, 255, 255, 0.6)',
+          color: '#003558'
+        },
+        '&:active': {
+          opacity: 0.8,
+          backgroundColor: '#33557b'
+        },
+        '&:visited': {
+          opacity: 0.8,
+          backgroundColor: '#33557b'
+        }
+      },
+      tabContent: {
+        width: '100%',
+        paddingLeft: '10px'
       }
     }
   }

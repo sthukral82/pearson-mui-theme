@@ -28,7 +28,7 @@ const styles = theme => ({
     backgroundColor: theme.palette.primary.dark,
     color: theme.palette.secondary.contrastText
   },
-  tabs: theme.overrides.MuiCustomTabs.DarkMode.tabs
+  tabs: theme.custom.MuiCustomTabs.DarkMode.tabs
 
 });
 
