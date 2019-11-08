@@ -2,7 +2,9 @@ language: node_js
 node_js:
   - 9
 script:
+  - npm link
   - (cd example && npm install)
+  - (cd example && npm link pearson-mui-theme)
   - npm run lint
   - npm run build
   - npm test
