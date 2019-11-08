@@ -11,6 +11,7 @@ import CircleOutline from './CircleOutline';
 import CheckCircleFilled from './CheckCircleFilled';
 import ChevronLeft from './ChevronLeft';
 import ChevronRight from './ChevronRight';
+import Collapse from './Collapse';
 import Expand from './Expand';
 import Filter from './Filter';
 import FlashcardOutlined from './FlashcardOutlined';
@@ -48,6 +49,7 @@ const icons = new Map([
   ['ChevronLeft', ChevronLeft],
   ['ChevronRight', ChevronRight],
   ['CircleOutline', CircleOutline],
+  ['Collapse', Collapse],
   ['Expand', Expand],
   ['Filter', Filter],
   ['FlashcardOutlined', FlashcardOutlined],
