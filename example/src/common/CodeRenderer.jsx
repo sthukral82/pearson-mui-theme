@@ -100,10 +100,10 @@ class CodeRenderer extends React.Component {
           <MarkdownContainer name={name} />
           <div className="header">
             <IconButton className={classes.button} aria-label="See Code" onClick={this.handleGithubClick}>
-              <GithubIcon />
+              <GithubIcon fontSize="large" />
             </IconButton>
             <IconButton className={classes.button} aria-label="See Code" onClick={this.handleCodeClick}>
-              <CodeIcon />
+              <CodeIcon fontSize="large" />
             </IconButton>
           </div>
           {this.renderCodeBlock()}

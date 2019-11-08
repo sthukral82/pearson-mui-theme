@@ -15,14 +15,14 @@ const styles = theme => ({
  * @author Hari Gangadharan
  */
 const component = ({ classes }) => (
-  <div className="primaryButtons">
+  <div>   <div className="primaryButtons">
     <Button
       variant="outlined"
       color="primary"
       size="small"
       className={classes.button}
     >
-Small Button
+      Small Button
     </Button>
 
     <Button
@@ -31,7 +31,7 @@ Small Button
       size="medium"
       className={classes.button}
     >
-Medium Button
+      Medium Button
     </Button>
 
     <Button
@@ -40,9 +40,42 @@ Medium Button
       size="large"
       className={classes.button}
     >
-Large Button
+      Large Button
     </Button>
   </div>
+    <div className="primaryButtons">
+      <Button
+        disabled
+        variant="outlined"
+        color="primary"
+        size="small"
+        className={classes.button}
+      >
+        Small Button
+      </Button>
+
+      <Button
+        disabled
+        variant="outlined"
+        color="primary"
+        size="medium"
+        className={classes.button}
+      >
+        Medium Button
+      </Button>
+
+      <Button
+        disabled
+        variant="outlined"
+        color="primary"
+        size="large"
+        className={classes.button}
+      >
+        Large Button
+      </Button>
+    </div>
+  </div>
+
 );
 
 component.propTypes = {

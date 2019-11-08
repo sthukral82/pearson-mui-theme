@@ -17,10 +17,10 @@ const styles = theme => ({
 });
 
 const AvatarCustom = withStyles(styles)(({
-  classes, className, color, children, ...rest
+  classes, className, color, disableHover, children, ...rest
 }) => (
   <Avatar
-    className={`avatarHover ${classes[color] || ''} ${className}`}
+    className={`${classes[color] || ''} ${disableHover ? '' : 'avatarHover'} ${className}`}
     {...rest}
   >
     {children}
@@ -29,7 +29,8 @@ const AvatarCustom = withStyles(styles)(({
 
 AvatarCustom.defaultProps = {
   className: '',
-  color: null
+  color: null,
+  disableHover: false
 };
 
 AvatarCustom.propTypes = {
@@ -39,6 +40,7 @@ AvatarCustom.propTypes = {
     PropTypes.node.isRequired
   ]).isRequired,
   classes: PropTypes.object.isRequired,
+  disableHover: PropTypes.bool,
   color: PropTypes.oneOf(['primary', 'secondary']),
   className: PropTypes.string
 };

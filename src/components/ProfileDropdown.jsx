@@ -17,6 +17,7 @@ const ProfileDropdown = ({
             <Avatar
               id={`${idPrefix}-icon-button-avatar`}
               color={avatarColor}
+              disableHover={open}
               aria-label={rest['aria-label']}
             >
               {text}

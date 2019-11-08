@@ -2,6 +2,7 @@ import AddCircleOutlined from './AddCircleOutlined';
 import Add from './Add';
 import Archive from './Archive';
 import ArrowBack from './ArrowBack';
+import BellFilled from './BellFilled';
 import BookmarkOutlined from './BookmarkOutlined';
 import BookmarkFilled from './BookmarkFilled';
 import CalendarOutlined from './CalendarOutlined';
@@ -16,6 +17,7 @@ import Expand from './Expand';
 import Filter from './Filter';
 import FlashcardOutlined from './FlashcardOutlined';
 import Folder from './Folder';
+import HelpFilled from './HelpFilled';
 import ListBulleted from './ListBulleted';
 import Listen from './Listen';
 import Lock from './Lock';
@@ -40,6 +42,7 @@ const icons = new Map([
   ['AddCircleOutlined', AddCircleOutlined],
   ['Archive', Archive],
   ['ArrowBack', ArrowBack],
+  ['BellFilled', BellFilled],
   ['BookmarkOutlined', BookmarkOutlined],
   ['BookmarkFilled', BookmarkFilled],
   ['CalendarOutlined', CalendarOutlined],
@@ -54,6 +57,7 @@ const icons = new Map([
   ['Filter', Filter],
   ['FlashcardOutlined', FlashcardOutlined],
   ['Folder', Folder],
+  ['HelpFilled', HelpFilled],
   ['ListBulleted', ListBulleted],
   ['Listen', Listen],
   ['Lock', Lock],

@@ -15,6 +15,7 @@ const styles = theme => ({
   },
   darkBackground: {
     backgroundColor: '#c7c7c7',
+    marginBottom: theme.spacing.unit,
     color: 'purple' /* just to show how inherit works */
   }
 });

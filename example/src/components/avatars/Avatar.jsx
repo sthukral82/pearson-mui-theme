@@ -16,7 +16,8 @@ const styles = theme => ({
   darkBackground: {
     display: 'flex',
     backgroundColor: theme.palette.primary.dark,
-    padding: 16
+    padding: 16,
+    marginBottom: 24
   },
   lightBackground: {
     display: 'flex',
@@ -38,6 +39,9 @@ const component = ({ classes }) => (
     <Paper className={classes.darkBackground}>
       <IconButton onClick={() => { /* Some Action */ }}>
         <Avatar color="primary" className={classes.avatar} aria-label="Hari Gangadharan">HG</Avatar>
+      </IconButton>
+      <IconButton onClick={() => { /* Some Action */ }}>
+        <Avatar color="primary" disableHover={true} className={classes.avatar} aria-label="Hari Gangadharan">HG</Avatar>
       </IconButton>
     </Paper>
     <Paper className={classes.lightBackground}>

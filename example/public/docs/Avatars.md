@@ -18,7 +18,7 @@ import { Avatar } from 'pearson-mui-theme';
 |:---|:---|
 | primary | Set prop color="primary". White text, white border & transparent background |
 | secondary | Set prop color="secondary". Pearson digital blue text and white background |
-| hover | Applied if Avatar is wrapped in an IconButton and has className avatarHover added to it |
+| disableHover |If disableHover is set to true, hover is disabled. |
 
 
 

@@ -9,7 +9,7 @@ const styles = theme => ({
     margin: theme.spacing.unit
   },
   darkBackground: {
-    backgroundColor: theme.palette.primary.dark
+    backgroundColor: theme.palette.primary.main
   }
 });
 

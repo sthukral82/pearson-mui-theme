@@ -5,16 +5,16 @@ Use fontSize and color to customize the button.
 
 |fontSize|Description|
 |:---|:---|
-|~~inherit~~ | Inherits the font size from parent. __Never use this.__ |
-|__default__  | 24px icons. This is the default option |
-|__small__  | 18x icons. |
-|__large__  | 30px icons. __Not used in our designs / for future use__ |
+|__inherit__ | Inherits the font size from parent. __Use this option with caution.__ |
+|__small__  | 16px icons. |
+|__default__  | 18px icons. This is the default option |
+|__large__  | 24px icons. |
 
 **Usage of color prop**
 
 |color|Description|
 |:---|:---|
-|~~inherit~~ | This is the default option. Inherits the font size from parent. __Never use this.__ |
+|__inherit__ | This is the default option. Inherits the font size from parent. __Use this option with caution.__ |
 |__action__  | Usual icon buttons, color: charcoal. |
 |__primary__  | Pearson digital blue |
 |__secondary__  | White icons |

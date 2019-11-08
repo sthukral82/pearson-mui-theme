@@ -202,7 +202,7 @@ const pearsonMuiTheme = {
           flexGrow: 1,
           backgroundColor: '#f5f5f5',
           padding: '10px',
-          fontFamily: 'OpenSans',
+          fontFamily: 'Open Sans',
           fontStyle: 'normal',
           fontStretch: 'normal',
           letterSpacing: 'normal'
@@ -367,11 +367,9 @@ const pearsonMuiTheme = {
     MuiButton: {
       root: {
         fontSize: 16,
+        fontWeight: 600,
         lineHeight: 1.25,
-        textTransform: 'none',
-        '&$disabled': {
-          backgroundColor: colors.moonlight
-        }
+        textTransform: 'none'
       },
       label: {
         minWidth: 104
@@ -388,6 +386,7 @@ const pearsonMuiTheme = {
         }
       },
       outlined: {
+        padding: '7px 17px',
         boxShadow: '0 5px 22px 4px rgba(0, 0, 0, 0.03), 0 7px 8px -4px rgba(0, 0, 0, 0.05)',
         borderColor: colors.mediumGray,
         color: colors.mediumGray,
@@ -400,6 +399,7 @@ const pearsonMuiTheme = {
         },
         '&$disabled': {
           border: '1px solid',
+          backgroundColor: colors.moonlight,
           borderColor: colors.moonlight
         }
       },
@@ -412,7 +412,6 @@ const pearsonMuiTheme = {
         }
       },
       outlinedPrimary: {
-        padding: '7px 24px',
         color: colors.white,
         backgroundColor: colors.digitalBlue,
         borderColor: colors.digitalBlue,
@@ -420,6 +419,12 @@ const pearsonMuiTheme = {
           color: colors.white,
           borderColor: colors.inkBlue,
           backgroundColor: colors.inkBlue
+        },
+        '&$disabled': {
+          opacity: 0.5,
+          backgroundColor: colors.digitalBlue,
+          border: 'solid 1px rgba(151, 151, 151, 0.07)',
+          color: colors.white
         }
       },
       outlinedSecondary: {
@@ -431,7 +436,12 @@ const pearsonMuiTheme = {
         },
         '&:hover': {
           backgroundColor: colors.white,
+          boxShadow: '0 6px 10px 0 rgba(37, 37, 37, 0.5), 0 2px 4px 0 rgba(0, 0, 0, 0.5)',
           color: colors.inkBlue
+        },
+        '&:active': {
+          backgroundColor: colors.whiteGray,
+          boxShadow: 'none'
         }
       },
       contained: {
@@ -470,8 +480,7 @@ const pearsonMuiTheme = {
         padding: '9px 24px',
         fontSize: '16px',
         lineHeight: '20px',
-        borderRadius: pearson.borderRadius.large,
-        fontWeight: 600
+        borderRadius: pearson.borderRadius.large
       }
     },
     MuiCardActionArea: {

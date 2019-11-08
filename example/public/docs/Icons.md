@@ -1,7 +1,7 @@
 # Icons
 
-Visit [Icons](https://uxframework.pearson.com/nightly/icons) in Pearson UX specifications.
-Pearson icons are available in two sizes, 18x18 and 24x24 pixels. You can incorporate them 
-into your code by passing params.
+Pearson usually uses icons in two sizes 18px and 24px. This theme library provides Pearson icons
+in three different sizes (16px, 18px and 24px) and 4 different colors. The style can be adjusted 
+by using props fontSize and color.
 
 **Always wrap the icons inside an IconButton when you are using icons for action.**
