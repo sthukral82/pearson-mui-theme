@@ -8,7 +8,6 @@ import Checkbox from '@material-ui/core/Checkbox';
 import Divider from '@material-ui/core/Divider';
 import FormLabel from '@material-ui/core/FormLabel';
 import IconButton from '@material-ui/core/IconButton';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
 import { withStyles } from '@material-ui/core/styles';
 import { CardList, Icon } from 'pearson-mui-theme';
 
@@ -50,7 +49,7 @@ class SelectableCards extends React.Component {
               className="small"
               action={(
                 <IconButton>
-                  <MoreVertIcon />
+                  <Icon name="MoreVert" />
                 </IconButton>
               )}
               title="Shrimp and Chorizo Paella September 14, 2016 and long header that will not stop here   "

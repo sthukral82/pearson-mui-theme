@@ -12,7 +12,7 @@ const Icon = ({ name, ...rest }) => {
   const IconToRender = icons.get(name);
   return (
     <IconToRender {...rest} />
-  )
+  );
 };
 
 Icon.propTypes = {

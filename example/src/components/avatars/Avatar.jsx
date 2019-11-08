@@ -41,7 +41,7 @@ const component = ({ classes }) => (
         <Avatar color="primary" className={classes.avatar} aria-label="Hari Gangadharan">HG</Avatar>
       </IconButton>
       <IconButton onClick={() => { /* Some Action */ }}>
-        <Avatar color="primary" disableHover={true} className={classes.avatar} aria-label="Hari Gangadharan">HG</Avatar>
+        <Avatar color="primary" disableHover className={classes.avatar} aria-label="Hari Gangadharan">HG</Avatar>
       </IconButton>
     </Paper>
     <Paper className={classes.lightBackground}>

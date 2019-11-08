@@ -5,7 +5,9 @@ import Typography from '@material-ui/core/Typography';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import { withStyles } from '@material-ui/core/styles';
-import { CardList } from 'pearson-mui-theme';
+import { CardList, Icon } from 'pearson-mui-theme';
+import CardHeader from '@material-ui/core/CardHeader';
+import IconButton from '@material-ui/core/IconButton';
 
 const styles = () => ({
   card: {
@@ -29,6 +31,14 @@ const Cards = ({ classes }) => (
     </CardList>
     <CardList>
       <Card className={classes.card}>
+        <CardHeader
+          className="small"
+          action={(
+            <IconButton>
+              <Icon name="MoreVert" />
+            </IconButton>
+          )}
+        />
         <CardContent>
           1.1-1.2 The History of Psychology
         </CardContent>

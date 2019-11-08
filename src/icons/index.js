@@ -22,6 +22,7 @@ import ListBulleted from './ListBulleted';
 import Listen from './Listen';
 import Lock from './Lock';
 import Menu from './Menu';
+import MoreVert from './MoreVert';
 import Notebook from './Notebook';
 import PearsonLogo from './PearsonLogo';
 import Remove from './Remove';
@@ -62,6 +63,7 @@ const icons = new Map([
   ['Listen', Listen],
   ['Lock', Lock],
   ['Menu', Menu],
+  ['MoreVert', MoreVert],
   ['Notebook', Notebook],
   ['PearsonLogo', PearsonLogo],
   ['Remove', Remove],

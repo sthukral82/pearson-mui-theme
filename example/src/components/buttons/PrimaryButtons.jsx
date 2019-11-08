@@ -15,34 +15,33 @@ const styles = theme => ({
  * @author Hari Gangadharan
  */
 const component = ({ classes }) => (
-  <div>   <div className="primaryButtons">
-    <Button
-      variant="outlined"
-      color="primary"
-      size="small"
-      className={classes.button}
-    >
-      Small Button
-    </Button>
-
-    <Button
-      variant="outlined"
-      color="primary"
-      size="medium"
-      className={classes.button}
-    >
-      Medium Button
-    </Button>
-
-    <Button
-      variant="outlined"
-      color="primary"
-      size="large"
-      className={classes.button}
-    >
-      Large Button
-    </Button>
-  </div>
+  <div>
+    <div className="primaryButtons">
+      <Button
+        variant="outlined"
+        color="primary"
+        size="small"
+        className={classes.button}
+      >
+        Small Button
+      </Button>
+      <Button
+        variant="outlined"
+        color="primary"
+        size="medium"
+        className={classes.button}
+      >
+        Medium Button
+      </Button>
+      <Button
+        variant="outlined"
+        color="primary"
+        size="large"
+        className={classes.button}
+      >
+        Large Button
+      </Button>
+    </div>
     <div className="primaryButtons">
       <Button
         disabled
@@ -53,7 +52,6 @@ const component = ({ classes }) => (
       >
         Small Button
       </Button>
-
       <Button
         disabled
         variant="outlined"
@@ -63,7 +61,6 @@ const component = ({ classes }) => (
       >
         Medium Button
       </Button>
-
       <Button
         disabled
         variant="outlined"
