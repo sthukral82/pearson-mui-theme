@@ -24,6 +24,7 @@ import Lock from './Lock';
 import Menu from './Menu';
 import MoreVert from './MoreVert';
 import Notebook from './Notebook';
+import Pdf from './Pdf';
 import PearsonLogo from './PearsonLogo';
 import Remove from './Remove';
 import Search from './Search';
@@ -33,6 +34,7 @@ import SmallCircleOutline from './SmallCircleOutline';
 import StarFilled from './StarFilled';
 import StarHalfFilled from './StarHalfFilled';
 import StarOutline from './StarOutline';
+import Text from './Text';
 
 /**
  * A Map containing all Icons
@@ -65,6 +67,7 @@ const icons = new Map([
   ['Menu', Menu],
   ['MoreVert', MoreVert],
   ['Notebook', Notebook],
+  ['Pdf', Pdf],
   ['PearsonLogo', PearsonLogo],
   ['Remove', Remove],
   ['Search', Search],
@@ -73,7 +76,8 @@ const icons = new Map([
   ['SmallCircleOutline', SmallCircleOutline],
   ['StarFilled', StarFilled],
   ['StarHalfilled', StarHalfFilled],
-  ['StarOutline', StarOutline]
+  ['StarOutline', StarOutline],
+  ['Text', Text]
 ]);
 
 export default icons;
