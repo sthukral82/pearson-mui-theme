@@ -7,7 +7,6 @@ import Paper from '@material-ui/core/Paper';
 import Popper from '@material-ui/core/Popper';
 import { withStyles } from '@material-ui/core/styles';
 
-
 const styles = () => ({
   popup: {
     width: 360
@@ -21,14 +20,23 @@ const styles = () => ({
 class Dropdown extends React.Component {
   constructor(props) {
     super(props);
+    this.ignoreOpen = false;
     this.state = { open: false };
   }
 
   handleToggle = () => {
-    this.handleChange(!this.state.open);
+    if (this.state.open || !this.ignoreOpen) {
+      this.handleChange(!this.state.open);
+    }
   };
 
   handleClose = () => {
+    this.ignoreOpen = true;
+    setTimeout(
+      () => {
+        this.ignoreOpen = false;
+      }, 5
+    );
     this.handleChange(false);
   };
 
@@ -81,7 +89,7 @@ class Dropdown extends React.Component {
               id="profile-menu"
               style={{ transformOrigin: placement === 'bottom' ? 'top' : 'bottom' }}
             >
-              <Paper className={classes.popup}>
+              <Paper className={classes.popup} onClick={this.handleClose}>
                 <ClickAwayListener onClickAway={this.handleClose}>
                   {children}
                 </ClickAwayListener>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 import { ProfileDropdown, ProfileDisplay, Icon } from 'pearson-mui-theme';
 
 import {
@@ -28,7 +29,7 @@ const menuStyles = () => ({
   }
 });
 
-const MenuContent = withStyles(menuStyles)(({ classes }) => (
+const MenuContent = withStyles(menuStyles)(withRouter(({ classes, history }) => (
   <List>
     <ListItem className={classes.header}>
       <ProfileDisplay name="Hari Gangadharan" email="hari.gangadharan@pearson.com" />
@@ -38,7 +39,7 @@ const MenuContent = withStyles(menuStyles)(({ classes }) => (
       button
       className={classes.menuItem}
       onClick={
-        () => { /* Do something with click */ }
+        () => { /* Do something with click */ history.push('/icons'); }
       }
     >
       <div>
@@ -61,7 +62,7 @@ const MenuContent = withStyles(menuStyles)(({ classes }) => (
       </Button>
     </ListItem>
   </List>
-));
+)));
 
 
 const styles = theme => ({
