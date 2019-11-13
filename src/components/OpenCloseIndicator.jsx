@@ -6,8 +6,8 @@ import CaretDown from '../icons/CaretDown';
 
 const styles = () => ({
   indicator: {
-    paddingTop: 21,
-    paddingLeft: 8
+    marginTop: 21,
+    marginLeft: 8
   }
 });
 

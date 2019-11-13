@@ -57,7 +57,8 @@ class Dropdown extends React.Component {
   }
 
   render() {
-    const { open } = this.state;
+    // Returns open state either from parent or local
+    const open = this.isOpen();
     const {
       classes, idPrefix, children, renderIcon
     } = this.props;

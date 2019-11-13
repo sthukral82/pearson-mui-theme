@@ -357,7 +357,6 @@ const pearsonMuiTheme = {
     },
     MuiButtonBase: {
       root: {
-        boxSizing: 'content-box',
         border: `2px solid ${colors.transparent}`,
         '&$focusVisible': {
           '&:after': pseodoOutline(2, 36, colors.focusBlue)

@@ -1,7 +1,7 @@
 {
   "name": "pearson-mui-theme-example",
   "homepage": "https://Pearson-Higher-Ed.github.io/",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "license": "MIT",
   "private": true,
   "dependencies": {
@@ -11,7 +11,7 @@
     "axios": "^0.18.0",
     "jss": "^9.8.7",
     "jsx-to-string": "^1.4.0",
-    "pearson-mui-theme": "0.1.6",
+    "pearson-mui-theme": "0.1.7",
     "prop-types": "^15.6.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
