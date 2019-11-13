@@ -32,7 +32,7 @@ const menuStyles = () => ({
 const MenuContent = withStyles(menuStyles)(withRouter(({ classes, history }) => (
   <List>
     <ListItem className={classes.header}>
-      <ProfileDisplay name="Hari Gangadharan" email="hari.gangadharan@pearson.com" />
+      <ProfileDisplay avatarText="HG" name="Hari Gangadharan" email="hari.gangadharan@pearson.com" />
     </ListItem>
     <Divider className={classes.divider} />
     <ListItem
