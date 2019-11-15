@@ -2,7 +2,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
-import { ProfileDropdown, ProfileDisplay, Icon } from 'pearson-mui-theme';
+import { ProfileDropdown, ProfileDisplay, Icon } from '@greenville/mui-theme';
 
 import {
   Button, Divider, Paper, Typography

@@ -7,7 +7,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import { withStyles } from '@material-ui/core/styles';
-import { CardList } from 'pearson-mui-theme';
+import { CardList } from '@greenville/mui-theme';
 
 const styles = theme => ({
   card: {

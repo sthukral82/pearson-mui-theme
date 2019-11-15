@@ -6,7 +6,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import { withStyles } from '@material-ui/core/styles';
-import { icons, Icon } from 'pearson-mui-theme';
+import { icons, Icon } from '@greenville/mui-theme';
 
 
 const styles = theme => ({

@@ -24,7 +24,7 @@ Use fontSize and color to customize the button.
 **Usage**
 ```html
 ```html
-import { Icon } from 'pearson-mui-theme';
+import { Icon } from '@greenville/mui-theme';
 
 <Icon name="Add" color="primary" />
 <Icon name="Add" color="secondary" />

@@ -6,7 +6,7 @@ import {
 import IconButton from '@material-ui/core/IconButton';
 import JssProvider from 'react-jss/lib/JssProvider';
 import { create } from 'jss';
-import pearsonTheme, { PearsonLogo, Icon } from 'pearson-mui-theme';
+import pearsonTheme, { PearsonLogo, Icon } from '@greenville/mui-theme';
 import DrawerComponent from './common/DrawerComponent';
 import SampleRenderer from './common/SampleRenderer';
 import './App.css';

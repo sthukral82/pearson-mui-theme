@@ -16,18 +16,18 @@ Install the package in your project. In your app root folder do:
 **NPM Command**
 
 ```shell
-> npm install --save pearson-mui-theme
+> npm install --save @greenville/mui-theme
 ```
 
 **Yarn Command**
 
 ```shell
-> yarn add pearson-mui-theme
+> yarn add @greenville/mui-theme
 ```
 
 Once package is installed, it can be imported and used as your theme.
 ```javascript
-import pearsonTheme from 'pearson-mui-theme';
+import pearsonTheme from '@greenville/mui-theme';
 import { MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles';
 ```
 

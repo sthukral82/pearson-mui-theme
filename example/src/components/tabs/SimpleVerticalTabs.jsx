@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import {
   VerticalTabs, Icon
-} from 'pearson-mui-theme';
+} from '@greenville/mui-theme';
 
 
 function TabContainer(props) {

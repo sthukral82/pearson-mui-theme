@@ -5,7 +5,7 @@ Visit [Avatars](https://uxframework.pearson.com/c/avatar-display) in Pearson UX 
 
 **Usage**
 ```html
-import { Avatar } from 'pearson-mui-theme';
+import { Avatar } from '@greenville/mui-theme';
 
 <Avatar
   aria-label="Hari Gangadharan's Profile"

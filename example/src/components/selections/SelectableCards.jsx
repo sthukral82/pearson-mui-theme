@@ -9,7 +9,7 @@ import Divider from '@material-ui/core/Divider';
 import FormLabel from '@material-ui/core/FormLabel';
 import IconButton from '@material-ui/core/IconButton';
 import { withStyles } from '@material-ui/core/styles';
-import { CardList, Icon } from 'pearson-mui-theme';
+import { CardList, Icon } from '@greenville/mui-theme';
 
 
 const styles = () => ({

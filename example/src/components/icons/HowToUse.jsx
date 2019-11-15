@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Paper from '@material-ui/core/Paper';
 import IconButton from '@material-ui/core/IconButton';
 import { withStyles } from '@material-ui/core/styles';
-import { Icon } from 'pearson-mui-theme';
+import { Icon } from '@greenville/mui-theme';
 
 
 const styles = theme => ({
