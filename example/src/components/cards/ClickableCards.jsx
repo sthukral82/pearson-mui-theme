@@ -9,7 +9,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import { withStyles } from '@material-ui/core/styles';
 import { CardList } from 'pearson-mui-theme';
 
-const styles = () => ({
+const styles = theme => ({
   card: {
     width: 362
   },
@@ -18,6 +18,12 @@ const styles = () => ({
   },
   clickableCards: {
     marginBottom: 32
+  },
+  dateAndTime: {
+    fontSize: 12,
+    color: theme.palette.text.primary,
+    paddingLeft: 10,
+    letterSpacing: -0.07
   }
 });
 /**
@@ -39,7 +45,7 @@ const Cards = ({ classes }) => (
             1.1-1.2 The History of Psychology
           </CardContent>
           <CardActions>
-            <div>JUNE 14, 2019 03:32 PM</div>
+            <div className={classes.dateAndTime}>JUNE 14, 2019 03:32 PM</div>
           </CardActions>
         </Card>
       </Button>
@@ -54,7 +60,7 @@ const Cards = ({ classes }) => (
             1.5-1.9 The Scientific Research
           </CardContent>
           <CardActions>
-            <div>JUNE 14, 2019 03:37 PM</div>
+            <div className={classes.dateAndTime}>JUNE 14, 2019 03:37 PM</div>
           </CardActions>
         </Card>
       </Button>
@@ -66,7 +72,7 @@ const Cards = ({ classes }) => (
             1.10-1.11 Ethics of Psychology
           </CardContent>
           <CardActions>
-            <div>JUNE 14, 2019 03:39 PM</div>
+            <div className={classes.dateAndTime}>JUNE 14, 2019 03:39 PM</div>
           </CardActions>
         </CardActionArea>
       </Card>

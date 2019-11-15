@@ -498,12 +498,6 @@ const pearsonMuiTheme = {
     MuiCardActions: {
       paddingRight: pearson.padding.l,
       root: {
-        '& div': {
-          fontSize: pearson.font.size.small,
-          color: pearson.colors.charcoal,
-          paddingLeft: 10,
-          letterSpacing: -0.07
-        },
         '@media (min-width:600px)': {
           paddingLeft: pearson.padding.xs,
           paddingRight: pearson.padding.m,
@@ -529,19 +523,10 @@ const pearsonMuiTheme = {
     MuiCardHeader: {
       root: {
         paddingBottom: 0,
-        alignItems: 'flex-start',
-        marginBottom: -28
+        alignItems: 'flex-start'
       },
       content: {
-        overflow: 'hidden',
-        '& span': {
-          textOverflow: 'ellipsis',
-          overflow: 'hidden',
-          whiteSpace: 'nowrap',
-          fontSize: '0.6875em',
-          textTransform: 'uppercase',
-          lineHeight: 'normal'
-        }
+        overflow: 'hidden'
       }
     },
     MuiDivider: {

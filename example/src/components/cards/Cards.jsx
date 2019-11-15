@@ -9,7 +9,7 @@ import { CardList, Icon } from 'pearson-mui-theme';
 import CardHeader from '@material-ui/core/CardHeader';
 import IconButton from '@material-ui/core/IconButton';
 
-const styles = () => ({
+const styles = theme => ({
   card: {
     width: 362,
     marginBottom: 24
@@ -17,6 +17,12 @@ const styles = () => ({
   simpleCards: {
     marginBottom: 32,
     marginTop: 32
+  },
+  dateAndTime: {
+    fontSize: 12,
+    color: theme.palette.text.primary,
+    paddingLeft: 10,
+    letterSpacing: -0.07
   }
 });
 /**
@@ -38,12 +44,10 @@ const Cards = ({ classes }) => (
               <Icon name="MoreVert" />
             </IconButton>
           )}
+          title="1.1-1.2 The History of Psychologyssss"
         />
-        <CardContent>
-          1.1-1.2 The History of Psychology
-        </CardContent>
         <CardActions>
-          <div>JUNE 14, 2019 03:32 PM</div>
+          <div className={classes.dateAndTime}>JUNE 14, 2019 03:32 PM</div>
         </CardActions>
       </Card>
       <Card className={classes.card}>
@@ -51,7 +55,7 @@ const Cards = ({ classes }) => (
           1.5-1.9 The Scientific Research
         </CardContent>
         <CardActions>
-          <div>JUNE 14, 2019 03:37 PM</div>
+          <div className={classes.dateAndTime}>JUNE 14, 2019 03:37 PM</div>
         </CardActions>
       </Card>
       <Card className={classes.card}>
@@ -59,7 +63,7 @@ const Cards = ({ classes }) => (
           1.10-1.11 Ethics of Psychology
         </CardContent>
         <CardActions>
-          <div>JUNE 14, 2019 03:39 PM</div>
+          <div className={classes.dateAndTime}>JUNE 14, 2019 03:39 PM</div>
         </CardActions>
       </Card>
     </CardList>
