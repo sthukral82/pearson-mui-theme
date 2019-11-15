@@ -234,7 +234,7 @@ const pearsonMuiTheme = {
       }
     },
     MuiVerticalTabs: {
-      root: {
+      container: {
         flexGrow: 1,
         display: 'flex',
         minHeight: 224,
@@ -242,38 +242,54 @@ const pearsonMuiTheme = {
         padding: '20px',
         backgroundColor: '#f5f5f5'
       },
+      root: {
+        minWidth: 60
+      },
       activeTab: {
-        opacity: 0.8,
-        backgroundColor: '#33557b',
+        width: 58,
+        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+        border: '1px solid #33557b',
         borderTopLeftRadius: 8,
         borderBottomLeftRadius: 8
       },
       tab: {
         color: '#ffffff',
+        textAlign: 'center',
         margin: 0,
         height: 80,
         fontSize: 10,
+        fontWeight: 600,
         minHeight: 60,
         opacity: 1,
+        padding: 0,
         '&:hover': {
-          opacity: 0.8,
+          backgroundColor: 'rgba(255, 255, 255, 0.1)',
+          border: '1px solid #33557b',
           borderTopLeftRadius: 8,
-          borderBottomLeftRadius: 8,
-          backgroundColor: 'rgba(255, 255, 255, 0.6)',
-          color: '#003558'
+          borderBottomLeftRadius: 8
         },
         '&:active': {
-          opacity: 0.8,
-          backgroundColor: '#33557b'
+          backgroundColor: 'rgba(255, 255, 255, 0.1)',
+          border: '1px solid #33557b',
+          borderTopLeftRadius: 8,
+          borderBottomLeftRadius: 8
         },
         '&:visited': {
-          opacity: 0.8,
-          backgroundColor: '#33557b'
+          backgroundColor: 'rgba(255, 255, 255, 0.1)',
+          border: '1px solid #33557b',
+          borderTopLeftRadius: 8,
+          borderBottomLeftRadius: 8
         }
       },
       tabContent: {
         width: '100%',
         paddingLeft: '10px'
+      },
+      wrapper: {
+        padding: 0
+      },
+      labelContainer: {
+        paddingTop: 9
       }
     },
     MuiTypography: {

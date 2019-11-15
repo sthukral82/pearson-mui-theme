@@ -4,16 +4,22 @@ import Tabs from '@material-ui/core/Tabs';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = () => ({
-  tabs: {
+  root: {
+    display: 'flex',
     backgroundColor: '#002e60',
-    borderRight: '1px solid ',
-    width: 72,
-    minWidth: 64,
+    height: '100%',
+    width: 60,
+    minWidth: 60,
+    maxWidth: 60,
     minHeight: 640
+  },
+  tabs: {
+    border: 0
   }
 });
 
-const CustomVerticalTabs = withStyles(() => ({
+// Customized Mui Tabs library
+const CustomTabs = withStyles(() => ({
   flexContainer: {
     flexDirection: 'column'
   },
@@ -22,20 +28,25 @@ const CustomVerticalTabs = withStyles(() => ({
   }
 }))(Tabs);
 
-const VerticalTabs = ({ classes, children, ...other }) => (
-  <CustomVerticalTabs
-    orientation="vertical"
-    aria-label="Vertical tabs example"
-    className={classes.tabs}
-    {...other}
-  >
-    {children}
-  </CustomVerticalTabs>
+const VerticalTabs = ({
+  children,
+  classes,
+  ...rest
+}) => (
+  <div className={classes.root}>
+    <CustomTabs
+      aria-label="Vertical tabs"
+      className={classes.tabs}
+      {...rest}
+    >
+      {children}
+    </CustomTabs>
+  </div>
 );
 
 VerticalTabs.propTypes = {
-  classes: PropTypes.object.isRequired,
-  children: PropTypes.array.isRequired
+  children: PropTypes.array.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(VerticalTabs);
