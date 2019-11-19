@@ -29,7 +29,7 @@ const menuStyles = () => ({
   }
 });
 
-const MenuContent = withStyles(menuStyles)(withRouter(({ classes, history }) => (
+const MenuContent = withStyles(menuStyles)(withRouter(({ classes, history, onClose }) => (
   <List>
     <ListItem className={classes.header}>
       <ProfileDisplay avatarText="HG" name="Hari Gangadharan" email="hari.gangadharan@pearson.com" />
@@ -39,7 +39,7 @@ const MenuContent = withStyles(menuStyles)(withRouter(({ classes, history }) => 
       button
       className={classes.menuItem}
       onClick={
-        () => { /* Do something with click */ history.push('/icons'); }
+        () => { /* Do something with click */ history.push('/icons'); onClose(); }
       }
     >
       <div>
@@ -78,13 +78,38 @@ const styles = theme => ({
  *
  * @author Hari Gangadharan
  */
-const ProfileDropdownExample = ({ classes }) => (
-  <Paper className={classes.darkBackground}>
-    <ProfileDropdown aria-label="Hari Gangadharan" text="HG">
-      <MenuContent />
-    </ProfileDropdown>
-  </Paper>
-);
+class ProfileDropdownExample extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { open: false };
+  }
+
+  handleChange = (open) => {
+    this.setState({ open });
+  };
+
+  handleClose = () => {
+    this.setState({ open: false });
+  };
+
+  render() {
+    const { open } = this.state;
+    return (
+      <Paper className={this.props.classes.darkBackground}>
+        <ProfileDropdown
+          id="profile-dropdown-example"
+          aria-label="Hari Gangadharan"
+          text="HG"
+          color="secondary"
+          open={open}
+          onChange={this.handleChange}
+        >
+          <MenuContent onClose={this.handleClose} />
+        </ProfileDropdown>
+      </Paper>
+    );
+  }
+}
 
 ProfileDropdownExample.propTypes = {
   classes: PropTypes.object.isRequired

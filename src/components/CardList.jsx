@@ -36,7 +36,7 @@ const CardList = ({ classes, className, children }) => (
 );
 
 CardList.propTypes = {
-  children: PropTypes.oneOf([PropTypes.arrayOf(PropTypes.node.isRequired), PropTypes.node.isRequired]).isRequired,
+  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node.isRequired), PropTypes.node.isRequired]).isRequired,
   className: PropTypes.string,
   classes: PropTypes.object.isRequired
 };

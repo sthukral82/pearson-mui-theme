@@ -44,7 +44,7 @@ const Cards = ({ classes }) => (
               <Icon name="MoreVert" />
             </IconButton>
           )}
-          title="1.1-1.2 The History of Psychologyssss"
+          title="1.1-1.2 The History of Psychology"
         />
         <CardActions>
           <div className={classes.dateAndTime}>JUNE 14, 2019 03:32 PM</div>

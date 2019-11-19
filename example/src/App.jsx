@@ -43,27 +43,29 @@ class App extends Component {
       <div>
         <JssProvider jss={jss} classNamePrefix="pmui" generateClassName={generateClassName}>
           <MuiThemeProvider theme={createMuiTheme(pearsonTheme)}>
-            <div className="curve">
-              <PearsonLogo style={{ fontSize: 49 }} color="secondary" />
-              <IconButton style={{ paddingLeft: 16 }} onClick={this.handleMenuClick}>
-                <Icon name="Menu" color="secondary" />
-              </IconButton>
-            </div>
             <BrowserRouter>
-              <div className="pearsonMuiTheme">
-                <DrawerComponent onClose={this.handleDrawerClose} open={this.state.drawerOpen} />
-                <Route exact path="/" render={() => (<SampleRenderer name="Home" />)} />
-                <Route exact path="/buttons" render={() => (<SampleRenderer name="Buttons" />)} />
-                <Route exact path="/cards" render={() => (<SampleRenderer name="Cards" />)} />
-                <Route exact path="/inputs" render={() => (<SampleRenderer name="Inputs" />)} />
-                <Route exact path="/selections" render={() => (<SampleRenderer name="Selections" />)} />
-                <Route exact path="/avatars" render={() => (<SampleRenderer name="Avatars" />)} />
-                <Route exact path="/typography" render={() => (<SampleRenderer name="Typography" />)} />
-                <Route exact path="/tabs" render={() => (<SampleRenderer name="Tabs" />)} />
-                <Route exact path="/sliders" render={() => (<SampleRenderer name="Sliders" />)} />
-                <Route exact path="/dialogs" render={() => (<SampleRenderer name="Dialogs" />)} />
-                <Route exact path="/dropdowns" render={() => (<SampleRenderer name="Dropdowns" />)} />
-                <Route exact path="/icons" render={() => (<SampleRenderer name="Icons" />)} />
+              <div>
+                <div className="curve">
+                  <PearsonLogo style={{ fontSize: 49 }} color="secondary" />
+                  <IconButton style={{ marginLeft: 16 }} color="secondary" onClick={this.handleMenuClick}>
+                    <Icon name="Menu" color="secondary" />
+                  </IconButton>
+                </div>
+                <div className="pearsonMuiTheme">
+                  <DrawerComponent onClose={this.handleDrawerClose} open={this.state.drawerOpen} />
+                  <Route exact path="/" render={() => (<SampleRenderer name="Home" />)} />
+                  <Route exact path="/buttons" render={() => (<SampleRenderer name="Buttons" />)} />
+                  <Route exact path="/cards" render={() => (<SampleRenderer name="Cards" />)} />
+                  <Route exact path="/inputs" render={() => (<SampleRenderer name="Inputs" />)} />
+                  <Route exact path="/selections" render={() => (<SampleRenderer name="Selections" />)} />
+                  <Route exact path="/avatars" render={() => (<SampleRenderer name="Avatars" />)} />
+                  <Route exact path="/typography" render={() => (<SampleRenderer name="Typography" />)} />
+                  <Route exact path="/tabs" render={() => (<SampleRenderer name="Tabs" />)} />
+                  <Route exact path="/sliders" render={() => (<SampleRenderer name="Sliders" />)} />
+                  <Route exact path="/dialogs" render={() => (<SampleRenderer name="Dialogs" />)} />
+                  <Route exact path="/dropdowns" render={() => (<SampleRenderer name="Dropdowns" />)} />
+                  <Route exact path="/icons" render={() => (<SampleRenderer name="Icons" />)} />
+                </div>
               </div>
             </BrowserRouter>
           </MuiThemeProvider>

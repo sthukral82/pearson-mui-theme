@@ -112,7 +112,7 @@ class SimpleVerticalTabs extends React.Component {
           />
           <Tab
             classes={classes}
-            label="Assignment"
+            label="Assignments"
             {...a11yProps(6)}
             icon={<Icon name="CalendarOutlined" fontSize="large" />}
             className={`${classes.tab} ${value === 6 ? classes.activeTab : ''}`}

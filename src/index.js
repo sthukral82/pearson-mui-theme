@@ -1,6 +1,6 @@
 import colors from './colors';
 
-const pseodoOutline = (padding, borderRadius, focusColor) => ({
+const pseudoOutline = (padding, borderRadius, focusColor) => ({
   content: '""',
   position: 'absolute',
   top: -(padding * 3),
@@ -11,7 +11,7 @@ const pseodoOutline = (padding, borderRadius, focusColor) => ({
   border: `2px solid ${focusColor}`
 });
 
-const tabPseodoOutline = (borderRadius, focusColor) => ({
+const tabPseudoOutline = (borderRadius, focusColor) => ({
   content: '""',
   position: 'absolute',
   top: 0,
@@ -166,12 +166,12 @@ const pearsonMuiTheme = {
       },
       textColorInherit: {
         '&.pmuiCustomFocusVisible': {
-          '&:after': tabPseodoOutline(6, colors.white)
+          '&:after': tabPseudoOutline(6, colors.summerSky)
         }
       },
       textColorPrimary: {
         '&.pmuiCustomFocusVisible': {
-          '&:after': tabPseodoOutline(6, colors.focusBlue)
+          '&:after': tabPseudoOutline(6, colors.focusBlue)
         }
       },
       textColorSecondary: {
@@ -179,7 +179,7 @@ const pearsonMuiTheme = {
         lineHeight: 1.29,
         textTransform: 'uppercase',
         '&.pmuiCustomFocusVisible': {
-          '&:after': tabPseodoOutline(6, colors.white)
+          '&:after': tabPseudoOutline(6, colors.summerSky)
         }
       },
       labelContainer: {
@@ -375,7 +375,7 @@ const pearsonMuiTheme = {
       root: {
         border: `2px solid ${colors.transparent}`,
         '&$focusVisible': {
-          '&:after': pseodoOutline(2, 36, colors.focusBlue)
+          '&:after': pseudoOutline(2, 36, colors.focusBlue)
         }
       }
     },
@@ -397,7 +397,7 @@ const pearsonMuiTheme = {
           backgroundColor: 'inherit'
         },
         '&$focusVisible': {
-          '&:after': pseodoOutline(2, 1, colors.focusBlue)
+          '&:after': pseudoOutline(2, 1, colors.focusBlue)
         }
       },
       outlined: {
@@ -447,7 +447,7 @@ const pearsonMuiTheme = {
         borderColor: colors.white,
         backgroundColor: colors.white,
         '&$focusVisible': {
-          '&:after': pseodoOutline(2, 36, colors.white)
+          '&:after': pseudoOutline(2, 36, colors.summerSky)
         },
         '&:hover': {
           backgroundColor: colors.white,
@@ -504,7 +504,7 @@ const pearsonMuiTheme = {
         fontSize: pearson.font.size.large,
         boxSizing: 'border-box',
         '&$focusVisible': {
-          '&:after': pseodoOutline(0, 1, colors.focusBlue)
+          '&:after': pseudoOutline(0, 1, colors.focusBlue)
         },
         '&:hover': {
           background: 'inherit'
@@ -512,7 +512,6 @@ const pearsonMuiTheme = {
       }
     },
     MuiCardActions: {
-      paddingRight: pearson.padding.l,
       root: {
         '@media (min-width:600px)': {
           paddingLeft: pearson.padding.xs,
@@ -617,6 +616,14 @@ const pearsonMuiTheme = {
             backgroundColor: 'rgba(255, 255, 255, 0.2)',
             color: colors.white
           }
+        }
+      },
+      colorSecondary: {
+        '&:hover': {
+          backgroundColor: 'inherit'
+        },
+        '&.pmuiCustomFocusVisible': {
+          '&:after': pseudoOutline(2, 36, colors.summerSky)
         }
       }
     },

@@ -5,17 +5,20 @@ import OpenCloseIndicator from './OpenCloseIndicator';
 import Dropdown from './Dropdown';
 
 const ProfileDropdown = ({
-  text, idPrefix, children, ...rest
-}) => (
-  <Dropdown
-    idPrefix={idPrefix}
-    renderIcon={
-      (open) => {
-        const avatarColor = open ? 'secondary' : 'primary';
-        return (
+  text, open, onChange, id, children, ...rest
+}) => {
+  const avatarColor = open ? 'secondary' : 'primary';
+  return (
+    <Dropdown
+      id={id}
+      open={open}
+      color="secondary"
+      onChange={onChange}
+      icon={
+        (
           <Fragment>
             <Avatar
-              id={`${idPrefix}-icon-button-avatar`}
+              id={`${id}-icon-button-avatar`}
               color={avatarColor}
               disableHover={open}
               aria-label={rest['aria-label']}
@@ -23,29 +26,29 @@ const ProfileDropdown = ({
               {text}
             </Avatar>
             <OpenCloseIndicator
-              id={`${idPrefix}-indicator`}
+              id={`${id}-indicator`}
               open={open}
             />
           </Fragment>
-        );
+        )
       }
-    }
-    {...rest}
-  >
-    {children}
-  </Dropdown>
-);
+      {...rest}
+    >
+      {children}
+    </Dropdown>
+  );
+};
 
 ProfileDropdown.defaultProps = {
-  idPrefix: 'pmui-profile-dropdown',
-  open: false,
-  onChange: null
+  id: 'pmui-profile-dropdown',
+  open: true,
+  onChange: () => {}
 };
 
 ProfileDropdown.propTypes = {
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node.isRequired), PropTypes.node.isRequired]).isRequired,
   open: PropTypes.bool,
-  idPrefix: PropTypes.string,
+  id: PropTypes.string,
   text: PropTypes.string.isRequired,
   onChange: PropTypes.func
 };

@@ -16,17 +16,15 @@ const styles = () => ({
   }
 });
 
-
 class Dropdown extends React.Component {
   constructor(props) {
     super(props);
     this.ignoreOpen = false;
-    this.state = { open: false };
   }
 
   handleToggle = () => {
-    if (this.state.open || !this.ignoreOpen) {
-      this.handleChange(!this.state.open);
+    if (this.props.open || !this.ignoreOpen) {
+      this.handleChange(!this.props.open);
     }
   };
 
@@ -43,40 +41,31 @@ class Dropdown extends React.Component {
   handleChange(newOpen) {
     if (this.props.onChange) {
       this.props.onChange(newOpen);
-    } else {
-      this.setState({ open: newOpen });
     }
-  }
-
-  isOpen() {
-    if (this.props.onChange) {
-      // state managed by parent
-      return this.props.open;
-    }
-    return this.state.open;
   }
 
   render() {
     // Returns open state either from parent or local
-    const open = this.isOpen();
+    const open = this.props.open;
     const {
-      classes, idPrefix, children, renderIcon
+      classes, id, children, icon, color
     } = this.props;
     return (
       <Fragment>
         <IconButton
-          id={`${idPrefix}-icon-button`}
+          id={id}
+          color={color}
           buttonRef={(node) => {
             this.anchorEl = node;
           }}
-          aria-owns={open ? 'profile-menu' : undefined}
+          aria-owns={open ? `${id}-profile-menu` : undefined}
           aria-haspopup="true"
           onClick={this.handleToggle}
         >
-          {renderIcon(open)}
+          {icon}
         </IconButton>
         <Popper
-          id={idPrefix}
+          id={`${id}-profile-menu-pop`}
           open={open}
           className={classes.popper}
           anchorEl={this.anchorEl}
@@ -87,10 +76,10 @@ class Dropdown extends React.Component {
           {({ TransitionProps, placement }) => (
             <Collapse
               {...TransitionProps}
-              id="profile-menu"
+              id={`${id}-profile-menu`}
               style={{ transformOrigin: placement === 'bottom' ? 'top' : 'bottom' }}
             >
-              <Paper className={classes.popup} onClick={this.handleClose}>
+              <Paper className={classes.popup}>
                 <ClickAwayListener onClickAway={this.handleClose}>
                   {children}
                 </ClickAwayListener>
@@ -104,17 +93,19 @@ class Dropdown extends React.Component {
 }
 
 Dropdown.defaultProps = {
-  idPrefix: 'pmui-profile-dropdown',
+  id: 'pmui-profile-dropdown',
   open: false,
+  color: 'default',
   onChange: null
 };
 
 Dropdown.propTypes = {
   classes: PropTypes.object.isRequired,
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node.isRequired), PropTypes.node.isRequired]).isRequired,
-  renderIcon: PropTypes.func.isRequired,
+  icon: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node.isRequired), PropTypes.node.isRequired]).isRequired,
   open: PropTypes.bool,
-  idPrefix: PropTypes.string,
+  color: PropTypes.oneOf(['primary', 'secondary', 'default']),
+  id: PropTypes.string,
   onChange: PropTypes.func
 };
 
