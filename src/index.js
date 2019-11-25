@@ -11,6 +11,18 @@ const pseudoOutline = (padding, borderRadius, focusColor) => ({
   border: `2px solid ${focusColor}`
 });
 
+
+const cardActionAreaPseudoOutline = (padding, borderRadius, focusColor) => ({
+  content: '""',
+  position: 'absolute',
+  top: -(padding * 2),
+  left: -(padding * 2),
+  borderRadius,
+  width: `calc(100% + ${padding * 8}px)`,
+  height: `calc(100% + ${padding * 8}px)`,
+  border: `2px solid ${focusColor}`
+});
+
 const tabPseudoOutline = (borderRadius, focusColor) => ({
   content: '""',
   position: 'absolute',
@@ -115,7 +127,6 @@ const pearsonMuiTheme = {
     MuiPaper: {
       root: {
         boxSizing: 'border-box',
-        fontFamily: pearson.font.size.large,
         padding: 0,
         marginLeft: 0,
         boxShadow: '0 5px 22px 4px rgba(0, 0, 0, 0.03), 0 7px 8px -4px rgba(0, 0, 0, 0.05)',
@@ -133,8 +144,8 @@ const pearsonMuiTheme = {
         maxWidth: 4000
       },
       colorPrimary: {
-        backgroundColor: colors.digitalBlue,
-        color: colors.white,
+        backgroundColor: colors.white,
+        color: colors.charcoal,
         border: '0 none',
         boxShadow: 'none'
       },
@@ -194,6 +205,17 @@ const pearsonMuiTheme = {
       wrapper: {
         paddingLeft: 4,
         paddingRight: 4
+      }
+    },
+    MuiToolbar: {
+      root: {
+        '& button:not(:first-child)': {
+          marginLeft: 18
+        }
+      },
+      dense: {
+        height: 50,
+        borderBottom: `1px solid ${colors.alto}`
       }
     },
     MuiCustomTabs: {
@@ -293,46 +315,43 @@ const pearsonMuiTheme = {
       }
     },
     MuiTypography: {
-      colorSecondary: {
-        color: colors.mediumGray
-      },
       root: {
         lineHeight: pearson.lineHeight.l,
         color: colors.charcoal,
         fontSize: 16
       },
       h1: {
-        fontSize: '1.5em'
+        fontSize: '2.3125em',
+        fontWeight: 300,
+        lineHeight: pearson.lineHeight.m
       },
       h2: {
-        fontSize: '1.75em',
-        fontWeight: 'bold',
-        lineHeight: pearson.lineHeight.m
+        fontSize: '1.5em',
+        fontWeight: 300,
+        lineHeight: pearson.lineHeight.xs
       },
       h3: {
         fontSize: '1.25em',
-        fontWeight: 300,
+        fontWeight: 600,
         fontStyle: 'normal',
-        letterSpacing: 0.37,
-        color: colors.charcoal,
-        lineHeight: pearson.lineHeight.m,
-        marginBottom: 16
+        lineHeight: pearson.lineHeight.m
       },
       h4: {
         fontSize: '1.125em',
+        fontWeight: 400,
         letterSpacing: 'normal',
         lineHeight: pearson.lineHeight.m
       },
       h5: {
-        letterSpacing: 0.3,
         fontSize: '1em',
+        fontWeight: 600,
         lineHeight: pearson.lineHeight.xs,
         color: colors.charcoal
       },
       h6: {
-        fontSize: 24,
-        lineHeight: pearson.lineHeight.xxs,
-        color: colors.charcoal
+        fontSize: '0.875em',
+        fontWeight: 600,
+        lineHeight: pearson.lineHeight.xxl
       },
       subtitle1: {
         fontSize: '.75em',
@@ -349,11 +368,10 @@ const pearsonMuiTheme = {
       },
       body1: {
         fontSize: 16,
-        color: colors.mediumGray,
         lineHeight: pearson.lineHeight.xs
       },
       body2: {
-        fontSize: 16
+        fontSize: 14
       }
     },
     MuiAvatar: {
@@ -504,7 +522,8 @@ const pearsonMuiTheme = {
         fontSize: pearson.font.size.large,
         boxSizing: 'border-box',
         '&$focusVisible': {
-          '&:after': pseudoOutline(0, 1, colors.focusBlue)
+          '&:after': cardActionAreaPseudoOutline(-1, 5, colors.focusBlue),
+          backgroundColor: 'inherit'
         },
         '&:hover': {
           background: 'inherit'

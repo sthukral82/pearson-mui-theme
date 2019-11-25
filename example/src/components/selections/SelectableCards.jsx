@@ -15,6 +15,9 @@ import { CardList, Icon } from '@greenville/mui-theme';
 const styles = () => ({
   card: {
     width: 362,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
     marginBottom: 24
   }
 });

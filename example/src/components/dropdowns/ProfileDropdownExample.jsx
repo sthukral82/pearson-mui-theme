@@ -43,7 +43,7 @@ const MenuContent = withStyles(menuStyles)(withRouter(({ classes, history, onClo
       }
     >
       <div>
-        <Typography variant="h5" className="applyHover">
+        <Typography variant="body1" className="applyHover">
           Account Settings
         </Typography>
         <Typography variant="subtitle1">

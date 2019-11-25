@@ -12,6 +12,9 @@ import IconButton from '@material-ui/core/IconButton';
 const styles = theme => ({
   card: {
     width: 362,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
     marginBottom: 24
   },
   simpleCards: {

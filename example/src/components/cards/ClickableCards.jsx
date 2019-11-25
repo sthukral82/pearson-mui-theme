@@ -11,7 +11,18 @@ import { CardList } from '@greenville/mui-theme';
 
 const styles = theme => ({
   card: {
-    width: 362
+    width: 362,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between'
+  },
+  cardClickArea: {
+    height: '100%',
+    display: 'flex',
+    textAlign: 'left',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start'
   },
   button: {
     marginBottom: 24
@@ -66,6 +77,7 @@ const Cards = ({ classes }) => (
       </Button>
       <Card className={`${classes.card} ${classes.button}`}>
         <CardActionArea
+          className={classes.cardClickArea}
           onClick={() => { alert('Clicked!'); }} /* eslint-disable-line no-undef */ /* eslint-disable-line no-alert */
         >
           <CardContent>

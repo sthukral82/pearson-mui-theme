@@ -8,6 +8,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import AccountCircle from '@material-ui/icons/AccountCircle';
+import ViewQuilt from '@material-ui/icons/ViewQuilt';
 import ViewCarousel from '@material-ui/icons/ViewCarousel';
 import Home from '@material-ui/icons/Home';
 import Apps from '@material-ui/icons/Apps';
@@ -44,6 +45,12 @@ const DrawerComponent = ({ classes, open, onClose }) => (
             <AccountCircle />
           </ListItemIcon>
           <ListItemText primary="Avatars" />
+        </ListItem>
+        <ListItem component={Link} to="/appbar" onClick={onClose}>
+          <ListItemIcon>
+            <ViewQuilt />
+          </ListItemIcon>
+          <ListItemText primary="AppBar" />
         </ListItem>
         <ListItem component={Link} to="/buttons" onClick={onClose}>
           <ListItemIcon>

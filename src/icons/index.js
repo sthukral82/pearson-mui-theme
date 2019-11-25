@@ -17,6 +17,7 @@ import Expand from './Expand';
 import Filter from './Filter';
 import FlashcardOutlined from './FlashcardOutlined';
 import Folder from './Folder';
+import FontChange from './FontChange';
 import HelpFilled from './HelpFilled';
 import ListBulleted from './ListBulleted';
 import Listen from './Listen';
@@ -60,6 +61,7 @@ const icons = new Map([
   ['Filter', Filter],
   ['FlashcardOutlined', FlashcardOutlined],
   ['Folder', Folder],
+  ['FontChange', FontChange],
   ['HelpFilled', HelpFilled],
   ['ListBulleted', ListBulleted],
   ['Listen', Listen],

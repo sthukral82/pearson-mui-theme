@@ -54,6 +54,7 @@ class App extends Component {
                 <div className="pearsonMuiTheme">
                   <DrawerComponent onClose={this.handleDrawerClose} open={this.state.drawerOpen} />
                   <Route exact path="/" render={() => (<SampleRenderer name="Home" />)} />
+                  <Route exact path="/appbar" render={() => (<SampleRenderer name="AppBar" />)} />
                   <Route exact path="/buttons" render={() => (<SampleRenderer name="Buttons" />)} />
                   <Route exact path="/cards" render={() => (<SampleRenderer name="Cards" />)} />
                   <Route exact path="/inputs" render={() => (<SampleRenderer name="Inputs" />)} />
