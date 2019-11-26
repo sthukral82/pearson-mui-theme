@@ -81,11 +81,15 @@ const pearson = {
 const pearsonMuiTheme = {
   spacing: { unit: 16 },
   props: {
-    // Name of the component ⚛️
+    // Name of the component️
     MuiButtonBase: {
       // The properties to apply
       disableRipple: true, // No more ripple, on the whole application
       focusVisibleClassName: 'pmuiCustomFocusVisible'
+    },
+    MuiAppBar: {
+      elevation: 0,
+      color: 'inherit'
     }
   },
   palette: {
@@ -146,21 +150,18 @@ const pearsonMuiTheme = {
       colorPrimary: {
         backgroundColor: colors.white,
         color: colors.charcoal,
-        border: '0 none',
-        boxShadow: 'none'
+        border: '0 none'
       },
       colorSecondary: {
         backgroundColor: colors.transparent,
         color: colors.white,
-        border: '0 none',
-        boxShadow: 'none'
+        border: '0 none'
       },
       // eslint-disable-next-line no-dupe-keys
       colorDefault: {
         backgroundColor: colors.white,
         color: colors.charcoal,
-        border: '0 none',
-        boxShadow: 'none'
+        border: '0 none'
       }
     },
     MuiTab: {

@@ -12,8 +12,8 @@ const styles = theme => ({
     flexGrow: 1
   },
   default: {
-    color: '#252522',
-    backgroundColor: '#FFF !important'
+    color: theme.palette.text.primary,
+    backgroundColor: theme.palette.background.paper
   },
   sephia: {
     color: '#991300',
@@ -21,11 +21,17 @@ const styles = theme => ({
   },
   night: {
     color: '#fff',
-    backgroundColor: '#333 !important'
+    backgroundColor: '#333',
+    '& .pmuiCustomFocusVisible:after': {
+      borderColor: '#fff'
+    }
   },
   transparent: {
     color: '#fff',
-    backgroundColor: 'transparent !important'
+    backgroundColor: 'transparent',
+    '& .pmuiCustomFocusVisible:after': {
+      borderColor: '#fff'
+    }
   },
   defaultAppBar: {
     marginBottom: 32,
@@ -84,9 +90,9 @@ ThemedAppBar.propTypes = {
  */
 const DefaultAppBar = () => (
   <div>
+    <ThemedAppBar theme="default" />
     <ThemedAppBar theme="night" />
     <ThemedAppBar theme="sephia" />
-    <ThemedAppBar theme="default" />
     <ThemedAppBar theme="transparent" />
   </div>
 
