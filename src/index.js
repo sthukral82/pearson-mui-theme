@@ -693,4 +693,5 @@ export { default as MediaCard } from './components/MediaCard';
 export { default as Avatar } from './components/Avatar';
 export { default as ProfileDisplay } from './components/ProfileDisplay';
 export { default as ProfileDropdown } from './components/ProfileDropdown';
+export { default as Tooltip } from './components/tooltip/ArrowTooltip';
 export { default as PearsonLogo } from './icons/PearsonLogo';

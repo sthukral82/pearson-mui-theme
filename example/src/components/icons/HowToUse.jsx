@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Paper from '@material-ui/core/Paper';
 import IconButton from '@material-ui/core/IconButton';
 import { withStyles } from '@material-ui/core/styles';
-import { Icon } from '@greenville/mui-theme';
+import { Icon, Tooltip } from '@greenville/mui-theme';
 
 
 const styles = theme => ({
@@ -43,9 +43,13 @@ const component = ({ classes }) => (
       <IconButton disabled className={classes.iconButton}>
         <Icon name="Add" />
       </IconButton>
-      <IconButton className={classes.iconButton}>
-        <Icon name="Add" />
-      </IconButton>
+      <Tooltip
+        title="Add something really cool!!!"
+      >
+        <IconButton className={classes.iconButton}>
+          <Icon name="Add" />
+        </IconButton>
+      </Tooltip>
     </Paper>
     <Paper className={classes.darkBackground}>
       <div>
