@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import IconButton from '@material-ui/core/IconButton';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import Collapse from '@material-ui/core/Collapse';
 import Paper from '@material-ui/core/Paper';
 import Popper from '@material-ui/core/Popper';
 import { withStyles } from '@material-ui/core/styles';
+import IconButtonWithTooltip from './tooltip/IconButtonWithTooltip';
 
 const styles = () => ({
   popup: {
@@ -48,12 +48,14 @@ class Dropdown extends React.Component {
     // Returns open state either from parent or local
     const open = this.props.open;
     const {
-      classes, id, children, icon, color
+      classes, id, title, hide, tooltipPlacement, children, icon, color
     } = this.props;
-    return (
+    return hide ? null : (
       <Fragment>
-        <IconButton
+        <IconButtonWithTooltip
           id={id}
+          title={title}
+          tooltipPlacement={tooltipPlacement}
           color={color}
           buttonRef={(node) => {
             this.anchorEl = node;
@@ -63,7 +65,7 @@ class Dropdown extends React.Component {
           onClick={this.handleToggle}
         >
           {icon}
-        </IconButton>
+        </IconButtonWithTooltip>
         <Popper
           id={`${id}-profile-menu-pop`}
           open={open}
@@ -93,19 +95,34 @@ class Dropdown extends React.Component {
 }
 
 Dropdown.defaultProps = {
-  id: 'pmui-profile-dropdown',
+  id: 'pmui-dropdown',
   open: false,
+  hide: false,
+  title: null,
+  tooltipPlacement: 'bottom',
   color: 'default',
   onChange: null
 };
 
 Dropdown.propTypes = {
-  classes: PropTypes.object.isRequired,
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node.isRequired), PropTypes.node.isRequired]).isRequired,
-  icon: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node.isRequired), PropTypes.node.isRequired]).isRequired,
-  open: PropTypes.bool,
-  color: PropTypes.oneOf(['primary', 'secondary', 'default']),
   id: PropTypes.string,
+  icon: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired,
+  open: PropTypes.bool,
+  hide: PropTypes.bool,
+  color: PropTypes.oneOf(['primary', 'secondary', 'default', 'inherit', 'action']),
+  title: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]),
+  tooltipPlacement: PropTypes.string,
+  classes: PropTypes.object.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired,
   onChange: PropTypes.func
 };
 

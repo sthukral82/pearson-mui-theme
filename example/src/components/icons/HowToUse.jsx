@@ -28,9 +28,14 @@ const styles = theme => ({
 const component = ({ classes }) => (
   <Fragment>
     <Paper className={classes.darkBackground}>
-      <IconButton className={classes.iconButton}>
-        <Icon name="Add" />
-      </IconButton>
+      <Tooltip
+        title="Add something really cool!!!"
+        placement="left"
+      >
+        <IconButton className={classes.iconButton}>
+          <Icon name="Add" />
+        </IconButton>
+      </Tooltip>
       <IconButton className={classes.iconButton}>
         <Icon name="Add" color="primary" />
       </IconButton>
@@ -45,6 +50,7 @@ const component = ({ classes }) => (
       </IconButton>
       <Tooltip
         title="Add something really cool!!!"
+        placement="bottom"
       >
         <IconButton className={classes.iconButton}>
           <Icon name="Add" />

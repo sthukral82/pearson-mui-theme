@@ -41,7 +41,7 @@ class ArrowTooltip extends React.Component {
   };
 
   render() {
-    const { classes, title, toolTipsProps } = this.props;
+    const { classes, title, ...rest } = this.props;
 
     return (
       <Tooltip
@@ -53,7 +53,6 @@ class ArrowTooltip extends React.Component {
             <span className={classes.arrow} ref={this.handleArrowRef} />
           </Fragment>
             )}
-        {...toolTipsProps}
         classes={{
           tooltip: classes.bootstrapTooltip,
           popper: classes.bootstrapPopper,
@@ -72,6 +71,7 @@ class ArrowTooltip extends React.Component {
             }
           }
         }}
+        {...rest}
       >
         {this.props.children}
       </Tooltip>
@@ -80,17 +80,16 @@ class ArrowTooltip extends React.Component {
 }
 
 ArrowTooltip.propTypes = {
-  title: PropTypes.node.isRequired,
+  title: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]).isRequired,
-  classes: PropTypes.object.isRequired,
-  toolTipsProps: PropTypes.object
+  classes: PropTypes.object.isRequired
 };
 
-ArrowTooltip.defaultProps = {
-  toolTipsProps: {}
-};
 
 export default withStyles(ArrowTooltipStyles)(ArrowTooltip);

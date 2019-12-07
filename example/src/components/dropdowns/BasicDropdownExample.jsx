@@ -1,11 +1,10 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
-import { ProfileDropdown, ProfileDisplay, Icon } from '@greenville/mui-theme';
+import {Dropdown, ProfileDisplay, Icon } from '@greenville/mui-theme';
 
 import {
-  Button, Divider, Paper, Typography
+  Button, Divider, Typography
 } from '@material-ui/core';
 import ListItem from '@material-ui/core/ListItem';
 import List from '@material-ui/core/List';
@@ -32,12 +31,7 @@ const menuStyles = () => ({
 const MenuContent = withStyles(menuStyles)(withRouter(({ classes, history, onClose }) => (
   <List>
     <ListItem className={classes.header}>
-      <ProfileDisplay
-        id="my-profile-display"
-        avatarText="HG"
-        name="Hari Gangadharan"
-        email="hari.gangadharan@pearson.com"
-      />
+      <ProfileDisplay avatarText="HG" name="Hari Gangadharan" email="hari.gangadharan@pearson.com" />
     </ListItem>
     <Divider className={classes.divider} />
     <ListItem
@@ -70,20 +64,12 @@ const MenuContent = withStyles(menuStyles)(withRouter(({ classes, history, onClo
 )));
 
 
-const styles = theme => ({
-  darkBackground: {
-    display: 'flex',
-    justifyContent: 'flex-end',
-    backgroundColor: theme.palette.primary.dark,
-    padding: 16
-  }
-});
 /**
  * Renders/demos Profile Dropdown Component.
  *
  * @author Hari Gangadharan
  */
-class ProfileDropdownExample extends React.Component {
+class BasicDropdownExample extends React.Component {
   constructor(props) {
     super(props);
     this.state = { open: false };
@@ -100,24 +86,22 @@ class ProfileDropdownExample extends React.Component {
   render() {
     const { open } = this.state;
     return (
-      <Paper className={this.props.classes.darkBackground}>
-        <ProfileDropdown
-          id="profile-dropdown-example"
-          aria-label="Hari Gangadharan"
-          text="HG"
-          color="secondary"
-          open={open}
-          onChange={this.handleChange}
-        >
-          <MenuContent onClose={this.handleClose} />
-        </ProfileDropdown>
-      </Paper>
+      <Dropdown
+        id="profile-dropdown-example"
+        aria-label="Hari Gangadharan"
+        title="More..."
+        text="HG"
+        open={open}
+        onChange={this.handleChange}
+        icon={(
+          <Icon name="MoreVert" />
+        )}
+      >
+        <MenuContent onClose={this.handleClose} />
+      </Dropdown>
     );
   }
 }
 
-ProfileDropdownExample.propTypes = {
-  classes: PropTypes.object.isRequired
-};
 
-export default withStyles(styles)(ProfileDropdownExample);
+export default BasicDropdownExample;

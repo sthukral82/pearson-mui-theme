@@ -14,27 +14,27 @@ const styles = () => ({
 });
 
 const ProfileDisplay = ({
-  classes, idPrefix, name, avatarText, email
+  classes, id, name, avatarText, email
 }) => (
-  <div id={idPrefix} className={classes.root}>
-    <Avatar id={`${idPrefix}-avatar`}>{avatarText}</Avatar>
+  <div id={id} className={classes.root}>
+    <Avatar id={`${id}-avatar`}>{avatarText}</Avatar>
     <div className={classes.nameCard}>
-      <Typography id={`${idPrefix}-name`} variant="h4">{name}</Typography>
-      <Typography id={`${idPrefix}-email`} variant="subtitle2">{email}</Typography>
+      <Typography id={`${id}-name`} variant="h4">{name}</Typography>
+      <Typography id={`${id}-email`} variant="subtitle2">{email}</Typography>
     </div>
   </div>
 );
 
 ProfileDisplay.propTypes = {
   classes: PropTypes.object.isRequired,
-  idPrefix: PropTypes.string,
+  id: PropTypes.string,
   name: PropTypes.string.isRequired,
   avatarText: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired
 };
 
 ProfileDisplay.defaultProps = {
-  idPrefix: 'pmui-profile-display'
+  id: 'pmui-profile-display'
 };
 
 export default withStyles(styles)(ProfileDisplay);

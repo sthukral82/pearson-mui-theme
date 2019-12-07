@@ -2,6 +2,9 @@
 
 This is Material UI Theme created to match Pearson UX specs as closely as possible.
 
+### Limitations
+Pearson Material UI Theme will currently support only Material UI Versions 3.x.
+
 ### How to use
 First, you have to include Open Sans font in your application. The best way would be add that in the head of
 the application's index.html. Mostly this can be found in the public directory:

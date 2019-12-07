@@ -2,6 +2,7 @@ import colors from './colors';
 
 const pseudoOutline = (padding, borderRadius, focusColor) => ({
   content: '""',
+  boxSizing: 'content-box',
   position: 'absolute',
   top: -(padding * 3),
   left: -(padding * 3),
@@ -14,6 +15,7 @@ const pseudoOutline = (padding, borderRadius, focusColor) => ({
 
 const cardActionAreaPseudoOutline = (padding, borderRadius, focusColor) => ({
   content: '""',
+  boxSizing: 'content-box',
   position: 'absolute',
   top: -(padding * 2),
   left: -(padding * 2),
@@ -25,6 +27,7 @@ const cardActionAreaPseudoOutline = (padding, borderRadius, focusColor) => ({
 
 const tabPseudoOutline = (borderRadius, focusColor) => ({
   content: '""',
+  boxSizing: 'content-box',
   position: 'absolute',
   top: 0,
   left: 0,
@@ -693,5 +696,7 @@ export { default as MediaCard } from './components/MediaCard';
 export { default as Avatar } from './components/Avatar';
 export { default as ProfileDisplay } from './components/ProfileDisplay';
 export { default as ProfileDropdown } from './components/ProfileDropdown';
+export { default as Dropdown } from './components/Dropdown';
 export { default as Tooltip } from './components/tooltip/ArrowTooltip';
+export { default as IconButtonWithTooltip } from './components/tooltip/IconButtonWithTooltip';
 export { default as PearsonLogo } from './icons/PearsonLogo';

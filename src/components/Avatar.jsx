@@ -35,9 +35,9 @@ AvatarCustom.defaultProps = {
 
 AvatarCustom.propTypes = {
   children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node.isRequired),
-    PropTypes.string.isRequired,
-    PropTypes.node.isRequired
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.string,
+    PropTypes.node
   ]).isRequired,
   classes: PropTypes.object.isRequired,
   disableHover: PropTypes.bool,

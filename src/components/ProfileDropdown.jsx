@@ -5,13 +5,14 @@ import OpenCloseIndicator from './OpenCloseIndicator';
 import Dropdown from './Dropdown';
 
 const ProfileDropdown = ({
-  text, open, onChange, id, children, ...rest
+  text, open, hide, onChange, id, children, ...rest
 }) => {
   const avatarColor = open ? 'secondary' : 'primary';
   return (
     <Dropdown
       id={id}
       open={open}
+      hide={hide}
       color="secondary"
       onChange={onChange}
       icon={
@@ -42,12 +43,17 @@ const ProfileDropdown = ({
 ProfileDropdown.defaultProps = {
   id: 'pmui-profile-dropdown',
   open: true,
+  hide: false,
   onChange: () => {}
 };
 
 ProfileDropdown.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node.isRequired), PropTypes.node.isRequired]).isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired,
   open: PropTypes.bool,
+  hide: PropTypes.bool,
   id: PropTypes.string,
   text: PropTypes.string.isRequired,
   onChange: PropTypes.func
