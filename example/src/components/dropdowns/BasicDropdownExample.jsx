@@ -1,7 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { withRouter } from 'react-router-dom';
-import {Dropdown, ProfileDisplay, Icon } from '@greenville/mui-theme';
+import { Dropdown, ProfileDisplay, Icon } from '@greenville/mui-theme';
 
 import {
   Button, Divider, Typography
@@ -25,10 +25,13 @@ const menuStyles = () => ({
     justifyContent: 'center',
     paddingTop: 24,
     paddingBottom: 20
+  },
+  popper: {
+    width: 420
   }
 });
 
-const MenuContent = withStyles(menuStyles)(withRouter(({ classes, history, onClose }) => (
+const MenuContent = withRouter(({ classes, history, onClose }) => (
   <List>
     <ListItem className={classes.header}>
       <ProfileDisplay avatarText="HG" name="Hari Gangadharan" email="hari.gangadharan@pearson.com" />
@@ -61,7 +64,7 @@ const MenuContent = withStyles(menuStyles)(withRouter(({ classes, history, onClo
       </Button>
     </ListItem>
   </List>
-)));
+));
 
 
 /**
@@ -85,23 +88,24 @@ class BasicDropdownExample extends React.Component {
 
   render() {
     const { open } = this.state;
+    const { classes } = this.props;
     return (
       <Dropdown
         id="profile-dropdown-example"
+        className={classes.popper}
         aria-label="Hari Gangadharan"
         title="More..."
-        text="HG"
         open={open}
         onChange={this.handleChange}
         icon={(
           <Icon name="MoreVert" />
         )}
       >
-        <MenuContent onClose={this.handleClose} />
+        <MenuContent classes={classes} onClose={this.handleClose} />
       </Dropdown>
     );
   }
 }
 
 
-export default BasicDropdownExample;
+export default withStyles(menuStyles)(BasicDropdownExample);

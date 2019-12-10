@@ -81,7 +81,7 @@ class Dropdown extends React.Component {
               id={`${id}-profile-menu`}
               style={{ transformOrigin: placement === 'bottom' ? 'top' : 'bottom' }}
             >
-              <Paper className={classes.popup}>
+              <Paper className={this.props.className || classes.popup}>
                 <ClickAwayListener onClickAway={this.handleClose}>
                   {children}
                 </ClickAwayListener>
@@ -99,6 +99,7 @@ Dropdown.defaultProps = {
   open: false,
   hide: false,
   title: null,
+  className: null,
   tooltipPlacement: 'bottom',
   color: 'default',
   onChange: null
@@ -119,6 +120,7 @@ Dropdown.propTypes = {
   ]),
   tooltipPlacement: PropTypes.string,
   classes: PropTypes.object.isRequired,
+  className: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
