@@ -383,11 +383,10 @@ const pearsonMuiTheme = {
         height: 48,
         width: 48,
         fontSize: '1rem',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        boxSizing: 'border-box'
       },
       colorDefault: {
-        height: 40,
-        width: 40,
         backgroundColor: colors.mediumGray,
         color: colors.white,
         border: `0px solid ${colors.mediumGray}`

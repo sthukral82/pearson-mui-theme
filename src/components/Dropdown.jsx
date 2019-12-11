@@ -22,6 +22,22 @@ class Dropdown extends React.Component {
     this.ignoreOpen = false;
   }
 
+  componentDidMount() {
+    this.addKeyboardEventListener(false);
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.open) {
+      this.addKeyboardEventListener(prevProps.open);
+    } else {
+      this.removeKeyboardEventListener();
+    }
+  }
+
+  componentWillUnmount() {
+    this.removeKeyboardEventListener();
+  }
+
   handleToggle = () => {
     if (this.props.open || !this.ignoreOpen) {
       this.handleChange(!this.props.open);
@@ -38,10 +54,28 @@ class Dropdown extends React.Component {
     this.handleChange(false);
   };
 
+  handleEscapePress = (event) => {
+    if (event.keyCode === 27) {
+      this.handleClose();
+    }
+  };
+
   handleChange(newOpen) {
     if (this.props.onChange) {
       this.props.onChange(newOpen);
     }
+  }
+
+  addKeyboardEventListener(prevOpen) {
+    if (this.props.open && !prevOpen) {
+      // add handler
+      document.addEventListener('keydown', this.handleEscapePress);
+    }
+  }
+
+  removeKeyboardEventListener() {
+    // remove handler
+    document.removeEventListener('keydown', this.handleEscapePress);
   }
 
   render() {
