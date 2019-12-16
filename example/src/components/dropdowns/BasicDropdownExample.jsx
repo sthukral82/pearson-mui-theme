@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { withRouter } from 'react-router-dom';
 import { Dropdown, ProfileDisplay, Icon } from '@greenville/mui-theme';
@@ -107,5 +108,8 @@ class BasicDropdownExample extends React.Component {
   }
 }
 
+BasicDropdownExample.propTypes = {
+  classes: PropTypes.object.isRequired
+};
 
 export default withStyles(menuStyles)(BasicDropdownExample);

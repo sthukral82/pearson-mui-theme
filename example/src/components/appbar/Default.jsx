@@ -52,7 +52,7 @@ const styles = theme => ({
  */
 const ThemedAppBar = withStyles(styles)(({ theme, classes }) => (
   <AppBar color="inherit" position="static" className={`${classes[theme]} ${classes.defaultAppBar}`}>
-    <Toolbar variant="dense" color="inherit" >
+    <Toolbar variant="dense" color="inherit">
       <IconButton color="inherit">
         <Icon name="Menu" color="inherit" />
       </IconButton>
@@ -97,7 +97,6 @@ const DefaultAppBar = () => (
   </div>
 
 );
-
 
 
 export default DefaultAppBar;
