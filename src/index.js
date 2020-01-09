@@ -576,7 +576,6 @@ const pearsonMuiTheme = {
     MuiListItem: {
       button: {
         '&:hover': {
-          backgroundColor: 'inherit',
           '& .applyHover': {
             color: pearson.colors.seaBlue
           }
