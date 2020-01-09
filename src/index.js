@@ -269,7 +269,7 @@ const pearsonMuiTheme = {
         backgroundColor: '#f5f5f5'
       },
       root: {
-        minWidth: 60
+        minWidth: 85
       },
       activeTab: {
         width: 58,
