@@ -586,7 +586,7 @@ const pearsonMuiTheme = {
     MuiMenuItem: {
       root: {
         '&:hover': {
-          backgroundColor: 'rgba(0, 0, 0, 0.08)',
+          backgroundColor: 'rgba(0, 0, 0, 0.08)'
         }
       }
     },
