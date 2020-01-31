@@ -6,7 +6,7 @@ import { Paper } from '@material-ui/core';
 
 const styles = theme => ({
   button: {
-    margin: theme.spacing.unit
+    margin: theme.spacing(1)
   },
   darkBackground: {
     backgroundColor: theme.palette.primary.main

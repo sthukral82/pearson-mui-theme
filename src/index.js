@@ -82,7 +82,7 @@ const pearson = {
 };
 
 const pearsonMuiTheme = {
-  spacing: { unit: 16 },
+  spacing: 16,
   props: {
     // Name of the component️
     MuiButtonBase: {

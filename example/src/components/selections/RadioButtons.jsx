@@ -10,8 +10,8 @@ import FormLabel from '@material-ui/core/FormLabel';
 
 const styles = theme => ({
   value: {
-    paddingTop: theme.spacing.unit,
-    paddingBottom: theme.spacing.unit
+    paddingTop: theme.spacing(1),
+    paddingBottom: theme.spacing(1)
   }
 });
 

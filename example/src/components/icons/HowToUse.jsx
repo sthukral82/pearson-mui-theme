@@ -8,14 +8,14 @@ import { Icon, Tooltip } from '@greenville/mui-theme';
 
 const styles = theme => ({
   root: {
-    margin: theme.spacing.unit
+    margin: theme.spacing(1)
   },
   iconButton: {
     margin: 9
   },
   darkBackground: {
     backgroundColor: '#c7c7c7',
-    marginBottom: theme.spacing.unit,
+    marginBottom: theme.spacing(1),
     color: 'purple' /* just to show how inherit works */
   }
 });

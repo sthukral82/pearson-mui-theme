@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Slider from '@material-ui/lab/Slider';
+import Slider from '@material-ui/core/Slider';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 
 const styles = theme => ({
   root: {
-    paddingTop: theme.spacing.unit,
-    paddingBottom: theme.spacing.unit,
+    paddingTop: theme.spacing(1),
+    paddingBottom: theme.spacing(1),
     display: 'flex',
     width: 0,
     height: 300
@@ -40,10 +40,10 @@ Value:
         </div>
         <div className={this.props.classes.root}>
           <Slider
-            vertical
+            orientation="vertical"
             value={value}
             min={0}
-            max={1}
+            max={100}
             onChange={this.handleChange}
           />
         </div>

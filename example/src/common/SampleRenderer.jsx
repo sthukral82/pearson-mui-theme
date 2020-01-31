@@ -8,17 +8,17 @@ import ComponentLoader from './ComponentLoader';
 const styles = theme => ({
   root: {
     ...theme.mixins.gutters(),
-    paddingTop: theme.spacing.unit * 2,
-    paddingBottom: theme.spacing.unit * 2,
-    margin: `${theme.spacing.unit}px auto`,
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
+    margin: `${theme.spacing(1)}px auto`,
     maxWidth: 620,
     [theme.breakpoints.only('xs')]: {
-      margin: theme.spacing.unit
+      margin: theme.spacing(1)
     }
   },
   '@media (max-width: 740px)': {
     root: {
-      margin: theme.spacing.unit
+      margin: theme.spacing(1)
     }
   }
 });

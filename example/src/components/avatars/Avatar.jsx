@@ -11,7 +11,7 @@ const styles = theme => ({
     justifyContent: 'center'
   },
   avatar: {
-    margin: theme.spacing.unit
+    margin: theme.spacing(1)
   },
   darkBackground: {
     display: 'flex',

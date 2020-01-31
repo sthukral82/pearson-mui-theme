@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Slider from '@material-ui/lab/Slider';
+import Slider from '@material-ui/core/Slider';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 
 const styles = theme => ({
   slider: {
-    paddingTop: theme.spacing.unit,
-    paddingBottom: theme.spacing.unit
+    paddingTop: theme.spacing(1),
+    paddingBottom: theme.spacing(1)
   }
 });
 
@@ -19,7 +19,7 @@ class BasicSlider extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: 0.5
+      value: 15
     };
   }
 
@@ -39,7 +39,7 @@ Value:
           className={this.props.classes.slider}
           value={value}
           min={0}
-          max={1}
+          max={30}
           onChange={this.handleChange}
         />
       </div>
