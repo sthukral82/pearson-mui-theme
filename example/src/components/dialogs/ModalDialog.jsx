@@ -32,7 +32,7 @@ class ModalDialog extends React.Component {
           color="primary"
           onClick={this.handleClickOpen}
         >
-Open alert dialog
+          Open alert dialog
         </Button>
         <Dialog
           open={this.state.open}
@@ -52,7 +52,7 @@ Open alert dialog
               color="default"
               onClick={this.handleClose}
             >
-Cancel
+              Cancel
             </Button>
             <Button
               autoFocus
@@ -60,7 +60,7 @@ Cancel
               color="primary"
               onClick={this.handleClose}
             >
-Delete
+              Delete
             </Button>
           </DialogActions>
         </Dialog>

@@ -35,7 +35,7 @@ class VerticalSlider extends Component {
     return (
       <div>
         <div>
-Value:
+          Value:
           {value}
         </div>
         <div className={this.props.classes.root}>

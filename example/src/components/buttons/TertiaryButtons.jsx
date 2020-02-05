@@ -22,7 +22,7 @@ const component = ({ classes }) => (
       size="small"
       className={classes.button}
     >
-Small Button
+      Small Button
     </Button>
 
     <Button
@@ -31,7 +31,7 @@ Small Button
       size="medium"
       className={classes.button}
     >
-Medium Button
+      Medium Button
     </Button>
 
     <Button
@@ -40,7 +40,7 @@ Medium Button
       size="large"
       className={classes.button}
     >
-Large Button
+      Large Button
     </Button>
   </div>
 );

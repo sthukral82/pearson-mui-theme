@@ -16,6 +16,8 @@ import ChevronRight from './ChevronRight';
 import ClockOutlined from './ClockOutlined';
 import Collapse from './Collapse';
 import Expand from './Expand';
+import ExpandLess from './ExpandLess';
+import ExpandMore from './ExpandMore';
 import Filter from './Filter';
 import FlagOutlined from './FlagOutlined';
 import FlashcardOutlined from './FlashcardOutlined';
@@ -66,6 +68,8 @@ const icons = new Map([
   ['ClockOutlined', ClockOutlined],
   ['Collapse', Collapse],
   ['Expand', Expand],
+  ['ExpandLess', ExpandLess],
+  ['ExpandMore', ExpandMore],
   ['Filter', Filter],
   ['FlagOutlined', FlagOutlined],
   ['FlashcardOutlined', FlashcardOutlined],
