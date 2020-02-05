@@ -32,7 +32,7 @@ class StepSlider extends Component {
     return (
       <div>
         <div>
-Value:
+          Value:
           {value}
         </div>
         <Slider

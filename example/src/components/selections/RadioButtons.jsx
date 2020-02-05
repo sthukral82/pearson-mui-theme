@@ -38,7 +38,7 @@ class RadioButtons extends React.Component {
     return (
       <div>
         <div className={classes.value}>
-Selection:
+          Selection:
           {value}
         </div>
         <FormControl component="fieldset" className={classes.formControl}>
@@ -81,8 +81,8 @@ Selection:
                 <div>
                   <span>D. </span>
                   <span>
-They concluded that differences in behavior were biological and claimed that people&apos;s biology
-                  determined how their societies were organized.
+                    They concluded that differences in behavior were biological and claimed that people&apos;s biology
+                    determined how their societies were organized.
                   </span>
                 </div>
               )}
