@@ -11,13 +11,13 @@ import CaretDown from './CaretDown';
 import CaretUp from './CaretUp';
 import CircleOutline from './CircleOutline';
 import CheckCircleFilled from './CheckCircleFilled';
+import ChevronDown from './ChevronDown';
 import ChevronLeft from './ChevronLeft';
 import ChevronRight from './ChevronRight';
+import ChevronUp from './ChevronUp';
 import ClockOutlined from './ClockOutlined';
 import Collapse from './Collapse';
 import Expand from './Expand';
-import ExpandLess from './ExpandLess';
-import ExpandMore from './ExpandMore';
 import Filter from './Filter';
 import FlagOutlined from './FlagOutlined';
 import FlashcardOutlined from './FlashcardOutlined';
@@ -62,14 +62,14 @@ const icons = new Map([
   ['CaretDown', CaretDown],
   ['CaretUp', CaretUp],
   ['CheckCircleFilled', CheckCircleFilled],
+  ['ChevronDown', ChevronDown],
   ['ChevronLeft', ChevronLeft],
   ['ChevronRight', ChevronRight],
+  ['ChevronUp', ChevronUp],
   ['CircleOutline', CircleOutline],
   ['ClockOutlined', ClockOutlined],
   ['Collapse', Collapse],
   ['Expand', Expand],
-  ['ExpandLess', ExpandLess],
-  ['ExpandMore', ExpandMore],
   ['Filter', Filter],
   ['FlagOutlined', FlagOutlined],
   ['FlashcardOutlined', FlashcardOutlined],
