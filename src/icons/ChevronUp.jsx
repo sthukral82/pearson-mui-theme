@@ -1,7 +1,7 @@
 import React from 'react';
 import SvgIcon from '@material-ui/core/SvgIcon';
 
-const ExpandLess = props => (
+const ChevronUp = props => (
   <SvgIcon
     viewBox="0 0 18 18"
     {...props}
@@ -14,4 +14,4 @@ const ExpandLess = props => (
   </SvgIcon>
 );
 
-export default ExpandLess;
+export default ChevronUp;
