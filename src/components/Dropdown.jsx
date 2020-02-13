@@ -117,7 +117,9 @@ class Dropdown extends React.Component {
             >
               <Paper className={this.props.className || classes.popup}>
                 <ClickAwayListener onClickAway={this.handleClose}>
-                  {children}
+                  <div>
+                    {children}
+                  </div>
                 </ClickAwayListener>
               </Paper>
             </Collapse>
