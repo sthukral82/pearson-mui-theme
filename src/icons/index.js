@@ -4,8 +4,9 @@ import Archive from './Archive';
 import ArrowBack from './ArrowBack';
 import BellFilled from './BellFilled';
 import BlankCalendarOutlined from './BlankCalendarOutlined';
-import BookmarkOutlined from './BookmarkOutlined';
 import BookmarkFilled from './BookmarkFilled';
+import BookmarkOutlined from './BookmarkOutlined';
+import BookOutlined from './BookOutlined';
 import CalendarOutlined from './CalendarOutlined';
 import CaretDown from './CaretDown';
 import CaretUp from './CaretUp';
@@ -58,6 +59,7 @@ const icons = new Map([
   ['BlankCalendarOutlined', BlankCalendarOutlined],
   ['BookmarkOutlined', BookmarkOutlined],
   ['BookmarkFilled', BookmarkFilled],
+  ['BookOutlined', BookOutlined],
   ['CalendarOutlined', CalendarOutlined],
   ['CaretDown', CaretDown],
   ['CaretUp', CaretUp],
