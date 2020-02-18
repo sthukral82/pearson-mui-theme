@@ -27,6 +27,7 @@ import Font from './Font';
 import FontChange from './FontChange';
 import HelpOutlined from './HelpOutlined';
 import HelpFilled from './HelpFilled';
+import Information from './Information';
 import ListBulleted from './ListBulleted';
 import Listen from './Listen';
 import Lock from './Lock';
@@ -38,6 +39,7 @@ import Pdf from './Pdf';
 import PearsonLogo from './PearsonLogo';
 import Remove from './Remove';
 import Search from './Search';
+import Settings from './Settings';
 import ScoreOutlined from './ScoreOutlined';
 import SmallCircleFilled from './SmallCircleFilled';
 import SmallCircleHalfFilled from './SmallCircleHalfFilled';
@@ -80,6 +82,7 @@ const icons = new Map([
   ['FontChange', FontChange],
   ['HelpFilled', HelpFilled],
   ['HelpOutlined', HelpOutlined],
+  ['Information', Information],
   ['ListBulleted', ListBulleted],
   ['Listen', Listen],
   ['Lock', Lock],
@@ -91,6 +94,7 @@ const icons = new Map([
   ['PearsonLogo', PearsonLogo],
   ['Remove', Remove],
   ['Search', Search],
+  ['Settings', Settings],
   ['ScoreOutlined', ScoreOutlined],
   ['SmallCircleFilled', SmallCircleFilled],
   ['SmallCircleHalfFilled', SmallCircleHalfFilled],
