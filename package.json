@@ -1,6 +1,6 @@
 {
   "name": "@greenville/mui-theme",
-  "version": "1.2.18",
+  "version": "1.2.19",
   "description": "A Material UI theme implementing Pearson UX specs",
   "author": "Pearson-Higher-Ed",
   "license": "MIT",
@@ -48,7 +48,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.18.0",
     "gh-pages": "^1.2.0",
-    "react": "link:./examples/node_modules/react",
+    "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "^3.3.0",
     "rollup": "^0.64.1",
