@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@greenville/mui-theme": "link:..",
-    "@material-ui/core": "^4.9.0",
+    "@material-ui/core": "link:../node_modules/@material-ui/core",
     "@material-ui/icons": "^4.5.1",
     "@material-ui/lab": "^4.0.0-alpha.40",
     "axios": "^0.18.0",
