@@ -35,6 +35,8 @@ import Menu from './Menu';
 import MessageOutlined from './MessageOutlined';
 import MoreVert from './MoreVert';
 import Notebook from './Notebook';
+import Pause from './Pause';
+import Play from './Play';
 import Pdf from './Pdf';
 import PearsonLogo from './PearsonLogo';
 import Remove from './Remove';
@@ -90,6 +92,8 @@ const icons = new Map([
   ['MessageOutlined', MessageOutlined],
   ['MoreVert', MoreVert],
   ['Notebook', Notebook],
+  ['Pause', Pause],
+  ['Play', Play],
   ['Pdf', Pdf],
   ['PearsonLogo', PearsonLogo],
   ['Remove', Remove],
