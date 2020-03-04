@@ -8,6 +8,7 @@ import CodeRenderer from '../common/CodeRenderer';
  */
 const Dropdowns = () => (
   <div>
+    <CodeRenderer name="dropdowns/SimpleMenu" />
     <CodeRenderer name="dropdowns/ProfileDropdownExample" />
     <CodeRenderer name="dropdowns/BasicDropdownExample" />
   </div>

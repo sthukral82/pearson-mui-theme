@@ -46,6 +46,7 @@ import ScoreOutlined from './ScoreOutlined';
 import SmallCircleFilled from './SmallCircleFilled';
 import SmallCircleHalfFilled from './SmallCircleHalfFilled';
 import SmallCircleOutline from './SmallCircleOutline';
+import Sortable from './Sortable';
 import StarFilled from './StarFilled';
 import StarHalfFilled from './StarHalfFilled';
 import StarOutline from './StarOutline';
@@ -103,6 +104,7 @@ const icons = new Map([
   ['SmallCircleFilled', SmallCircleFilled],
   ['SmallCircleHalfFilled', SmallCircleHalfFilled],
   ['SmallCircleOutline', SmallCircleOutline],
+  ['Sortable', Sortable],
   ['StarFilled', StarFilled],
   ['StarHalfilled', StarHalfFilled],
   ['StarOutline', StarOutline],
