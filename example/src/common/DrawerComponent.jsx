@@ -56,7 +56,7 @@ const DrawerComponent = ({ classes, open, onClose }) => (
           <ListItemIcon>
             <Apps />
           </ListItemIcon>
-          <ListItemText primary="Buttons" />
+          <ListItemText primary="Buttons & Links" />
         </MenuItem>
         <MenuItem button component={Link} to="/cards" onClick={onClose}>
           <ListItemIcon>
@@ -98,7 +98,7 @@ const DrawerComponent = ({ classes, open, onClose }) => (
           <ListItemIcon>
             <WebAsset />
           </ListItemIcon>
-          <ListItemText primary="Dropdowns" />
+          <ListItemText primary="Menu & Dropdowns" />
         </MenuItem>
         <MenuItem button component={Link} to="/typography" onClick={onClose}>
           <ListItemIcon>

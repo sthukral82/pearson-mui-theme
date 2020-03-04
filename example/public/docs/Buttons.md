@@ -1,4 +1,4 @@
-# Buttons
+# Buttons & Links
 
 Visit [Button](https://uxframework.pearson.com/nightly/buttons) in Pearson UX specifications.
 

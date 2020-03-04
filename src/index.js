@@ -25,6 +25,19 @@ const cardActionAreaPseudoOutline = (padding, borderRadius, focusColor) => ({
   border: `2px solid ${focusColor}`
 });
 
+
+const menuPseudoOutline = (focusColor) => ({
+  content: '""',
+  boxSizing: 'content-box',
+  position: 'absolute',
+  top: 1,
+  left: 1,
+  borderRadius: 8,
+  width: 'calc(100% - 6px)',
+  height: 'calc(100% - 6px)',
+  border: `2px solid ${focusColor}`
+});
+
 const tabPseudoOutline = (borderRadius, focusColor) => ({
   content: '""',
   boxSizing: 'content-box',
@@ -93,6 +106,9 @@ const pearsonMuiTheme = {
     MuiAppBar: {
       elevation: 0,
       color: 'inherit'
+    },
+    MuiMenuItem: {
+      focusVisibleClassName: 'pmuiCustomFocusVisible'
     }
   },
   palette: {
@@ -587,6 +603,9 @@ const pearsonMuiTheme = {
       root: {
         '&:hover': {
           backgroundColor: 'rgba(0, 0, 0, 0.08)'
+        },
+        '&.pmuiCustomFocusVisible': {
+          '&:after': menuPseudoOutline(colors.focusBlue)
         }
       }
     },
@@ -596,21 +615,24 @@ const pearsonMuiTheme = {
         padding: '24px',
         boxShadow: '0 2px 4px 0 rgba(0, 0, 0, 0.4)',
         marginTop: '10px'
-      },
-      paper: {
-        padding: '24px'
       }
     },
     MuiSlider: {
-      root: {},
       track: {
-        backgroundColor: colors.alto,
-        height: '4px'
+        backgroundColor: colors.seaBlue,
+        height: 8,
+        borderRadius: 16
       },
       thumb: {
-        backgroundColor: colors.digitalMarineTurquoise,
-        width: '15px',
-        height: '15px'
+        backgroundColor: colors.white,
+        border: `solid 1px ${colors.alto}`,
+        boxShadow: '0 5px 22px 4px rgba(0, 0, 0, 0.03), 0 7px 8px -4px rgba(0, 0, 0, 0.05)',
+        width: 20,
+        height: 20
+      },
+      trackAfter: {
+        backgroundColor: colors.concrete,
+        height: 8
       }
     },
     MuiSvgIcon: {

@@ -45,7 +45,9 @@ const component = ({ classes }) => (
       </IconButton>
     </Paper>
     <Paper className={classes.lightBackground}>
-      <Avatar className={`${classes.avatar} avatarHover`}>HG</Avatar>
+      <Avatar size="small" className={classes.avatar}>HG</Avatar>
+      <Avatar className={classes.avatar}>HG</Avatar>
+      <Avatar color="default" size="large" className={classes.avatar}>HG</Avatar>
     </Paper>
   </div>
 );

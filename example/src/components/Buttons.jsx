@@ -15,6 +15,7 @@ const Buttons = () => (
     <CodeRenderer name="buttons/TertiaryButtons" />
     <CodeRenderer name="buttons/DisabledButtons" />
     <CodeRenderer name="buttons/TextButtons" />
+    <CodeRenderer name="buttons/Links" />
   </div>
 );
 
