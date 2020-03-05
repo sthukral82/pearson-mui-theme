@@ -109,6 +109,9 @@ const pearsonMuiTheme = {
     },
     MuiMenuItem: {
       focusVisibleClassName: 'pmuiCustomFocusVisible'
+    },
+    MuiSlider: {
+      trackSize: 8
     }
   },
   palette: {
@@ -621,7 +624,10 @@ const pearsonMuiTheme = {
       track: {
         backgroundColor: colors.seaBlue,
         height: 8,
-        borderRadius: 16
+        borderRadius: 16,
+        '$vertical &': {
+          width: 8
+        }
       },
       thumb: {
         backgroundColor: colors.white,
@@ -630,9 +636,12 @@ const pearsonMuiTheme = {
         width: 20,
         height: 20
       },
-      trackAfter: {
+      rail: {
         backgroundColor: colors.concrete,
-        height: 8
+        height: 8,
+        '$vertical &': {
+          width: 8
+        }
       }
     },
     MuiSvgIcon: {

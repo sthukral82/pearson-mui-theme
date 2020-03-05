@@ -22,7 +22,7 @@ class VerticalSlider extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: 0.5
+      value: 56
     };
   }
 
