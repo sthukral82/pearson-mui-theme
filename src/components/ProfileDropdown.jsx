@@ -15,6 +15,7 @@ const ProfileDropdown = ({
       hide={hide}
       color="secondary"
       onChange={onChange}
+      disableHover
       icon={
         (
           <Fragment>

@@ -82,7 +82,7 @@ class Dropdown extends React.Component {
     // Returns open state either from parent or local
     const open = this.props.open;
     const {
-      classes, id, title, hide, tooltipPlacement, children, icon, color
+      classes, id, title, hide, tooltipPlacement, children, icon, color, disableHover
     } = this.props;
     return hide ? null : (
       <Fragment>
@@ -91,6 +91,7 @@ class Dropdown extends React.Component {
           title={title}
           tooltipPlacement={tooltipPlacement}
           color={color}
+          className={disableHover ? 'disableHover' : ''}
           buttonRef={(node) => {
             this.anchorEl = node;
           }}
@@ -134,6 +135,7 @@ Dropdown.defaultProps = {
   id: 'pmui-dropdown',
   open: false,
   hide: false,
+  disableHover: false,
   title: null,
   className: null,
   tooltipPlacement: 'bottom',
@@ -149,6 +151,7 @@ Dropdown.propTypes = {
   ]).isRequired,
   open: PropTypes.bool,
   hide: PropTypes.bool,
+  disableHover: PropTypes.bool,
   color: PropTypes.oneOf(['primary', 'secondary', 'default', 'inherit', 'action']),
   title: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),

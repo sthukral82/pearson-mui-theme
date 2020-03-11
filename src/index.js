@@ -538,6 +538,11 @@ const pearsonMuiTheme = {
         borderRadius: pearson.borderRadius.large
       }
     },
+    MuiCard: {
+      root: {
+        boxShadow: '0px 4px 8px 0px rgba(0, 0, 0, 5%), 0px 4px 22px 0px rgba(0, 0, 0, 3%)'
+      }
+    },
     MuiCardActionArea: {
       root: {
         fontFamily: pearson.font.family,
@@ -668,21 +673,49 @@ const pearsonMuiTheme = {
     },
     MuiIconButton: {
       root: {
-        padding: 5,
-        color: colors.charcoal,
+        padding: 6,
+        color: colors.mediumGray,
+        '&$disabled': {
+          opacity: 0.5
+        },
+        '&.disableHover': {
+          '&:hover': {
+            backgroundColor: 'inherit'
+          },
+          '&:active': {
+            backgroundColor: 'inherit'
+          }
+        },
         '&:hover': {
-          backgroundColor: colors.transparent,
+          backgroundColor: `${colors.alto}A6`,
           '& .avatarHover': {
-            backgroundColor: 'rgba(255, 255, 255, 0.2)',
+            backgroundColor: `${colors.white}33`,
             color: colors.white
           }
+        },
+        '&.pmuiCustomFocusVisible': {
+          backgroundColor: `${colors.alto}A6`
         }
+      },
+      sizeSmall: {
+        padding: 4
       },
       colorSecondary: {
         '&:hover': {
-          backgroundColor: 'inherit'
+          backgroundColor: `${colors.black}CC`
+        },
+        '&:active': {
+          backgroundColor: `${colors.black}4D`
+        },
+        '&$disabled': {
+          opacity: 0.5,
+          color: colors.white
         },
         '&.pmuiCustomFocusVisible': {
+          '&.disableHover': {
+            backgroundColor: 'inherit'
+          },
+          backgroundColor: `${colors.black}CC`,
           '&:after': pseudoOutline(2, 36, colors.summerSky)
         }
       }
