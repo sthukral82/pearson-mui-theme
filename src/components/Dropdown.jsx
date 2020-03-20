@@ -82,7 +82,7 @@ class Dropdown extends React.Component {
     // Returns open state either from parent or local
     const open = this.props.open;
     const {
-      classes, id, title, hide, tooltipPlacement, children, icon, color, disableHover
+      classes, id, title, hide, tooltipPlacement, children, icon, color, disableHover, popperPlacement
     } = this.props;
     return hide ? null : (
       <Fragment>
@@ -106,7 +106,7 @@ class Dropdown extends React.Component {
           open={open}
           className={classes.popper}
           anchorEl={this.anchorEl}
-          placement="bottom-end"
+          placement={popperPlacement}
           transition
           disablePortal
         >
@@ -140,7 +140,8 @@ Dropdown.defaultProps = {
   className: null,
   tooltipPlacement: 'bottom',
   color: 'default',
-  onChange: null
+  onChange: null,
+  popperPlacement: 'bottom-end'
 };
 
 Dropdown.propTypes = {
@@ -164,7 +165,8 @@ Dropdown.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]).isRequired,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  popperPlacement: PropTypes.string
 };
 
 export default withStyles(styles)(Dropdown);
