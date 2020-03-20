@@ -711,6 +711,46 @@ const pearsonMuiTheme = {
         alignItems: 'flex-start',
         paddingTop: 30
       }
+    },
+    MuiPickersCalendarHeader: {
+      switchHeader: {
+        marginBottom: 17,
+      },
+      iconButton: {
+        padding: '7px'
+      },
+      dayLabel: {
+        color: colors.mediumGray,
+        width: 8,
+        height: 16,
+        margin: '12px 16px'
+      }
+    },
+    MuiPickersDay: {
+      day: {
+        width: 32,
+        height: 32,
+        margin: 4
+      },
+      daySelected: {
+        backgroundColor: colors.mediumGray,
+        '&:hover': {
+          backgroundColor: colors.mediumGray
+        }
+      },
+      dayDisabled: {
+        cursor: 'auto',
+        color: colors.concrete
+      },
+      current: {
+        backgroundColor: colors.moonlight,
+        color: colors.charcoal
+      }
+    },
+    MuiPickersCalendar: {
+      transitionContainer: {
+        minHeight: 200
+      }
     }
   }
 };
