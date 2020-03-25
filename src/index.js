@@ -788,11 +788,6 @@ const pearsonMuiTheme = {
         backgroundColor: colors.moonlight,
         color: colors.charcoal
       }
-    },
-    MuiPickersCalendar: {
-      transitionContainer: {
-        minHeight: 200
-      }
     }
   }
 };
