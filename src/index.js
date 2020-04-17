@@ -442,7 +442,7 @@ const pearsonMuiTheme = {
       },
       outlined: {
         padding: '7px 17px',
-        boxShadow: '0 5px 22px 4px rgba(0, 0, 0, 0.03), 0 7px 8px -4px rgba(0, 0, 0, 0.05)',
+        boxShadow: 'none',
         borderColor: colors.mediumGray,
         color: colors.mediumGray,
         backgroundColor: 'transparent',
@@ -527,6 +527,7 @@ const pearsonMuiTheme = {
       sizeSmall: {
         padding: '5px 24px',
         fontSize: '0.875rem',
+        lineHeight: '20px',
         '& span': {
           minWidth: 80
         }
@@ -787,6 +788,11 @@ const pearsonMuiTheme = {
       current: {
         backgroundColor: colors.moonlight,
         color: colors.charcoal
+      }
+    },
+    MuiPickersCalendar: {
+      transitionContainer: {
+        minHeight: 236
       }
     }
   }
