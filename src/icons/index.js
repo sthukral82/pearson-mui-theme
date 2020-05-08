@@ -51,6 +51,7 @@ import StarFilled from './StarFilled';
 import StarHalfFilled from './StarHalfFilled';
 import StarOutline from './StarOutline';
 import Text from './Text';
+import Warning from './Warning';
 /**
  * A Map containing all Icons
  * @author Hari Gangadharan
@@ -108,7 +109,8 @@ const icons = new Map([
   ['StarFilled', StarFilled],
   ['StarHalfilled', StarHalfFilled],
   ['StarOutline', StarOutline],
-  ['Text', Text]
+  ['Text', Text],
+  ['Warning', Warning]
 ]);
 
 export default icons;
