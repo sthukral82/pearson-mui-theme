@@ -1,5 +1,6 @@
-import AddCircleOutlined from './AddCircleOutlined';
+import AccountOutlined from './AccountOutlined';
 import Add from './Add';
+import AddCircleOutlined from './AddCircleOutlined';
 import Archive from './Archive';
 import ArrowBack from './ArrowBack';
 import BellFilled from './BellFilled';
@@ -25,12 +26,14 @@ import FlashcardOutlined from './FlashcardOutlined';
 import Folder from './Folder';
 import Font from './Font';
 import FontChange from './FontChange';
+import Globe from './Globe';
 import HelpOutlined from './HelpOutlined';
 import HelpFilled from './HelpFilled';
 import Information from './Information';
 import ListBulleted from './ListBulleted';
 import Listen from './Listen';
 import Lock from './Lock';
+import LockOnOutlined from './LockOnOutlined';
 import Menu from './Menu';
 import MessageOutlined from './MessageOutlined';
 import MoreVert from './MoreVert';
@@ -40,9 +43,10 @@ import Pdf from './Pdf';
 import PearsonLogo from './PearsonLogo';
 import Play from './Play';
 import Remove from './Remove';
+import ScoreOutlined from './ScoreOutlined';
 import Search from './Search';
 import Settings from './Settings';
-import ScoreOutlined from './ScoreOutlined';
+import ShowOnOutlined from './ShowOnOutlined';
 import SmallCircleFilled from './SmallCircleFilled';
 import SmallCircleHalfFilled from './SmallCircleHalfFilled';
 import SmallCircleOutline from './SmallCircleOutline';
@@ -57,6 +61,7 @@ import Warning from './Warning';
  * @author Hari Gangadharan
  */
 const icons = new Map([
+  ['AccountOutlined', AccountOutlined],
   ['Add', Add],
   ['AddCircleOutlined', AddCircleOutlined],
   ['Archive', Archive],
@@ -84,12 +89,14 @@ const icons = new Map([
   ['Folder', Folder],
   ['Font', Font],
   ['FontChange', FontChange],
+  ['Globe', Globe],
   ['HelpFilled', HelpFilled],
   ['HelpOutlined', HelpOutlined],
   ['Information', Information],
   ['ListBulleted', ListBulleted],
   ['Listen', Listen],
   ['Lock', Lock],
+  ['LockOnOutlined', LockOnOutlined],
   ['Menu', Menu],
   ['MessageOutlined', MessageOutlined],
   ['MoreVert', MoreVert],
@@ -99,9 +106,10 @@ const icons = new Map([
   ['PearsonLogo', PearsonLogo],
   ['Play', Play],
   ['Remove', Remove],
+  ['ScoreOutlined', ScoreOutlined],
   ['Search', Search],
   ['Settings', Settings],
-  ['ScoreOutlined', ScoreOutlined],
+  ['ShowOnOutlined', ShowOnOutlined],
   ['SmallCircleFilled', SmallCircleFilled],
   ['SmallCircleHalfFilled', SmallCircleHalfFilled],
   ['SmallCircleOutline', SmallCircleOutline],
