@@ -46,6 +46,7 @@ import Remove from './Remove';
 import ScoreOutlined from './ScoreOutlined';
 import Search from './Search';
 import Settings from './Settings';
+import ShowOffOutlined from './ShowOffOutlined';
 import ShowOnOutlined from './ShowOnOutlined';
 import SmallCircleFilled from './SmallCircleFilled';
 import SmallCircleHalfFilled from './SmallCircleHalfFilled';
@@ -109,6 +110,7 @@ const icons = new Map([
   ['ScoreOutlined', ScoreOutlined],
   ['Search', Search],
   ['Settings', Settings],
+  ['ShowOffOutlined', ShowOffOutlined],
   ['ShowOnOutlined', ShowOnOutlined],
   ['SmallCircleFilled', SmallCircleFilled],
   ['SmallCircleHalfFilled', SmallCircleHalfFilled],
