@@ -11,7 +11,6 @@ const ShowOffOutlined = (props) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <SvgIcon viewBox="0 0 24 24" {...props}>
     <g fill="none" fillRule="evenodd">
-      <rect width="24" height="24" />
       <path
         fill="currentcolor"
         d="M3.70710678,2.29289322 L21.7383297,20.3241161 C22.128854,20.7146404 22.128854,21.3478054
