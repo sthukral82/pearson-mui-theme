@@ -2,11 +2,12 @@ import React from 'react';
 import SvgIcon from '@material-ui/core/SvgIcon';
 
 /**
- * Icon for Book Open Icon.
+ * Book open outlined icon
  *
  * @author Hari Gangadharan
  */
-const BookOutlined = props => (
+const BookOutlined = (props) => (
+  // eslint-disable-next-line react/jsx-props-no-spreading
   <SvgIcon viewBox="0 0 24 24" {...props}>
     <path
       fill="currentcolor"
