@@ -11,7 +11,7 @@ import { icons, Icon } from '@greenville/mui-theme';
 
 const styles = theme => ({
   root: {
-    margin: theme.spacing.unit
+    margin: theme.spacing(1)
   },
   iconButton: {
     margin: 9

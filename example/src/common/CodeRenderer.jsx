@@ -17,16 +17,16 @@ const REPO_RELATIVE_PATH = 'develop/example/src/components';
 const styles = theme => createStyles({
   root: {
     ...theme.mixins.gutters(),
-    padding: theme.spacing.unit * 2,
-    margin: `${theme.spacing.unit}px auto`,
+    padding: theme.spacing(2),
+    margin: `${theme.spacing(1)}px auto`,
     maxWidth: 620,
     [theme.breakpoints.only('xs')]: {
-      margin: theme.spacing.unit
+      margin: theme.spacing(1)
     }
   },
   '@media (max-width: 740px)': {
     root: {
-      margin: theme.spacing.unit
+      margin: theme.spacing(1)
     }
   },
   renderer: {
@@ -64,7 +64,7 @@ class CodeRenderer extends React.Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const name = this.props.name;
     const rawCodePath = `${GITHUB_RAW_PATH}/${REPO_RELATIVE_PATH}/${name}.jsx`;
     const repoCodePath = `${GITHUB_CODE_PATH}/${REPO_RELATIVE_PATH}/${name}.jsx`;

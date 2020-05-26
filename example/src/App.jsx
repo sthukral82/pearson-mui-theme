@@ -1,22 +1,15 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import {
-  MuiThemeProvider, createMuiTheme, jssPreset, createGenerateClassName
-} from '@material-ui/core/styles';
+import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
-import JssProvider from 'react-jss/lib/JssProvider';
-import { create } from 'jss';
-import pearsonTheme, { PearsonLogo, Icon } from '@greenville/mui-theme';
+import { JssProvider, SheetsRegistry } from 'react-jss';
+import pearsonTheme, { Icon } from '@greenville/mui-theme';
 import DrawerComponent from './common/DrawerComponent';
 import SampleRenderer from './common/SampleRenderer';
 import './App.css';
 
-const jss = create({
-  ...jssPreset(),
-  // We define a custom insertion point that JSS will look for injecting the styles in the DOM.
-  insertionPoint: 'jss-insertion-point'
-});
-const generateClassName = createGenerateClassName();
+const sheets = new SheetsRegistry();
+
 /**
  * The main App Component.
  *
@@ -41,12 +34,12 @@ class App extends Component {
   render() {
     return (
       <div>
-        <JssProvider jss={jss} classNamePrefix="pmui" generateClassName={generateClassName}>
-          <MuiThemeProvider theme={createMuiTheme(pearsonTheme)}>
+        <ThemeProvider theme={createMuiTheme(pearsonTheme)}>
+          <JssProvider registry={sheets} classNamePrefix="pmui">
             <BrowserRouter>
               <div>
                 <div className="curve">
-                  <PearsonLogo style={{ fontSize: 49 }} color="secondary" />
+                  <Icon name="PearsonLogo" style={{ fontSize: 49 }} color="secondary" />
                   <IconButton style={{ marginLeft: 16 }} color="secondary" onClick={this.handleMenuClick}>
                     <Icon name="Menu" color="secondary" />
                   </IconButton>
@@ -69,8 +62,8 @@ class App extends Component {
                 </div>
               </div>
             </BrowserRouter>
-          </MuiThemeProvider>
-        </JssProvider>
+          </JssProvider>
+        </ThemeProvider>
       </div>
     );
   }

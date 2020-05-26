@@ -25,6 +25,19 @@ const cardActionAreaPseudoOutline = (padding, borderRadius, focusColor) => ({
   border: `2px solid ${focusColor}`
 });
 
+
+const menuPseudoOutline = (focusColor) => ({
+  content: '""',
+  boxSizing: 'content-box',
+  position: 'absolute',
+  top: 1,
+  left: 1,
+  borderRadius: 8,
+  width: 'calc(100% - 6px)',
+  height: 'calc(100% - 6px)',
+  border: `2px solid ${focusColor}`
+});
+
 const tabPseudoOutline = (borderRadius, focusColor) => ({
   content: '""',
   boxSizing: 'content-box',
@@ -82,7 +95,7 @@ const pearson = {
 };
 
 const pearsonMuiTheme = {
-  spacing: { unit: 16 },
+  spacing: 16,
   props: {
     // Name of the component️
     MuiButtonBase: {
@@ -93,6 +106,12 @@ const pearsonMuiTheme = {
     MuiAppBar: {
       elevation: 0,
       color: 'inherit'
+    },
+    MuiMenuItem: {
+      focusVisibleClassName: 'pmuiCustomFocusVisible'
+    },
+    MuiSlider: {
+      trackSize: 8
     }
   },
   palette: {
@@ -269,7 +288,7 @@ const pearsonMuiTheme = {
         backgroundColor: '#f5f5f5'
       },
       root: {
-        minWidth: 60
+        minWidth: 85
       },
       activeTab: {
         width: 58,
@@ -423,7 +442,7 @@ const pearsonMuiTheme = {
       },
       outlined: {
         padding: '7px 17px',
-        boxShadow: '0 5px 22px 4px rgba(0, 0, 0, 0.03), 0 7px 8px -4px rgba(0, 0, 0, 0.05)',
+        boxShadow: 'none',
         borderColor: colors.mediumGray,
         color: colors.mediumGray,
         backgroundColor: 'transparent',
@@ -508,6 +527,7 @@ const pearsonMuiTheme = {
       sizeSmall: {
         padding: '5px 24px',
         fontSize: '0.875rem',
+        lineHeight: '20px',
         '& span': {
           minWidth: 80
         }
@@ -517,6 +537,11 @@ const pearsonMuiTheme = {
         fontSize: '16px',
         lineHeight: '20px',
         borderRadius: pearson.borderRadius.large
+      }
+    },
+    MuiCard: {
+      root: {
+        boxShadow: '0px 4px 8px 0px rgba(0, 0, 0, 5%), 0px 4px 22px 0px rgba(0, 0, 0, 3%)'
       }
     },
     MuiCardActionArea: {
@@ -583,27 +608,46 @@ const pearsonMuiTheme = {
         }
       }
     },
+    MuiMenuItem: {
+      root: {
+        '&:hover': {
+          backgroundColor: 'rgba(0, 0, 0, 0.08)'
+        },
+        '&.pmuiCustomFocusVisible': {
+          '&:after': menuPseudoOutline(colors.focusBlue)
+        }
+      }
+    },
     MuiPopover: {
       root: {
         borderRadius: '4px',
         padding: '24px',
         boxShadow: '0 2px 4px 0 rgba(0, 0, 0, 0.4)',
         marginTop: '10px'
-      },
-      paper: {
-        padding: '24px'
       }
     },
     MuiSlider: {
-      root: {},
       track: {
-        backgroundColor: colors.alto,
-        height: '4px'
+        backgroundColor: colors.seaBlue,
+        height: 8,
+        borderRadius: 16,
+        '$vertical &': {
+          width: 8
+        }
       },
       thumb: {
-        backgroundColor: colors.digitalMarineTurquoise,
-        width: '15px',
-        height: '15px'
+        backgroundColor: colors.white,
+        border: `solid 1px ${colors.alto}`,
+        boxShadow: '0 5px 22px 4px rgba(0, 0, 0, 0.03), 0 7px 8px -4px rgba(0, 0, 0, 0.05)',
+        width: 20,
+        height: 20
+      },
+      rail: {
+        backgroundColor: colors.concrete,
+        height: 8,
+        '$vertical &': {
+          width: 8
+        }
       }
     },
     MuiSvgIcon: {
@@ -630,21 +674,49 @@ const pearsonMuiTheme = {
     },
     MuiIconButton: {
       root: {
-        padding: 5,
-        color: colors.charcoal,
+        padding: 6,
+        color: colors.mediumGray,
+        '&$disabled': {
+          opacity: 0.5
+        },
+        '&.disableHover': {
+          '&:hover': {
+            backgroundColor: 'inherit'
+          },
+          '&:active': {
+            backgroundColor: 'inherit'
+          }
+        },
         '&:hover': {
-          backgroundColor: colors.transparent,
+          backgroundColor: `${colors.alto}A6`,
           '& .avatarHover': {
-            backgroundColor: 'rgba(255, 255, 255, 0.2)',
+            backgroundColor: `${colors.white}33`,
             color: colors.white
           }
+        },
+        '&.pmuiCustomFocusVisible': {
+          backgroundColor: `${colors.alto}A6`
         }
+      },
+      sizeSmall: {
+        padding: 4
       },
       colorSecondary: {
         '&:hover': {
-          backgroundColor: 'inherit'
+          backgroundColor: `${colors.black}CC`
+        },
+        '&:active': {
+          backgroundColor: `${colors.black}4D`
+        },
+        '&$disabled': {
+          opacity: 0.5,
+          color: colors.white
         },
         '&.pmuiCustomFocusVisible': {
+          '&.disableHover': {
+            backgroundColor: 'inherit'
+          },
+          backgroundColor: `${colors.black}CC`,
           '&:after': pseudoOutline(2, 36, colors.summerSky)
         }
       }
@@ -681,6 +753,46 @@ const pearsonMuiTheme = {
       root: {
         alignItems: 'flex-start',
         paddingTop: 30
+      }
+    },
+    MuiPickersCalendarHeader: {
+      switchHeader: {
+        marginBottom: 17,
+      },
+      iconButton: {
+        padding: '7px'
+      },
+      dayLabel: {
+        color: colors.mediumGray,
+        width: 8,
+        height: 16,
+        margin: '12px 16px'
+      }
+    },
+    MuiPickersDay: {
+      day: {
+        width: 32,
+        height: 32,
+        margin: 4
+      },
+      daySelected: {
+        backgroundColor: colors.mediumGray,
+        '&:hover': {
+          backgroundColor: colors.mediumGray
+        }
+      },
+      dayDisabled: {
+        cursor: 'auto',
+        color: colors.concrete
+      },
+      current: {
+        backgroundColor: colors.moonlight,
+        color: colors.charcoal
+      }
+    },
+    MuiPickersCalendar: {
+      transitionContainer: {
+        minHeight: 236
       }
     }
   }

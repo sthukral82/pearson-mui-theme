@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Slider from '@material-ui/lab/Slider';
+import Slider from '@material-ui/core/Slider';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 
 const styles = theme => ({
   slider: {
-    paddingTop: theme.spacing.unit,
-    paddingBottom: theme.spacing.unit
+    paddingTop: theme.spacing(1),
+    paddingBottom: theme.spacing(1)
   }
 });
 
@@ -32,7 +32,7 @@ class StepSlider extends Component {
     return (
       <div>
         <div>
-Value:
+          Value:
           {value}
         </div>
         <Slider

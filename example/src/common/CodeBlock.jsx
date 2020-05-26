@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SyntaxHighlighter from 'react-syntax-highlighter/prism';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 /**
  * A Component that can render the code block with proper syntax highlighting.
@@ -21,7 +22,7 @@ export default class CodeBlock extends React.PureComponent {
     const { language, value } = this.props;
 
     return (
-      <SyntaxHighlighter language={language}>
+      <SyntaxHighlighter language={language} style={atomDark}>
         {value}
       </SyntaxHighlighter>
     );

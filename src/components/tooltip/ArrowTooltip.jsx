@@ -21,63 +21,38 @@
 
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
-import ArrowTooltipStyles from './ArrowTooltipStyles';
 
-class ArrowTooltip extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      arrowRef: null
-    };
-  }
+const useStylesBootstrap = makeStyles(theme => ({
+  arrow: {
+    color: theme.palette.common.black,
+  },
+  tooltip: {
+    backgroundColor: theme.palette.common.black,
+  },
+}));
 
-  handleArrowRef = (node) => {
-    this.setState({
-      arrowRef: node
-    });
-  };
-
-  render() {
-    const { classes, title, ...rest } = this.props;
-
-    return (
-      <Tooltip
-        title={(
-          <Fragment>
-            <Typography color="secondary" variant="body2">
-              {title}
-            </Typography>
-            <span className={classes.arrow} ref={this.handleArrowRef} />
-          </Fragment>
-            )}
-        classes={{
-          tooltip: classes.bootstrapTooltip,
-          popper: classes.bootstrapPopper,
-          tooltipPlacementLeft: classes.bootstrapPlacementLeft,
-          tooltipPlacementRight: classes.bootstrapPlacementRight,
-          tooltipPlacementTop: classes.bootstrapPlacementTop,
-          tooltipPlacementBottom: classes.bootstrapPlacementBottom
-        }}
-        PopperProps={{
-          popperOptions: {
-            modifiers: {
-              arrow: {
-                enabled: Boolean(this.state.arrowRef),
-                element: this.state.arrowRef
-              }
-            }
-          }
-        }}
-        {...rest}
-      >
-        {this.props.children}
-      </Tooltip>
-    );
-  }
-}
+const ArrowTooltip = ({ title, children, ...rest }) => {
+  const classes = useStylesBootstrap();
+  return (
+    <Tooltip
+      arrow
+      title={(
+        <Fragment>
+          <Typography color="secondary" variant="body2">
+            {title}
+          </Typography>
+        </Fragment>
+      )}
+      classes={classes}
+      {...rest}
+    >
+      {children}
+    </Tooltip>
+  );
+};
 
 ArrowTooltip.propTypes = {
   title: PropTypes.oneOfType([
@@ -87,9 +62,8 @@ ArrowTooltip.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
-  ]).isRequired,
-  classes: PropTypes.object.isRequired
+  ]).isRequired
 };
 
 
-export default withStyles(ArrowTooltipStyles)(ArrowTooltip);
+export default ArrowTooltip;

@@ -1,28 +1,27 @@
 {
   "name": "@greenville/mui-theme-example",
   "homepage": "https://Pearson-Higher-Ed.github.io/",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "license": "MIT",
   "private": true,
   "publishConfig": {
     "registry": "https://devops-tools.pearson.com/nexus-deps/content/repositories/npm-internal/"
   },
   "dependencies": {
-    "@material-ui/core": "^3.9.2",
-    "@material-ui/icons": "^3.0.1",
-    "@material-ui/lab": "^3.0.0-alpha.22",
+    "@greenville/mui-theme": "link:..",
+    "@material-ui/core": "link:../node_modules/@material-ui/core",
+    "@material-ui/icons": "^4.5.1",
+    "@material-ui/lab": "^4.0.0-alpha.40",
     "axios": "^0.18.0",
     "jss": "^9.8.7",
-    "jsx-to-string": "^1.4.0",
-    "@greenville/mui-theme": "link:..",
     "prop-types": "^15.6.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-jss": "^8.6.1",
-    "react-markdown": "^4.0.3",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "^1.1.4",
-    "react-syntax-highlighter": "^9.0.1"
+    "react": "link:../node_modules/react",
+    "react-dom": "link:../node_modules/react-dom",
+    "react-jss": "^10.0.4",
+    "react-markdown": "^4.3.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.3.0",
+    "react-syntax-highlighter": "^12.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -34,5 +33,17 @@
   },
   "devDependencies": {
     "gh-pages": "^2.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

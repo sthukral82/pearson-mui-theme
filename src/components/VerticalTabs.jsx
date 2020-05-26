@@ -8,9 +8,9 @@ const styles = () => ({
     display: 'flex',
     backgroundColor: '#002e60',
     height: '100%',
-    width: 60,
-    minWidth: 60,
-    maxWidth: 60,
+    width: 85,
+    minWidth: 85,
+    maxWidth: 85,
     minHeight: 640
   },
   tabs: {

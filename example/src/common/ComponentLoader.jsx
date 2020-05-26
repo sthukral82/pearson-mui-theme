@@ -14,7 +14,7 @@ class ComponentLoader extends React.Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     import(`../components/${this.props.name}`).then(
       (component) => {
         this.setState({

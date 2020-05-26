@@ -19,7 +19,7 @@ class MarkdownContainer extends React.Component {
   }
 
 
-  componentWillMount() {
+  componentDidMount() {
     axios.get(`${GITHUB_DOC_ROOT}/${this.props.name}.md`).then(
       (response) => {
         this.setState({ markdown: response.data });

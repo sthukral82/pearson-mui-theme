@@ -15,7 +15,8 @@ const colors = {
   sunshineYellow: '#ffb81c',
   sunflowerYellow: '#ff9b19',
   whiteGray: '#f5f5f5',
-  white: '#ffffff'
+  white: '#ffffff',
+  black: '#000000'
 };
 
 export default colors;

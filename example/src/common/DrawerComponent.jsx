@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
+import MenuItem from '@material-ui/core/MenuItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import AccountCircle from '@material-ui/icons/AccountCircle';
@@ -34,84 +34,84 @@ const DrawerComponent = ({ classes, open, onClose }) => (
   <Drawer open={open} onClose={onClose}>
     <div className={classes.drawer}>
       <List>
-        <ListItem component={Link} to="/" onClick={onClose}>
+        <MenuItem button component={Link} to="/" onClick={onClose}>
           <ListItemIcon>
             <Home />
           </ListItemIcon>
           <ListItemText primary="Home" />
-        </ListItem>
-        <ListItem component={Link} to="/avatars" onClick={onClose}>
+        </MenuItem>
+        <MenuItem button component={Link} to="/avatars" onClick={onClose}>
           <ListItemIcon>
             <AccountCircle />
           </ListItemIcon>
           <ListItemText primary="Avatars" />
-        </ListItem>
-        <ListItem component={Link} to="/appbar" onClick={onClose}>
+        </MenuItem>
+        <MenuItem button component={Link} to="/appbar" onClick={onClose}>
           <ListItemIcon>
             <ViewQuilt />
           </ListItemIcon>
           <ListItemText primary="AppBar" />
-        </ListItem>
-        <ListItem component={Link} to="/buttons" onClick={onClose}>
+        </MenuItem>
+        <MenuItem button component={Link} to="/buttons" onClick={onClose}>
           <ListItemIcon>
             <Apps />
           </ListItemIcon>
-          <ListItemText primary="Buttons" />
-        </ListItem>
-        <ListItem component={Link} to="/cards" onClick={onClose}>
+          <ListItemText primary="Buttons & Links" />
+        </MenuItem>
+        <MenuItem button component={Link} to="/cards" onClick={onClose}>
           <ListItemIcon>
             <Pages />
           </ListItemIcon>
           <ListItemText primary="Cards" />
-        </ListItem>
-        <ListItem component={Link} to="/inputs" onClick={onClose}>
+        </MenuItem>
+        <MenuItem button component={Link} to="/inputs" onClick={onClose}>
           <ListItemIcon>
             <Apps />
           </ListItemIcon>
           <ListItemText primary="Inputs" />
-        </ListItem>
-        <ListItem component={Link} to="/selections" onClick={onClose}>
+        </MenuItem>
+        <MenuItem button component={Link} to="/selections" onClick={onClose}>
           <ListItemIcon>
             <SelectAllRounded />
           </ListItemIcon>
           <ListItemText primary="Selection Controls" />
-        </ListItem>
-        <ListItem component={Link} to="/tabs" onClick={onClose}>
+        </MenuItem>
+        <MenuItem button component={Link} to="/tabs" onClick={onClose}>
           <ListItemIcon>
             <Tab />
           </ListItemIcon>
           <ListItemText primary="Tabs" />
-        </ListItem>
-        <ListItem component={Link} to="/sliders" onClick={onClose}>
+        </MenuItem>
+        <MenuItem button component={Link} to="/sliders" onClick={onClose}>
           <ListItemIcon>
             <SwapHorizontalCircle />
           </ListItemIcon>
           <ListItemText primary="Sliders" />
-        </ListItem>
-        <ListItem component={Link} to="/dialogs" onClick={onClose}>
+        </MenuItem>
+        <MenuItem button component={Link} to="/dialogs" onClick={onClose}>
           <ListItemIcon>
             <WebAsset />
           </ListItemIcon>
           <ListItemText primary="Dialogs" />
-        </ListItem>
-        <ListItem component={Link} to="/dropdowns" onClick={onClose}>
+        </MenuItem>
+        <MenuItem button component={Link} to="/dropdowns" onClick={onClose}>
           <ListItemIcon>
             <WebAsset />
           </ListItemIcon>
-          <ListItemText primary="Dropdowns" />
-        </ListItem>
-        <ListItem component={Link} to="/typography" onClick={onClose}>
+          <ListItemText primary="Menu & Dropdowns" />
+        </MenuItem>
+        <MenuItem button component={Link} to="/typography" onClick={onClose}>
           <ListItemIcon>
             <ViewCarousel />
           </ListItemIcon>
           <ListItemText primary="Typography" />
-        </ListItem>
-        <ListItem component={Link} to="/icons" onClick={onClose}>
+        </MenuItem>
+        <MenuItem button component={Link} to="/icons" onClick={onClose}>
           <ListItemIcon>
             <ThumbUpOutlined />
           </ListItemIcon>
           <ListItemText primary="Icons" />
-        </ListItem>
+        </MenuItem>
       </List>
     </div>
   </Drawer>

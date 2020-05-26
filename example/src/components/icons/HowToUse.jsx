@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import Box from '@material-ui/core/Box';
 import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import { withStyles } from '@material-ui/core/styles';
 import { Icon, Tooltip } from '@greenville/mui-theme';
@@ -8,14 +10,22 @@ import { Icon, Tooltip } from '@greenville/mui-theme';
 
 const styles = theme => ({
   root: {
-    margin: theme.spacing.unit
+    margin: theme.spacing(1)
   },
-  iconButton: {
+  smallIconMargin: {
     margin: 9
+  },
+  largeIconMargin: {
+    margin: 8
+  },
+  blueBackground: {
+    backgroundColor: '#005d83',
+    marginBottom: theme.spacing(1),
+    padding: theme.spacing(1)
   },
   darkBackground: {
     backgroundColor: '#c7c7c7',
-    marginBottom: theme.spacing.unit,
+    marginBottom: theme.spacing(1),
     color: 'purple' /* just to show how inherit works */
   }
 });
@@ -27,36 +37,66 @@ const styles = theme => ({
  */
 const component = ({ classes }) => (
   <Fragment>
-    <Paper className={classes.darkBackground}>
+    <Box>
+      <Typography variant="h4">
+        Small Icon Buttons - color: default
+      </Typography>
       <Tooltip
         title="Add something really cool!!!"
         placement="left"
       >
-        <IconButton className={classes.iconButton}>
+        <IconButton size="small" className={classes.smallIconMargin}>
           <Icon name="Add" />
         </IconButton>
       </Tooltip>
-      <IconButton className={classes.iconButton}>
-        <Icon name="Add" color="primary" />
+      <IconButton size="small" className={classes.smallIconMargin}>
+        <Icon name="CalendarOutlined" />
       </IconButton>
-      <IconButton className={classes.iconButton}>
-        <Icon name="Add" color="secondary" />
+      <IconButton size="small" className={classes.smallIconMargin}>
+        <Icon name="FlashcardOutlined" />
       </IconButton>
-      <IconButton className={classes.iconButton}>
-        <Icon name="Add" color="error" />
-      </IconButton>
-      <IconButton disabled className={classes.iconButton}>
-        <Icon name="Add" />
+      <IconButton size="small" disabled className={classes.smallIconMargin}>
+        <Icon name="Folder" />
       </IconButton>
       <Tooltip
         title="Add something really cool!!!"
         placement="bottom"
       >
-        <IconButton className={classes.iconButton}>
+        <IconButton size="small" className={classes.smallIconMargin}>
           <Icon name="Add" />
         </IconButton>
       </Tooltip>
-    </Paper>
+    </Box>
+    <Box className={classes.blueBackground}>
+      <Typography variant="h4" color="secondary" className={classes.largeIconMargin}>
+        Large Icon Buttons - color: secondary
+      </Typography>
+      <Tooltip
+        title="Add something really cool!!!"
+        placement="left"
+      >
+        <IconButton color="secondary" className={classes.largeIconMargin}>
+          <Icon fontSize="large" name="Add" />
+        </IconButton>
+      </Tooltip>
+      <IconButton color="secondary" className={classes.largeIconMargin}>
+        <Icon fontSize="large" name="CalendarOutlined" />
+      </IconButton>
+      <IconButton color="secondary" className={classes.largeIconMargin}>
+        <Icon fontSize="large" name="FlashcardOutlined" />
+      </IconButton>
+      <IconButton color="secondary" disabled className={classes.largeIconMargin}>
+        <Icon fontSize="large" name="Folder" />
+      </IconButton>
+      <Tooltip
+        title="Add something really cool!!!"
+        placement="bottom"
+      >
+        <IconButton color="secondary" className={classes.largeIconMargin}>
+          <Icon fontSize="large" name="Add" />
+        </IconButton>
+      </Tooltip>
+    </Box>
     <Paper className={classes.darkBackground}>
       <div>
         <Icon name="Add" fontSize="small" color="action" className={classes.root} />
