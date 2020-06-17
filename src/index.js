@@ -794,6 +794,13 @@ const pearsonMuiTheme = {
       transitionContainer: {
         minHeight: 236
       }
+    },
+    MuiPickersToolbarButton: {
+      toolbarBtn: {
+        maxWidth: 60,
+        marginLeft: '0 !important',
+        fontSize: '1.75rem'
+      }
     }
   }
 };

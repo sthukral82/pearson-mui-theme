@@ -21,6 +21,7 @@ import ClockOutlined from './ClockOutlined';
 import Collapse from './Collapse';
 import Correct from './Correct';
 import Download from './Download';
+import Edit from './Edit';
 import Expand from './Expand';
 import Filter from './Filter';
 import FlagOutlined from './FlagOutlined';
@@ -45,6 +46,7 @@ import Pdf from './Pdf';
 import PearsonLogo from './PearsonLogo';
 import Play from './Play';
 import Remove from './Remove';
+import RemoveCircleOutlined from './RemoveCircleOutlined';
 import ScoreOutlined from './ScoreOutlined';
 import Search from './Search';
 import Settings from './Settings';
@@ -88,6 +90,7 @@ const icons = new Map([
   ['Correct', Correct],
   ['Download', Download],
   ['Expand', Expand],
+  ['Edit', Edit],
   ['Filter', Filter],
   ['FlagOutlined', FlagOutlined],
   ['FlashcardOutlined', FlashcardOutlined],
@@ -111,6 +114,7 @@ const icons = new Map([
   ['PearsonLogo', PearsonLogo],
   ['Play', Play],
   ['Remove', Remove],
+  ['RemoveCircleOutlined', RemoveCircleOutlined],
   ['ScoreOutlined', ScoreOutlined],
   ['Search', Search],
   ['Settings', Settings],
