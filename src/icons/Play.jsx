@@ -6,7 +6,8 @@ import SvgIcon from '@material-ui/core/SvgIcon';
  *
  * @author Sam George
  */
-const Play = props => (
+const Play = (props) => (
+  // eslint-disable-next-line react/jsx-props-no-spreading
   <SvgIcon viewBox="0 0 24 24" {...props}>
     <path
       fill="currentcolor"

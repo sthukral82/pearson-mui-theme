@@ -20,7 +20,10 @@ import ChevronUp from './ChevronUp';
 import ClockOutlined from './ClockOutlined';
 import Collapse from './Collapse';
 import Correct from './Correct';
+import Descending from './Descending';
 import Download from './Download';
+import DrawerClose from './DrawerClose';
+import DrawerLeft from './DrawerLeft';
 import Edit from './Edit';
 import Expand from './Expand';
 import Filter from './Filter';
@@ -29,6 +32,8 @@ import FlashcardOutlined from './FlashcardOutlined';
 import Folder from './Folder';
 import Font from './Font';
 import FontChange from './FontChange';
+import FullscreenOff from './FullscreenOff';
+import FullscreenOn from './FullscreenOn';
 import Globe from './Globe';
 import HelpOutlined from './HelpOutlined';
 import HelpFilled from './HelpFilled';
@@ -88,7 +93,10 @@ const icons = new Map([
   ['ClockOutlined', ClockOutlined],
   ['Collapse', Collapse],
   ['Correct', Correct],
+  ['Descending', Descending],
   ['Download', Download],
+  ['DrawerClose', DrawerClose],
+  ['DrawerLeft', DrawerLeft],
   ['Expand', Expand],
   ['Edit', Edit],
   ['Filter', Filter],
@@ -97,6 +105,8 @@ const icons = new Map([
   ['Folder', Folder],
   ['Font', Font],
   ['FontChange', FontChange],
+  ['FullscreenOff', FullscreenOff],
+  ['FullscreenOn', FullscreenOn],
   ['Globe', Globe],
   ['HelpFilled', HelpFilled],
   ['HelpOutlined', HelpOutlined],

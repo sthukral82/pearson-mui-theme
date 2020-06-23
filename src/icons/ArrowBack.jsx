@@ -1,19 +1,24 @@
 import React from 'react';
 import SvgIcon from '@material-ui/core/SvgIcon';
 
-const ArrowBackIcon = props => (
-  <SvgIcon
-    viewBox="0 0 18 18"
-    {...props}
-  >
+/**
+ * Arrow back icon
+ *
+ * @file ArrowBack.jsx
+ */
+const ArrowBack = (props) => (
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  <SvgIcon viewBox="0 0 24 24" {...props}>
     <path
       fill="currentcolor"
-      d={
-        `M3.416 8H17a1 1 0 0 1 0 2H3.416l6.29 6.291a1.001 1.001 0 1 1-1.415 1.416L.293 9.709a1.001 1.001 0 0 1 
-        0-1.418L8.291.293A1.001 1.001 0 1 1 9.707 1.71L3.416 8z`
-      }
+      d="M5.41421356,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13
+      21,13 L5.41421356,13 L12.6873629,20.2731493 C13.0778872,20.6636736 13.0778872,21.2968386
+      12.6873629,21.6873629 C12.2968386,22.0778872 11.6636736,22.0778872 11.2731493,21.6873629
+      L2.29289322,12.7071068 C1.90236893,12.3165825 1.90236893,11.6834175 2.29289322,11.2928932
+      L11.2731493,2.3126371 C11.6636736,1.92211281 12.2968386,1.92211281 12.6873629,2.3126371
+      C13.0778872,2.70316139 13.0778872,3.33632637 12.6873629,3.72685066 L5.41421356,11 Z"
     />
   </SvgIcon>
 );
 
-export default ArrowBackIcon;
+export default ArrowBack;
