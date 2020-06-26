@@ -12,6 +12,8 @@ import CalendarOutlined from './CalendarOutlined';
 import CaretDown from './CaretDown';
 import CaretUp from './CaretUp';
 import CircleOutline from './CircleOutline';
+import CircleInprogressOutline from './CircleInprogressOutline';
+import CircleNotStartedOutline from './CircleNotStartedOutline';
 import CheckCircleFilled from './CheckCircleFilled';
 import ChevronDown from './ChevronDown';
 import ChevronLeft from './ChevronLeft';
@@ -90,6 +92,8 @@ const icons = new Map([
   ['ChevronRight', ChevronRight],
   ['ChevronUp', ChevronUp],
   ['CircleOutline', CircleOutline],
+  ['CircleInprogressOutline', CircleInprogressOutline],
+  ['CircleNotStartedOutline', CircleNotStartedOutline],
   ['ClockOutlined', ClockOutlined],
   ['Collapse', Collapse],
   ['Correct', Correct],
