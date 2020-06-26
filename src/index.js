@@ -216,15 +216,6 @@ const pearsonMuiTheme = {
           '&:after': tabPseudoOutline(6, colors.summerSky)
         }
       },
-      labelContainer: {
-        paddingTop: '12px',
-        paddingBottom: '10px',
-        paddingLeft: 0,
-        paddingRight: 0,
-        '@media (min-width: 960px)': {
-          padding: 'inherit'
-        }
-      },
       wrapper: {
         paddingLeft: 4,
         paddingRight: 4
@@ -290,6 +281,11 @@ const pearsonMuiTheme = {
       root: {
         minWidth: 85
       },
+      labelIcon: {
+        '& $wrapper > *:first-child': {
+          marginBottom: 9,
+        },
+      },
       activeTab: {
         width: 58,
         backgroundColor: 'rgba(255, 255, 255, 0.1)',
@@ -332,9 +328,6 @@ const pearsonMuiTheme = {
       },
       wrapper: {
         padding: 0
-      },
-      labelContainer: {
-        paddingTop: 9
       }
     },
     MuiTypography: {

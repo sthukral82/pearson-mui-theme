@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import {
-  VerticalTabs, Icon
+  VerticalTabs,
+  Icon
 } from '@greenville/mui-theme';
 
+/**
+ * Tab container where the contents are geting displayed
+ *
+ * @param {*} props 
+ */
 function TabContainer(props) {
   const {
     children, value, index, ...other
@@ -43,14 +49,14 @@ function a11yProps(index) {
 const styles = theme => ({
   activeTab: theme.overrides.MuiVerticalTabs.activeTab,
   container: theme.overrides.MuiVerticalTabs.container,
-  labelContainer: theme.overrides.MuiVerticalTabs.labelContainer,
+  labelIcon: theme.overrides.MuiVerticalTabs.labelIcon,
   root: theme.overrides.MuiVerticalTabs.root,
   tab: theme.overrides.MuiVerticalTabs.tab,
   tabContent: theme.overrides.MuiVerticalTabs.tabContent,
   wrapper: theme.overrides.MuiVerticalTabs.wrapper
 });
 
-class SimpleVerticalTabs extends React.Component {
+class SimpleVerticalTabs extends PureComponent {
   state = {
     value: 0
   };
@@ -62,6 +68,7 @@ class SimpleVerticalTabs extends React.Component {
   render() {
     const { classes } = this.props;
     const { value } = this.state;
+
     return (
       <div className={classes.container}>
         <VerticalTabs
@@ -69,49 +76,77 @@ class SimpleVerticalTabs extends React.Component {
           onChange={this.handleChange}
         >
           <Tab
-            classes={classes}
+            classes={{
+              labelIcon: classes.labelIcon,
+              root: classes.root,
+              wrapper: classes.wrapper
+            }}
             label="Back"
             {...a11yProps(0)}
-            icon={<Icon name="ArrowBack" fontSize="default" />}
+            icon={<Icon name="ArrowBack" fontSize="large" />}
             className={`${classes.tab} ${value === 0 ? classes.activeTab : ''}`}
           />
           <Tab
-            classes={classes}
+            classes={{
+              labelIcon: classes.labelIcon,
+              root: classes.root,
+              wrapper: classes.wrapper
+            }}
             label="Contents"
             {...a11yProps(1)}
             icon={<Icon name="ListBulleted" fontSize="large" />}
             className={`${classes.tab} ${value === 1 ? classes.activeTab : ''}`}
           />
           <Tab
-            classes={classes}
+            classes={{
+              labelIcon: classes.labelIcon,
+              root: classes.root,
+              wrapper: classes.wrapper
+            }}
             label="Bookmarks"
             {...a11yProps(2)}
             icon={<Icon name="BookmarkOutlined" fontSize="large" />}
             className={`${classes.tab} ${value === 2 ? classes.activeTab : ''}`}
           />
           <Tab
-            classes={classes}
+            classes={{
+              labelIcon: classes.labelIcon,
+              root: classes.root,
+              wrapper: classes.wrapper
+            }}
             label="NoteBook"
             {...a11yProps(3)}
             icon={<Icon name="Notebook" fontSize="large" />}
             className={`${classes.tab} ${value === 3 ? classes.activeTab : ''}`}
           />
           <Tab
-            classes={classes}
+            classes={{
+              labelIcon: classes.labelIcon,
+              root: classes.root,
+              wrapper: classes.wrapper
+            }}
             label="Study"
             {...a11yProps(4)}
             icon={<Icon name="FlashcardOutlined" fontSize="large" />}
             className={`${classes.tab} ${value === 4 ? classes.activeTab : ''}`}
           />
           <Tab
-            classes={classes}
+            classes={{
+              labelIcon: classes.labelIcon,
+              root: classes.root,
+              wrapper: classes.wrapper
+            }}
             label="Resources"
             {...a11yProps(5)}
             icon={<Icon name="Folder" fontSize="large" />}
             className={`${classes.tab} ${value === 5 ? classes.activeTab : ''}`}
           />
           <Tab
-            classes={classes}
+            classes={{
+              labelIcon: classes.labelIcon,
+              root: classes.root,
+              wrapper: classes.wrapper
+            }}
             label="Assignments"
             {...a11yProps(6)}
             icon={<Icon name="CalendarOutlined" fontSize="large" />}
