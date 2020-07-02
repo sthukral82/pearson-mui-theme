@@ -9,7 +9,8 @@ const styles = () => ({
     display: 'flex'
   },
   nameCard: {
-    paddingLeft: 8
+    paddingLeft: 8,
+    wordBreak: 'break-word'
   }
 });
 
