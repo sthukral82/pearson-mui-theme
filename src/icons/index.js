@@ -23,6 +23,7 @@ import ClockOutlined from './ClockOutlined';
 import Collapse from './Collapse';
 import Correct from './Correct';
 import Descending from './Descending';
+import Delete from './Delete';
 import Download from './Download';
 import DrawerClose from './DrawerClose';
 import DrawerLeft from './DrawerLeft';
@@ -40,6 +41,7 @@ import Globe from './Globe';
 import HelpOutlined from './HelpOutlined';
 import HelpFilled from './HelpFilled';
 import Information from './Information';
+import LaunchOutlined from './LaunchOutlined';
 import ListBulleted from './ListBulleted';
 import Listen from './Listen';
 import Lock from './Lock';
@@ -67,6 +69,7 @@ import StarFilled from './StarFilled';
 import StarHalfFilled from './StarHalfFilled';
 import StarOutline from './StarOutline';
 import Text from './Text';
+import Upload from './Upload';
 import Warning from './Warning';
 /**
  * A Map containing all Icons
@@ -98,6 +101,7 @@ const icons = new Map([
   ['Collapse', Collapse],
   ['Correct', Correct],
   ['Descending', Descending],
+  ['Delete', Delete],
   ['Download', Download],
   ['DrawerClose', DrawerClose],
   ['DrawerLeft', DrawerLeft],
@@ -115,6 +119,7 @@ const icons = new Map([
   ['HelpFilled', HelpFilled],
   ['HelpOutlined', HelpOutlined],
   ['Information', Information],
+  ['LaunchOutlined', LaunchOutlined],
   ['ListBulleted', ListBulleted],
   ['Listen', Listen],
   ['Lock', Lock],
@@ -142,6 +147,7 @@ const icons = new Map([
   ['StarHalfilled', StarHalfFilled],
   ['StarOutline', StarOutline],
   ['Text', Text],
+  ['Upload', Upload],
   ['Warning', Warning]
 ]);
 
