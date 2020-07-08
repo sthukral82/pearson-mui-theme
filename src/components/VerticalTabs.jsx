@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Tabs from '@material-ui/core/Tabs';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
-const styles = () => ({
+const useStyles = makeStyles(() => ({
   root: {
+    flexGrow: 1,
     display: 'flex',
     backgroundColor: '#002e60',
     height: '100%',
@@ -15,38 +16,42 @@ const styles = () => ({
   },
   tabs: {
     border: 0
-  }
-});
-
-// Customized Mui Tabs library
-const CustomTabs = withStyles(() => ({
-  flexContainer: {
-    flexDirection: 'column'
   },
   indicator: {
     display: 'none'
   }
-}))(Tabs);
+}));
 
+/**
+ * Vertical tab implementation
+ *
+ * @file VerticalTab.jsx
+ */
 const VerticalTabs = ({
   children,
-  classes,
   ...rest
-}) => (
-  <div className={classes.root}>
-    <CustomTabs
-      aria-label="Vertical tabs"
-      className={classes.tabs}
-      {...rest}
-    >
-      {children}
-    </CustomTabs>
-  </div>
-);
+}) => {
+  const classes = useStyles();
 
-VerticalTabs.propTypes = {
-  children: PropTypes.array.isRequired,
-  classes: PropTypes.object.isRequired
+  return (
+    <div className={classes.root}>
+      <Tabs
+        aria-label="Vertical tabs"
+        className={classes.tabs}
+        classes={{
+          indicator: classes.indicator
+        }}
+        orientation="vertical"
+        {...rest}
+      >
+        {children}
+      </Tabs>
+    </div>
+  );
 };
 
-export default withStyles(styles)(VerticalTabs);
+VerticalTabs.propTypes = {
+  children: PropTypes.array.isRequired
+};
+
+export default VerticalTabs;
