@@ -20,8 +20,8 @@ const ProfileDisplay = ({
   <div id={id} className={classes.root}>
     <Avatar id={`${id}-avatar`}>{avatarText}</Avatar>
     <div className={classes.nameCard}>
-      <Typography id={`${id}-name`} variant="h4">{name}</Typography>
-      <Typography id={`${id}-email`} variant="subtitle2">{email}</Typography>
+      <Typography id={`${id}-name`} variant="h4" component="div">{name}</Typography>
+      <Typography id={`${id}-email`} variant="subtitle2" component="div">{email}</Typography>
     </div>
   </div>
 );
