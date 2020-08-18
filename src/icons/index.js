@@ -28,6 +28,7 @@ import Download from './Download';
 import DrawerClose from './DrawerClose';
 import DrawerLeft from './DrawerLeft';
 import Edit from './Edit';
+import Email from './Email';
 import Expand from './Expand';
 import Filter from './Filter';
 import FlagOutlined from './FlagOutlined';
@@ -107,6 +108,7 @@ const icons = new Map([
   ['DrawerLeft', DrawerLeft],
   ['Expand', Expand],
   ['Edit', Edit],
+  ['Email', Email],
   ['Filter', Filter],
   ['FlagOutlined', FlagOutlined],
   ['FlashcardOutlined', FlashcardOutlined],
