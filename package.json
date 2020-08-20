@@ -1,6 +1,6 @@
 {
   "name": "@greenville/mui-theme",
-  "version": "1.4.13",
+  "version": "1.4.14-1",
   "description": "A Material UI theme implementing Pearson UX specs",
   "author": "Pearson-Higher-Ed",
   "license": "MIT",
@@ -13,7 +13,7 @@
     "npm": ">=5"
   },
   "publishConfig": {
-    "registry": "https://devops-tools.pearson.com/nexus-deps/content/repositories/npm-internal/"
+    "registry": "https://nexus.releng.pearsondev.com/repository/npm-internal/"
   },
   "scripts": {
     "test": "cross-env CI=1 react-scripts test --env=jsdom",
