@@ -22,8 +22,9 @@ import ChevronUp from './ChevronUp';
 import ClockOutlined from './ClockOutlined';
 import Collapse from './Collapse';
 import Correct from './Correct';
-import Descending from './Descending';
 import Delete from './Delete';
+import Descending from './Descending';
+import DoublePage from './DoublePage';
 import Download from './Download';
 import DrawerClose from './DrawerClose';
 import DrawerLeft from './DrawerLeft';
@@ -55,6 +56,7 @@ import Pause from './Pause';
 import Pdf from './Pdf';
 import PearsonLogo from './PearsonLogo';
 import Play from './Play';
+import Preview from './Preview';
 import Remove from './Remove';
 import RemoveCircleOutlined from './RemoveCircleOutlined';
 import ScoreOutlined from './ScoreOutlined';
@@ -62,6 +64,7 @@ import Search from './Search';
 import Settings from './Settings';
 import ShowOffOutlined from './ShowOffOutlined';
 import ShowOnOutlined from './ShowOnOutlined';
+import SinglePage from './SinglePage';
 import SmallCircleFilled from './SmallCircleFilled';
 import SmallCircleHalfFilled from './SmallCircleHalfFilled';
 import SmallCircleOutline from './SmallCircleOutline';
@@ -72,6 +75,8 @@ import StarOutline from './StarOutline';
 import Text from './Text';
 import Upload from './Upload';
 import Warning from './Warning';
+import ZoomIn from './ZoomIn';
+import ZoomOut from './ZoomOut';
 /**
  * A Map containing all Icons
  * @author Hari Gangadharan
@@ -101,8 +106,9 @@ const icons = new Map([
   ['ClockOutlined', ClockOutlined],
   ['Collapse', Collapse],
   ['Correct', Correct],
-  ['Descending', Descending],
   ['Delete', Delete],
+  ['Descending', Descending],
+  ['DoublePage', DoublePage],
   ['Download', Download],
   ['DrawerClose', DrawerClose],
   ['DrawerLeft', DrawerLeft],
@@ -134,6 +140,7 @@ const icons = new Map([
   ['Pdf', Pdf],
   ['PearsonLogo', PearsonLogo],
   ['Play', Play],
+  ['Preview', Preview],
   ['Remove', Remove],
   ['RemoveCircleOutlined', RemoveCircleOutlined],
   ['ScoreOutlined', ScoreOutlined],
@@ -141,6 +148,7 @@ const icons = new Map([
   ['Settings', Settings],
   ['ShowOffOutlined', ShowOffOutlined],
   ['ShowOnOutlined', ShowOnOutlined],
+  ['SinglePage', SinglePage],
   ['SmallCircleFilled', SmallCircleFilled],
   ['SmallCircleHalfFilled', SmallCircleHalfFilled],
   ['SmallCircleOutline', SmallCircleOutline],
@@ -150,7 +158,9 @@ const icons = new Map([
   ['StarOutline', StarOutline],
   ['Text', Text],
   ['Upload', Upload],
-  ['Warning', Warning]
+  ['Warning', Warning],
+  ['ZoomIn', ZoomIn],
+  ['ZoomOut', ZoomOut]
 ]);
 
 export default icons;
