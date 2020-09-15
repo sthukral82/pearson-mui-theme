@@ -97,6 +97,7 @@ class Dropdown extends React.Component {
           }}
           aria-owns={open ? `${id}-profile-menu` : undefined}
           aria-haspopup="true"
+          aria-expanded={open}
           onClick={this.handleToggle}
         >
           {icon}
