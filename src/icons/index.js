@@ -40,6 +40,7 @@ import FontChange from './FontChange';
 import FullscreenOff from './FullscreenOff';
 import FullscreenOn from './FullscreenOn';
 import Globe from './Globe';
+import Home from './Home';
 import HelpOutlined from './HelpOutlined';
 import HelpFilled from './HelpFilled';
 import Information from './Information';
@@ -124,6 +125,7 @@ const icons = new Map([
   ['FullscreenOff', FullscreenOff],
   ['FullscreenOn', FullscreenOn],
   ['Globe', Globe],
+  ['Home', Home],
   ['HelpFilled', HelpFilled],
   ['HelpOutlined', HelpOutlined],
   ['Information', Information],
