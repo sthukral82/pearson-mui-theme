@@ -22,8 +22,8 @@
     "start": "rollup -c -w",
     "lint": "eslint --ext .jsx,.js src example/src",
     "lint:fix": "eslint --fix --ext .jsx,.js src example/src",
-    "prepare": "yarn run build",
-    "predeploy": "cd example && yarn install && yarn run build",
+    "prepare": "npm run build",
+    "predeploy": "cd example && npm install && npm run build",
     "deploy": "surge -p example/build -d pearson-theme.surge.sh"
   },
   "peerDependencies": {
